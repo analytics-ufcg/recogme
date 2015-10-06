@@ -1,0 +1,166 @@
+<!DOCTYPE html >
+<html lang="pt-br" ng-app="minmax">
+<head >
+	<meta charset="UTF-8">
+	<title >User Feedback</title>
+	<link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="libs/ladda/dist/ladda-themeless.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">Recogme</a>
+		</div>
+	</div>
+</nav>
+
+<div class="main-content" ng-controller="MinMaxCtrl">
+
+	<form name="userForm" role="form" data-toggle="validator" ng-submit="onSubmit()"
+		  novalidate="novalidate" ng-hide="submitted">
+
+		<div class="form-group">
+			<label for="name" class="control-label">Nome</label>
+			<input type="text"
+			       class="form-control"
+			       ng-model="formModel.name"
+			       id="name"
+			       name="name"
+				   required="required"
+				   >
+			<label for="confirmName" class="control-label">Confirme seu nome</label>
+			<input type="text"
+			       class="form-control"
+			       ng-model="formModel.confirmName"
+			       id="name"
+				   required="required"
+			   	   match="name"
+			   	   data-match="#name"
+			   	   data-match-error="Nome não confere"
+			   	   >
+
+
+			   	   <div class="help-block with-errors"></div>	
+
+		</div>
+
+		<div class="form-group">
+			<label for="email" class="control-label">Email</label>
+			<input type="email"
+			       class="form-control"
+			       ng-model="formModel.email"
+			       id="email"
+				   required="required">
+		</div>
+
+		<div class="form-group">
+			<label for="confirmEmail" class="control-label">Confirme seu email</label>
+			<input type="email"
+			       class="form-control"
+			       ng-model="formModel.confirmEmail"
+			       id="confirmEmail"
+				   required="required"
+				   match="email"
+			   	   data-match="#email"
+			   	   data-match-error="Email não confere.">
+				   <div class="help-block with-errors"></div>
+		</div>
+
+	
+		<div class="form-group">
+			<label for="password" class="control-label">Senha</label>
+			<input type="password"
+			       class="form-control"
+			       id="password"
+			       ng-model="formModel.password"
+			       required="required"
+				   ng-minlength="10"
+				   ng-minlength-err-type="badPassword"
+				   ng-pattern="/^[A-Za-z0-9_]{1,32}$/"
+				   ng-pattern-err-type="badPassword"
+				   >
+		</div>
+
+		<div class="form-group">
+			<label for="confirmPassword" class="control-label">Confirme sua senha</label>
+			<input type="password"
+			       class="form-control"
+			       ng-model="formModel.confirmPassword"
+			       id="password"
+			       required="required"
+				   ng-minlength="10"
+				   match="password"
+			   	   data-match="#password"
+			   	   data-match-error="Senha não confere.">
+				   <div class="help-block with-errors"></div>
+		</div>
+
+		<div class="form-group">
+
+			<div class="form-group">
+		  		<label for="comment">Digite o texto acima</label>
+		  		<textarea type="text" 
+		  		          id="text" 
+		  		          class="form-control" 
+		  				  ng-model="formModel.text"
+		  				  required="required" 
+		  				  rows="5"></textarea>
+			</div>
+
+			<div class="form-group">
+		  		<label for="comment">Confirme o texto</label>
+		  		<textarea type="text" 
+		  				  class="form-control"
+		  				  ng-model="formModel.confirmText"
+		  				  id="confirmText" 
+		  				  required="required"
+		  				  match="text"
+		  				  data-match="#text"
+		  				  rows="5"
+					   	  data-match-error="Texto não confere."></textarea>
+					   	  <div class="help-block with-errors"></div>
+			</div>
+		</div>
+
+			<button class="btn btn-primary"
+			        ladda="submitting"
+			        data-style="expand-right"
+					type="submit">
+				<span ng-show="submitting">Registrando</span>
+				<span ng-show="!submitting">Registrar</span>
+			</button>
+		</div>
+
+	</form>
+
+	<div class="alert alert-danger text-center" ng-show="has_error">
+				<h3>Houve algum problema no seu registro, por favor tente mais tarde.</h3>
+	</div>
+
+	<div class="alert alert-info text-center" ng-show="submitted">
+		<h3>Registro realizado com sucesso!</h3>
+	</div>
+
+
+
+
+</div>
+
+
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-auto-validate/dist/jcs-auto-validate.js"></script>
+<script src="libs/ladda/dist/spin.min.js"></script>
+<script src="libs/ladda/dist/ladda.min.js"></script>
+<script src="libs/angular-ladda/dist/angular-ladda.min.js"></script>
+
+<script src="libs/angular-match/angular-match.min.js"></script>
+
+<script src="script.js"></script>
+<script src="jquery.js"></script>
+<script src="bootstrap-validator.js"></script>
+
+</body >
+</html >
