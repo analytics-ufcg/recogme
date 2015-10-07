@@ -1,12 +1,23 @@
 <!DOCTYPE html >
 <html lang="pt-br" ng-app="cadastro">
-<head >
+<head>
 	<meta charset="UTF-8">
 	<title >User Feedback</title>
 	<link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="libs/ladda/dist/ladda-themeless.min.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 </head>
+
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-auto-validate/dist/jcs-auto-validate.js"></script>
+<script src="libs/ladda/dist/spin.min.js"></script>
+<script src="libs/ladda/dist/ladda.min.js"></script>
+<script src="libs/angular-ladda/dist/angular-ladda.min.js"></script>
+
+<script src="libs/angular-validation-match/src/angular-validation-match.js"></script>
+<script src="script.js"></script>
+<script src="jquery.js"></script>
+<script src="bootstrap-validator.js"></script>
 
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -17,19 +28,19 @@
 	</div>
 </nav>
 
-<div class="main-content" ng-controller="MinMaxCtrl">
+<div class="main-content col-xs-6 col-md-offset-3" ng-controller="CadastroCtrl">
 
-	<form name="userForm" ng-model="userForm" role="form" data-toggle="validator" ng-submit="onSubmit()"
+	<form name="userForm" ng-model="userForm" role="form" data-toggle="validator" ng-submit="onSubmit()" autocomplete="off"
 		  novalidate="novalidate" ng-hide="submitted">
 
 		<div class="form-group">
 			<label for="name" class="control-label">Nome</label>
 			<div>
 			<input type="text"
+				   name="name"
 			       class="form-control"
 			       ng-model="formModel.name"
 			       id="name"
-			       name="name"
 				   required="required"
 				   ng-required-err-type="emptyField"
 				   >
@@ -48,6 +59,7 @@
 		<div class="form-group">
 			<label for="email" class="control-label">Email</label>
 			<input type="email"
+				   autocomplete="off"
 			       class="form-control"
 			       ng-model="formModel.email"
 			       id="email"
@@ -92,19 +104,24 @@
 			       id="password"
 				   match="formModel.password"
 				   ng-match-err-type="passwordMatchErr"
-				   >
-				   
+				   > 
 		</div>
 
 		<div class="form-group">
+		<div class="form-group" ng-controller="getRandomText">
+			
+			<p>{{datajson[whichItem].content}}</p>
 
+		</div>
 			<div class="form-group">
+
 		  		<label for="comment">Digite o texto acima</label>
 		  		<textarea type="text" 
-		  		          id="text" 
+		  		          id="userText" 
 		  		          class="form-control" 
-		  				  ng-model="formModel.text"
-		  				  required="required" 
+		  				  ng-model="formModel.userText"
+		  				  name="userText"
+		  				  required="required"
 		  				  ng-required-err-type="emptyField"
 		  				  rows="5"></textarea>
 			</div>
@@ -113,10 +130,10 @@
 		  		<label for="comment">Confirme o texto</label>
 		  		<textarea type="text" 
 		  				  class="form-control"
-		  				  ng-model="formModel.confirmText"
+		  				  ng-model="formModel.confirmUserText"
 		  				  id="confirmText" 
 		  				  required="required"
-		  				  match="formModel.text"
+		  				  match="formModel.userText"
 		  				  ng-match-err-type="textMatchErr"
 		  				  rows="5"
 					   	  ></textarea>
@@ -144,16 +161,5 @@
 			<h3>Registro realizado com sucesso!</h3>
 		</div>
 </div>
-<script src="libs/angular/angular.min.js"></script>
-<script src="libs/angular-auto-validate/dist/jcs-auto-validate.js"></script>
-<script src="libs/ladda/dist/spin.min.js"></script>
-<script src="libs/ladda/dist/ladda.min.js"></script>
-<script src="libs/angular-ladda/dist/angular-ladda.min.js"></script>
-
-<script src="libs/angular-validation-match/src/angular-validation-match.js"></script>
-<script src="script.js"></script>
-<script src="jquery.js"></script>
-<script src="bootstrap-validator.js"></script>
-
 </body >
 </html >

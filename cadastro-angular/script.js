@@ -18,9 +18,7 @@ app.run(function (defaultErrorMessageResolver) {
 	}
 );
 
-
-
-app.controller('MinMaxCtrl', function ($scope, $http) {
+app.controller('CadastroCtrl', function ($scope, $http) {
 	$scope.formModel = {};
 	$scope.submitting = false;
 	$scope.submitted = false;
@@ -32,19 +30,24 @@ app.controller('MinMaxCtrl', function ($scope, $http) {
 		$scope.submitting = true;
 		console.log("Hey i'm submitted!");
 		console.log($scope.formModel);
-
-		$http.post('https://minmax-server.herokuapp.com/register/', $scope.formModel).
-			success(function (data) {
-				console.log(":)");
-				$scope.submitting = false;
-				$scope.submitted = true;
-				$scope.has_error = false;
-			}).error(function(data) {
-				console.log(":(");
-				$scope.submitting = false;
-				$scope.submitted = false;
-				$scope.has_error = true;
-			});
-
 	};
 });
+
+app.controller('getRandomText', ['$scope', '$http', function($scope, $http) {
+    	$http.get('data.json').success(function(data) {
+		$scope.datajson = data;
+		$scope.whichItem = 0;
+		$scope.randomText = data[0];
+	});
+}]);
+
+app.controller('textMatch', function ($scope) {
+	var text = $('#randomText').text()
+	var inputText = $('#userText').val()
+
+	if (text === inputText){
+		console.log("They match");
+	}
+
+});
+
