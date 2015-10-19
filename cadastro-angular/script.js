@@ -48,6 +48,5 @@ app.controller('textMatch', function ($scope) {
 	if (text === inputText){
 		console.log("They match");
 	}
-
 });
 
