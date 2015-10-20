@@ -9,6 +9,18 @@
 </head>
 
 <body>
+
+<script src="jquery.js"></script>
+
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-auto-validate/dist/jcs-auto-validate.js"></script>
+<script src="libs/ladda/dist/spin.min.js"></script>
+<script src="libs/ladda/dist/ladda.min.js"></script>
+<script src="libs/angular-ladda/dist/angular-ladda.min.js"></script>
+<script src="libs/validation-match/dist/angular-validation-match.min.js"></script>
+
+<script src="cadastro.js"></script>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
@@ -19,8 +31,9 @@
 
 <div class="main-content col-xs-6 col-md-offset-3" ng-controller="CadastroCtrl">
 
-	<form name="userForm" ng-model="userForm" role="form" data-toggle="validator" ng-submit="onSubmit()" autocomplete="off"
+	<form id="formField" name="userForm" ng-model="userForm" role="form" data-toggle="validator" ng-submit="onSubmit()" autocomplete="off"
 		  novalidate="novalidate" ng-hide="submitted">
+
 
 		<div class="form-group">
 			<label for="name" class="control-label">Nome</label>
@@ -48,7 +61,7 @@
 		<div class="form-group">
 			<label for="email" class="control-label">Email</label>
 			<input type="email"
-				   autocomplete="off"
+				   
 			       class="form-control"
 			       ng-model="formModel.email"
 			       id="email"
@@ -60,7 +73,9 @@
 
 		<div class="form-group">
 			<label for="confirmEmail" class="control-label">Confirme seu email</label>
+
 			<input type="email"
+		
 			       class="form-control"
 			       ng-model="formModel.confirmEmail"
 			       id="confirmEmail"
@@ -71,10 +86,13 @@
 			   	   >
 		</div>
 
+
 	
 		<div class="form-group">
 			<label for="password" class="control-label">Senha</label>
+			<input type="text" style="display:none;">
 			<input type="password"
+				   autocomplete="off"
 			       class="form-control"
 			       id="password"
 			       ng-model="formModel.password"
@@ -90,7 +108,7 @@
 			<input type="password"
 			       class="form-control"
 			       ng-model="formModel.confirmPassword"
-			       id="password"
+			       id="confirmPassword"
 				   match="formModel.password"
 				   ng-match-err-type="passwordMatchErr"
 				   > 
@@ -98,7 +116,7 @@
 
 		<div class="form-group">
 		<div class="form-group" ng-controller="getRandomText">
-			
+			<!-- o texto precisa dar match com os campos abaixo -->
 			<p>{{datajson[whichItem].content}}</p>
 
 		</div>
@@ -112,21 +130,11 @@
 		  				  name="userText"
 		  				  required="required"
 		  				  ng-required-err-type="emptyField"
+						  match=""
+		  				  ng-match-err-type="textMatchErr"
 		  				  rows="5"></textarea>
 			</div>
 
-			<div class="form-group">
-		  		<label for="comment">Confirme o texto</label>
-		  		<textarea type="text" 
-		  				  class="form-control"
-		  				  ng-model="formModel.confirmUserText"
-		  				  id="confirmText" 
-		  				  required="required"
-		  				  match="formModel.userText"
-		  				  ng-match-err-type="textMatchErr"
-		  				  rows="5"
-					   	  ></textarea>
-			</div>
 		</div>
 
 		<div class="form-group">
@@ -152,15 +160,8 @@
 </div>
 
 
-<script src="jquery.js"></script>
-<script src="libs/angular/angular.min.js"></script>
-<script src="libs/angular-auto-validate/dist/jcs-auto-validate.js"></script>
-<script src="libs/ladda/dist/spin.min.js"></script>
-<script src="libs/ladda/dist/ladda.min.js"></script>
-<script src="libs/angular-ladda/dist/angular-ladda.min.js"></script>
-<script src="libs/angular-validation-match/dist/angular-validation-match.min.js"></script>
-
-<script src="script.js"></script>
+<script src="keycodes.js"></script>
+<script src="keystroke.js"></script>
 
 </body >
 </html >
