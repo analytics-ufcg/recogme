@@ -6,6 +6,14 @@ from django.contrib.auth.models import User
 from .form import RegistroUserForm
 from .models import UserProfile
 
+from django.contrib.auth import authenticate, login, logout
+
+from django.contrib.auth.decorators import login_required
+
+# Añadir import logout y messages
+
+from django.contrib import messages
+
 # Create your views here.
 
 def registro_usuario_view(request):
@@ -47,6 +55,39 @@ def registro_usuario_view(request):
         'form': form
         }
     return render(request, 'accounts/registro.html', context)
+
+
+@login_required
+def index_view(request):
+    return render(request, 'accounts/index.html')
+
+def login_view(request):
+    if request.user.is_authenticated():
+        return redirect(reverse('accounts.index'))
+    mensaje = ''
+    if request.method == 'POST':
+
+        username = request.POST.get('username')
+
+        password = request.POST.get('password')
+
+        user = authenticate(username=username, password=password)
+
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return redirect(reverse('accounts.index'))
+            else:
+                pass
+
+        mensaje = 'Nome de usuário ou senha não são válidos.'
+
+    return render(request, 'accounts/login.html', {'mensaje': mensaje})
+
+def logout_view(request):
+    logout(request)
+    messages.success(request, 'Deslogado com Sucesso.')
+    return redirect(reverse('accounts.login'))
 
 
 def obrigado_view(request, username):

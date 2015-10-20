@@ -9,9 +9,75 @@
     <link href="{% static 'css/cadastro.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+<div class="container">
+
+  <div class="navbar-header">
+
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+      <span class="sr-only">Toggle navigation</span>
+
+      <span class="icon-bar"></span>
+
+      <span class="icon-bar"></span>
+
+      <span class="icon-bar"></span>
+
+    </button>
+
+    <a class="navbar-brand" href="#">Project name</a>
+
+  </div>
+
+<div id="navbar" class="collapse navbar-collapse">
+
+      <ul class="nav navbar-nav">
+
+            <li class="active"><a href="#">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+
+<ul class="nav navbar-nav navbar-right">
+
+      <!-- {% if user.is_authenticated %} -->
+
+           <!--  <li><a href="{% url 'accounts.index' %}">{{ user.username }}</a></li>
+
+            <li><a href="{% url 'accounts.logout' %}">Logout</a></li>
+ -->
+      <!-- {%else %} -->
+
+ <!--            <li><a href="{% url 'accounts.registro' %}">Registro</a></li>
+
+            <li><a href="{% url 'accounts.login' %}">Login</a></li> -->
+
+      <!-- {% endif %} -->
+
+</ul>
+
+
+
+</div><!--/.nav-collapse -->
+
+
+</div>
+
+</nav>
+
+
     <div class="cover">
       <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?w=1024&amp;q=50&amp;fm=jpg&amp;s=478a9a2196033db7c0bf3c8ba3707f4d')"></div>
       <div class="container">
+            <!-- {% include '_messages.html' %} -->
             {% block content %}{% endblock content %}
       </div>
     </div>
