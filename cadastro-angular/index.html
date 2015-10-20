@@ -61,7 +61,7 @@
 		<div class="form-group">
 			<label for="email" class="control-label">Email</label>
 			<input type="email"
-				   autocomplete="false"
+				   
 			       class="form-control"
 			       ng-model="formModel.email"
 			       id="email"
@@ -73,7 +73,9 @@
 
 		<div class="form-group">
 			<label for="confirmEmail" class="control-label">Confirme seu email</label>
+
 			<input type="email"
+		
 			       class="form-control"
 			       ng-model="formModel.confirmEmail"
 			       id="confirmEmail"
@@ -88,7 +90,9 @@
 	
 		<div class="form-group">
 			<label for="password" class="control-label">Senha</label>
+			<input type="text" style="display:none;">
 			<input type="password"
+				   autocomplete="off"
 			       class="form-control"
 			       id="password"
 			       ng-model="formModel.password"
@@ -126,23 +130,11 @@
 		  				  name="userText"
 		  				  required="required"
 		  				  ng-required-err-type="emptyField"
-
+						  match=""
+		  				  ng-match-err-type="textMatchErr"
 		  				  rows="5"></textarea>
 			</div>
 
-			<div class="form-group">
-		  		<label for="comment">Confirme o texto</label>
-		  		<textarea type="text" 
-		  				  class="form-control"
-		  				  ng-model="formModel.confirmUserText"
-		  				  id="confirmText" 
-		  				  required="required"
-		  				  ng-required-err-type="emptyField"
-		  				  match="formModel.userText"
-		  				  ng-match-err-type="textMatchErr"
-		  				  rows="5"
-					   	  ></textarea>
-			</div>
 		</div>
 
 		<div class="form-group">
