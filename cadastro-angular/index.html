@@ -17,7 +17,7 @@
 <script src="libs/ladda/dist/spin.min.js"></script>
 <script src="libs/ladda/dist/ladda.min.js"></script>
 <script src="libs/angular-ladda/dist/angular-ladda.min.js"></script>
-<script src="libs/angular-validation-match/dist/angular-validation-match.min.js"></script>
+<script src="libs/validation-match/dist/angular-validation-match.min.js"></script>
 
 <script src="cadastro.js"></script>
 
@@ -33,6 +33,7 @@
 
 	<form id="formField" name="userForm" ng-model="userForm" role="form" data-toggle="validator" ng-submit="onSubmit()" autocomplete="off"
 		  novalidate="novalidate" ng-hide="submitted">
+
 
 		<div class="form-group">
 			<label for="name" class="control-label">Nome</label>
@@ -60,7 +61,7 @@
 		<div class="form-group">
 			<label for="email" class="control-label">Email</label>
 			<input type="email"
-				   autocomplete="off"
+				   autocomplete="false"
 			       class="form-control"
 			       ng-model="formModel.email"
 			       id="email"
@@ -83,6 +84,7 @@
 			   	   >
 		</div>
 
+
 	
 		<div class="form-group">
 			<label for="password" class="control-label">Senha</label>
@@ -102,7 +104,7 @@
 			<input type="password"
 			       class="form-control"
 			       ng-model="formModel.confirmPassword"
-			       id="password"
+			       id="confirmPassword"
 				   match="formModel.password"
 				   ng-match-err-type="passwordMatchErr"
 				   > 
