@@ -33,7 +33,11 @@
 
 	<form id="formField" name="userForm" ng-model="userForm" role="form" data-toggle="validator" ng-submit="onSubmit()" autocomplete="off"
 		  novalidate="novalidate" ng-hide="submitted">
-
+		 
+		 <div style="display: none;">
+ 			<input type="text" id="PreventChromeAutocomplete" 
+  			name="PreventChromeAutocomplete" autocomplete="address-level4" />
+		</div>
 
 		<div class="form-group">
 			<label for="name" class="control-label">Nome</label>
