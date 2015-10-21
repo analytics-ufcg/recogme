@@ -35,6 +35,7 @@ def registro_usuario_view(request):
             user_model = User.objects.create_user(username=username, password=password)
             # Añadimos el email
             user_model.email = email
+            user_model.is_active=True
             # Y guardamos el objeto, esto guardara los datos en la db.
             user_model.save()
             # Ahora, creamos un objeto UserProfile, aunque no haya incluido
