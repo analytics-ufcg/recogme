@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 
 class RegistroUserForm(forms.Form):
     text = "Ei ipsum appareat ius, quo ei."
-    username = forms.CharField(label='Digite Seu Nome', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    username2 = forms.CharField(label='Confirme Seu Nome', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    username = forms.CharField(label='Digite seu username', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    username2 = forms.CharField(label='Confirme seu username', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     email = forms.EmailField(label='Digite Seu Email', widget=forms.EmailInput(attrs={'class': 'form-control'}))
     email2 = forms.EmailField(label='Confirme Seu Email', widget=forms.EmailInput(attrs={'class': 'form-control'}))
@@ -16,7 +16,7 @@ class RegistroUserForm(forms.Form):
                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     password2 = forms.CharField(label='Confirme Sua Senha', min_length=5,
                                 widget=forms.PasswordInput(attrs={'class': 'form-control'}))
-    phrase = forms.CharField(label='Digite \"Ei ipsum appareat ius, quo ei.\"', min_length=5,
+    phrase = forms.CharField(label='Digite', min_length=5,
                              widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     def clean_username(self):

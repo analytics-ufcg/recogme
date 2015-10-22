@@ -17,6 +17,7 @@ from django.contrib import messages
 # Create your views here.
 
 def registro_usuario_view(request):
+    print(request)
     if request.method == 'POST':
         # Si el method es post, obtenemos los datos del formulario
         form = RegistroUserForm(request.POST, request.FILES)
