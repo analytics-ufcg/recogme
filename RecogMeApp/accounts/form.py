@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 
 class RegistroUserForm(forms.Form):
     text = "Ei ipsum appareat ius, quo ei."
-    username = forms.CharField(label='Digite seu username', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    username2 = forms.CharField(label='Confirme seu username', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    name = forms.CharField(label='Digite seu Nome Completo', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    name2 = forms.CharField(label='Confirme seu Nome Completo', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     email = forms.EmailField(label='Digite Seu Email', widget=forms.EmailInput(attrs={'class': 'form-control'}))
     email2 = forms.EmailField(label='Confirme Seu Email', widget=forms.EmailInput(attrs={'class': 'form-control'}))
@@ -19,25 +19,25 @@ class RegistroUserForm(forms.Form):
     phrase = forms.CharField(label='Digite', min_length=5,
                              widget=forms.TextInput(attrs={'class': 'form-control'}))
 
-    def clean_username(self):
+    def clean_name(self):
         """Verify if the username is already registered"""
-        username = self.cleaned_data['username']
-        if User.objects.filter(username=username):
-            raise forms.ValidationError('Nome de usuário já registrado.')
-        return username
+        name = self.cleaned_data['name']
+        if len(name.split()) < 2:
+            raise forms.ValidationError('Digite Nome e Sobrenome.')
+        return name
 
-    def clean_username2(self):
+    def clean_name2(self):
         """Verify if the username and username2 are equals"""
-        username = self.cleaned_data['username']
-        username2 = self.cleaned_data['username2']
-        if username != username2:
+        name = self.cleaned_data['name']
+        name2 = self.cleaned_data['name2']
+        if name != name2:
             raise forms.ValidationError('Os nomes de usuários não conhecidem.')
-        return username2
+        return name2
 
     def clean_email(self):
         """Verify if the email is already registered"""
         email = self.cleaned_data['email']
-        if User.objects.filter(email=email):
+        if User.objects.filter(username=email):
             raise forms.ValidationError('Email já registrado no banco.')
         return email
 
