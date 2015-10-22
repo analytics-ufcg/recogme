@@ -40,23 +40,23 @@
 		</div>
 
 		<div class="form-group">
-			<label for="name" class="control-label">Nome</label>
+			<label for="name" class="control-label">Nome completo</label>
 			<div>
 			<input type="text"
-				   name="name"
+				   name="fullName"
 			       class="form-control"
 			       ng-model="formModel.name"
-			       id="name"
+			       id="fullName"
 				   required="required"
 				   ng-required-err-type="emptyField"
 				   >
 			</div>
-			<label for="confirmName" class="control-label">Confirme seu nome</label>
+			<label for="confirmFullName" class="control-label">Confirme seu nome</label>
 			<input type="text"
-				   name="confirmName"
+				   name="confirmFullName"
 			       class="form-control"
 			       ng-model="formModel.confirmName"
-			       id="name"
+			       id="confirmFullName"
 				   match="formModel.name"
 				   ng-match-err-type="nameMatchErr"
 			   	   >
@@ -119,22 +119,22 @@
 		</div>
 
 		<div class="form-group">
-		<div class="form-group" ng-controller="getRandomText">
-			<!-- o texto precisa dar match com os campos abaixo -->
-			<p>{{datajson[whichItem].content}}</p>
+		<div class="form-group" ng-controller="getRandomTextCtrl">
+			<label for="textField">Frase: </label>
+			<p id="textField" ng-model="textField">Imagine uma nova história para sua vida e acredite nela.</p>
 
 		</div>
 			<div class="form-group">
 
-		  		<label for="comment">Digite o texto acima</label>
+		  		<label for="comment">Digite a frase acima</label>
 		  		<textarea type="text" 
-		  		          id="userText" 
+		  		          id="userText"
 		  		          class="form-control" 
 		  				  ng-model="formModel.userText"
 		  				  name="userText"
 		  				  required="required"
 		  				  ng-required-err-type="emptyField"
-						  match=""
+						  match="textField"
 		  				  ng-match-err-type="textMatchErr"
 		  				  rows="5"></textarea>
 			</div>
@@ -150,7 +150,8 @@
 			<button class="btn btn-primary"
 			        ladda="submitting"
 			        data-style="expand-right"
-					type="submit">
+					type="submit"
+					id="btnclick">
 				<span ng-show="submitting">Registrando</span>
 				<span ng-show="!submitting">Registrar</span>
 			</button>
@@ -160,7 +161,7 @@
 
 	<div class="alert alert-info text-center" ng-show="submitted">
 			<h3>Registro realizado com sucesso!</h3>
-		</div>
+	</div>
 </div>
 
 

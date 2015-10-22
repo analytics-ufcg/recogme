@@ -14,6 +14,7 @@ app.run(function (defaultErrorMessageResolver) {
 			errorMessages['invalidPassword'] = 'Senha inválida. A senha deve conter no mínimo 10 digitos e ser formada por letras e/ou números.';
 			errorMessages['passwordMatchErr'] = 'Senha nao confere.'
 			errorMessages['textMatchErr'] = 'Texto nao confere.'
+			errorMessages['loginMatchErr'] = 'Login não confere.';
 		});
 	}
 );
@@ -24,7 +25,7 @@ app.controller('CadastroCtrl', function ($scope, $http) {
 	$scope.submitted = false;
 	$scope.has_error = false;
 
-
+	$scope.textField = $('#textField').text();
 
 	$scope.onSubmit = function () {
 		$scope.submitting = true;
@@ -33,20 +34,11 @@ app.controller('CadastroCtrl', function ($scope, $http) {
 	};
 });
 
-app.controller('getRandomText', ['$scope', '$http', function($scope, $http) {
+app.controller('getRandomTextCtrl', ['$scope', '$http', function($scope, $http) {
     	$http.get('data.json').success(function(data) {
 		$scope.datajson = data;
 		$scope.whichItem = 0;
 		$scope.randomText = data[0];
 	});
 }]);
-
-app.controller('textMatch', function ($scope) {
-	var text = $('#randomText').text()
-	var inputText = $('#userText').val()
-
-	if (text === inputText){
-		console.log("They match");
-	}
-});
 
