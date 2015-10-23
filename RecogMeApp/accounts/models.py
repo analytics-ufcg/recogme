@@ -7,6 +7,10 @@ class UserProfile(models.Model):
     phrase = models.TextField()
     name2 = models.TextField("")
     email2 = models.EmailField()
+    json_login = models.TextField()
+    json_email = models.TextField()
+    json_password = models.TextField()
+    json_phrase = models.TextField()
 
     def __str__(self):
         return self.user.username

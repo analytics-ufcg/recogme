@@ -13,14 +13,22 @@ from django.contrib.auth.decorators import login_required
 # Añadir import logout y messages
 
 from django.contrib import messages
-
+import logging
+import json
 
 # Create your views here.
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
+# def parser(json_string):
+#     json_parsed = json.loads(json_string)
+#     logger.error(json_parsed)
 
 def registro_usuario_view(request):
     print(request)
     if request.method == 'POST':
-
+        for i in request.POST.lists():
+            logger.error(i)
         form = RegistroUserForm(request.POST, request.FILES)
         # Comprobamos si el formulario es valido
         if form.is_valid():
@@ -35,6 +43,8 @@ def registro_usuario_view(request):
             fullname = cleaned_data.get('name')
             first_name = fullname.split()[0]
             last_name = " ".join(fullname.split()[1:])
+            # keystroke = cleaned_data.get('keystroke')
+            # parser(keystroke)
 
             # E instanciamos un objeto User, con el username y password
             user_model = User.objects.create_user(username=username, password=password)
@@ -77,7 +87,7 @@ def login_view(request):
     mensaje = ''
     if request.method == 'POST':
 
-        username = request.POST.get('username')
+        username = request.POST.get('email')
 
         password = request.POST.get('password')
 
@@ -91,7 +101,8 @@ def login_view(request):
                 pass
 
         mensaje = 'Nome de usuário ou senha não são válidos.'
-
+        for i in request.POST.lists():
+            logger.error(i)
     return render(request, 'accounts/login.html', {'mensaje': mensaje})
 
 

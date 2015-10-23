@@ -6,18 +6,23 @@ from django.contrib.auth.models import User
 
 class RegistroUserForm(forms.Form):
     text = "Ei ipsum appareat ius, quo ei."
-    name = forms.CharField(label='Digite seu Nome Completo', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    name2 = forms.CharField(label='Confirme seu Nome Completo', min_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    name = forms.CharField(label='Digite seu Nome Completo', min_length=5,
+                           widget=forms.TextInput(attrs={'class': 'form-control', 'id': "fullName"}))
+    name2 = forms.CharField(label='Confirme seu Nome Completo', min_length=5,
+                            widget=forms.TextInput(attrs={'id': "confirmFullName", 'class': 'form-control'}))
 
-    email = forms.EmailField(label='Digite Seu Email', widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    email2 = forms.EmailField(label='Confirme Seu Email', widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    email = forms.EmailField(label='Digite Seu Email',
+                             widget=forms.EmailInput(attrs={'id': "email", 'class': 'form-control'}))
+    email2 = forms.EmailField(label='confirmEmail',
+                              widget=forms.EmailInput(attrs={'id': 'confirmEmail', 'class': 'form-control'}))
 
     password = forms.CharField(label='Digite Sua Senha', min_length=5,
-                               widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+                               widget=forms.PasswordInput(attrs={'id': "password", 'class': 'form-control'}))
     password2 = forms.CharField(label='Confirme Sua Senha', min_length=5,
-                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+                                widget=forms.PasswordInput(attrs={'id': "confirmPassword", 'class': 'form-control'}))
+
     phrase = forms.CharField(label='Digite: Ei ipsum appareat ius, quo ei.', min_length=5,
-                             widget=forms.TextInput(attrs={'class': 'form-control'}))
+                             widget=forms.TextInput(attrs={'id': "userText", 'class': 'form-control'}))
 
     def clean_name(self):
         """Verify if the username is already registered"""
@@ -64,4 +69,3 @@ class RegistroUserForm(forms.Form):
         if phrase != self.text:
             raise forms.ValidationError('A frase não confere')
         return phrase
-

@@ -26,13 +26,13 @@
 
 {% csrf_token %}
 
-<div class="form-group">
+    <div class="form-group">
 
-	<label class="control-label" for="email">Email de usuario</label>
+        <label class="control-label" for="email">Email de usuario</label>
 
-	<input type="text" id="email" name="email" class="form-control" value="{{ email }}">
+        <input type="text" id="email" name="email" class="form-control" value="{{ email }}">
 
-</div>
+    </div>
 
 	<div class="form-group">
 
@@ -42,7 +42,7 @@
 
 	</div>
 
-<button type="submit" class="btn btn-primary">Login</button>
+<button id="form" type="submit" class="btn btn-primary">Login</button>
 
 </form>
 

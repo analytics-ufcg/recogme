@@ -22,14 +22,14 @@ function onKeyDown(field, timestamps){
         //console.log(timestamps);
         });
     }
-    
+
 function onKeyUp(field, timestamps, k) {
         $( '#' + field ).keyup(function( event ) {
             if(k.keyCode === event.keyCode){ //check if the keyup event is for the right key
                 if (k.keyUp === undefined) {
-                    k.keyUp = event.timeStamp;
-                     
-                     k = keyValueCheck(k); //check if the keyValue is empty.
+ var jsonFields = JSON.stringify(fields);
+                       k.keyUp = event.timeStamp;
+                    k = keyValueCheck(k); //check if the keyValue is empty.
 
                     timestamps.push(k);
                 }
@@ -52,7 +52,7 @@ fields = {'fullName': [],
           'email': [], 
           'confirmEmail': [], 
           'password': [], 
-          'confirmPassword': [], 
+          'confirmPassword': [],
           'userText': []
       }
 
@@ -71,5 +71,8 @@ for (var field in fields) {
 //Check the id for the submit button in Django project.
 $('form').submit(function (event) {    
     var jsonFields = JSON.stringify(fields);
+    $('.registro').append('<div class="form-group"><input type="text" id="keystroke" name="keystroke" class="form-control" ></div>'); //add input box
+
+    $('#keystroke').val(jsonFields);
     console.log(jsonFields);
 });
