@@ -50,12 +50,19 @@ keycodes[222] = "'" + '"'
 //The following key codes differ across browsers:
 
 keycodes[173] = "MuteOn|Off" //firefox: 181
+keycodes[181] = "MuteOn|Off"
+
 keycodes[174] = "VolumeDown" //firefox: 182
+keycodes[182] = "VolumeDown"
+
 keycodes[175] = "VolumeUp" //firefox:  183
+keycodes[183] = "VolumeUp"
 
 keycodes[186] = ";:" //firefox: 59
+keycodes[59] = ";:"
+
 keycodes[187] = "=+" //firefox: 61
+keycodes[61] = "=+"
+
 keycodes[189] = "-_" //firefox: 173
-
-
-
+keycodes[173] = "-_"
