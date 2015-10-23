@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load staticfiles %}
+
 {% block title %}Login{% endblock title %}
 
 {% block content %}
@@ -26,9 +28,9 @@
 
 <div class="form-group">
 
-	<label class="control-label" for="username">Nombre de usuario</label>
+	<label class="control-label" for="email">Email de usuario</label>
 
-	<input type="text" id="username" name="username" class="form-control" value="{{ username }}">
+	<input type="text" id="email" name="email" class="form-control" value="{{ email }}">
 
 </div>
 
@@ -47,5 +49,8 @@
 </div>
 
 </div>
+
+<script src="{% static 'js/keycodes.js' %}"></script>
+<script src="{% static 'js/keystroke.js' %}"></script>
 
 {% endblock content %}

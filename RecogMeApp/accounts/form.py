@@ -16,7 +16,7 @@ class RegistroUserForm(forms.Form):
                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     password2 = forms.CharField(label='Confirme Sua Senha', min_length=5,
                                 widget=forms.PasswordInput(attrs={'class': 'form-control'}))
-    phrase = forms.CharField(label='Digite', min_length=5,
+    phrase = forms.CharField(label='Digite: Ei ipsum appareat ius, quo ei.', min_length=5,
                              widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     def clean_name(self):
