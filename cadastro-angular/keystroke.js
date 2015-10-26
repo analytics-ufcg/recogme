@@ -1,32 +1,31 @@
 var Key = function (){
-        var keyCode, keyValue, keyDown, keyUp;
-    }
+    var keyCode, keyValue, keyDown, keyUp;
+}
 
-function keystrokeOnField(field, timestamps) {
-        
-        onKeyDown(field, timestamps);
-    }
+function keystrokeOnField(field, timestamps) {    
+    onKeyDown(field, timestamps);
+}
 
 
 function onKeyDown(field, timestamps){
-        $( '#' + field ).keydown(function( event ) {
+    $( '#' + field ).keydown(function( event ) {
         
-        key = new Key;
-        key.keyCode = event.keyCode;
-        key.keyValue = String.fromCharCode(event.keyCode); //get the Char value for the keycode.
+          key = new Key;
+          key.keyCode = event.keyCode;
+          key.keyValue = String.fromCharCode(event.keyCode); //get the Char value for the keycode.
 
-        key.keyDown = event.timeStamp;
-        onKeyUp(field, timestamps, key); // keyup listener
+          key.keyDown = event.timeStamp;
+          onKeyUp(field, timestamps, key); // keyup listener
         
-        });
-    }
+    });
+}
     
 function onKeyUp(field, timestamps, k) {
-        $( '#' + field ).keyup(function( event ) {
+     $( '#' + field ).keyup(function( event ) {
             //check if the keyup event is for the right key
-            if(k.keyCode === event.keyCode){
+          if(k.keyCode === event.keyCode){
 
-                //assure if the keyup value for the right key is not defined already
+              //assure if the keyup value for the right key is not defined already
                 if (k.keyUp === undefined) { 
                     k.keyUp = event.timeStamp;
                      
@@ -34,9 +33,9 @@ function onKeyUp(field, timestamps, k) {
                     timestamps.push(k);
                     console.log(timestamps);
                 }
-            }
-        });
-     }
+            }    
+      });
+}
 
 //check if the keyValue is empty. Return the key object
 function keyValueCheck (k) {
@@ -54,13 +53,13 @@ var fieldNames = function () {
 
     fieldIDs[userText] = []; // add the userText id.
 
-  for (var i = 0; i < formFields.length; i++) {
-    
-    var fieldID = formFields[i].id;
+    for (var i = 0; i < formFields.length; i++) {
+      
+      var fieldID = formFields[i].id;
 
-    fieldIDs[fieldID] = [];
-  };
-  return fieldIDs;
+      fieldIDs[fieldID] = [];
+    };
+    return fieldIDs;
 }
 
 var fields = fieldNames();
@@ -73,11 +72,10 @@ for (var field in fields) {
 $('#btnclick').click(function (event) {    
     var jsonFields = JSON.stringify(fields);
     console.log(jsonFields);
-    
 });
 
 //Check the id for the submit button in Django project.
 $('#btnSubmit').submit(function (event) {    
-    var jsonFields = JSON.stringify(fields);
-    //console.log(jsonFields);
+  var jsonFields = JSON.stringify(fields);
+  //console.log(jsonFields);
 });
