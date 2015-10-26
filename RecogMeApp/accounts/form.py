@@ -7,7 +7,8 @@ from django.contrib.auth.models import User
 class RegistroUserForm(forms.Form):
     text = "Ei ipsum appareat ius, quo ei."
     name = forms.CharField(label='Digite seu Nome Completo', min_length=5,
-                           widget=forms.TextInput(attrs={'class': 'form-control', 'id': "fullName"}))
+                           widget=forms.TextInput(attrs={'class': 'form-control', 'id': "fullName",
+                                                         'autocomplete':'false'}))
     name2 = forms.CharField(label='Confirme seu Nome Completo', min_length=5,
                             widget=forms.TextInput(attrs={'id': "confirmFullName", 'class': 'form-control'}))
 

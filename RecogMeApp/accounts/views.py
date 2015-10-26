@@ -20,15 +20,29 @@ import json
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
-# def parser(json_string):
-#     json_parsed = json.loads(json_string)
-#     logger.error(json_parsed)
+
+def parser(json_string):
+    # dict_keys(['confirmEmail', 'email', 'confirmPassword', 'confirmFullName', 'fullName', 'password', 'userText'])
+    json_parsed = json.loads(json_string)
+    json_email = {"login": json_parsed["email"], 'confirmEmail': json_parsed['confirmEmail']}
+    json_password = {'password': json_parsed['password'], 'confirmPassword': json_parsed['confirmPassword']}
+    json_full_name = {'fullName': json_parsed['password'], 'confirmFullName': json_parsed['confirmFullName']}
+    json_user_text = {'userText': json_parsed['userText']}
+
+    logger.error("___________________________________________________________________________\n")
+    logger.error(json_parsed)
+    logger.error("___________________________________________________________________________\n")
+
+    return [json_email, json_password, json_full_name, json_user_text]
 
 def registro_usuario_view(request):
     print(request)
     if request.method == 'POST':
-        for i in request.POST.lists():
-            logger.error(i)
+        # for i in request.POST.lists():
+        #     logger.error("___________________________________________________________________________\n")
+        #     logger.error(i)
+        #     logger.error("___________________________________________________________________________\n")
+
         form = RegistroUserForm(request.POST, request.FILES)
         # Comprobamos si el formulario es valido
         if form.is_valid():
@@ -43,8 +57,8 @@ def registro_usuario_view(request):
             fullname = cleaned_data.get('name')
             first_name = fullname.split()[0]
             last_name = " ".join(fullname.split()[1:])
-            # keystroke = cleaned_data.get('keystroke')
-            # parser(keystroke)
+            keystroke = request.POST.get('keystroke')
+            keystroke = parser(keystroke)
 
             # E instanciamos un objeto User, con el username y password
             user_model = User.objects.create_user(username=username, password=password)
@@ -60,6 +74,11 @@ def registro_usuario_view(request):
             # Al campo user le asignamos el objeto user_model
             user_profile.user = user_model
             user_profile.phrase = phrase
+
+            user_profile.json_email = json.dumps(keystroke[0])
+            user_profile.json_full_name = json.dumps(keystroke[2])
+            user_profile.json_password = json.dumps(keystroke[1])
+            user_profile.json_user_text = json.dumps(keystroke[3])
 
             # y le asignamos la photo (el campo, permite datos null)
             # user_profile.photo = photo

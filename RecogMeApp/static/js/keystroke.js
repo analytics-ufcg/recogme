@@ -32,6 +32,7 @@ function onKeyUp(field, timestamps, k) {
                     k = keyValueCheck(k); //check if the keyValue is empty.
 
                     timestamps.push(k);
+                    console.log(k);
                 }
             }
         });
