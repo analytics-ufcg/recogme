@@ -66,3 +66,37 @@ keycodes[61] = "=+"
 
 keycodes[189] = "-_" //firefox: 173
 keycodes[173] = "-_"
+
+
+
+//Keycodes for the numeric keypad
+
+keycodes[45] = "Insert"
+keycodes[35] = "End"
+keycodes[40] = "Down"
+keycodes[34] = "PageDown"
+keycodes[37] = "Left"
+keycodes[12] = "" //Numpad 5 (Numlock off)
+
+keycodes[39] = "Right"
+keycodes[36] = "Home"
+keycodes[38] = "Up"
+keycodes[33] = "PageUp"
+
+
+keycodes[96] = "Numpad 0"
+keycodes[97] = "Numpad 1"
+keycodes[98] = "Numpad 2"
+keycodes[99] = "Numpad 3"
+keycodes[100] = "Numpad 4"
+keycodes[101] = "Numpad 5"
+keycodes[102] = "Numpad 6"
+keycodes[103] = "Numpad 7"
+keycodes[104] = "Numpad 8"
+keycodes[105] = "Numpad 9"
+keycodes[106] = "Numpad *"
+keycodes[107] = "Numpad +"
+keycodes[109] = "Numpad -"
+keycodes[110] = "Numpad ."
+keycodes[111] = "Numpad /"
+
