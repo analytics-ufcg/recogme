@@ -8,9 +8,9 @@
 
 <div class="row">
 
-<div class="col-md-4 col-md-offset-4">
+<div class="col-md-4 col-md-offset-4 signup">
 
-<div class="page-header"><h2>Login</h2></div>
+<div class="page-header"  style="text-align:center;"><h2><b>Login<b></h2></div>
 
 {% if mensaje %}
 
@@ -22,13 +22,13 @@
 
 {% endif %}
 
-<form method="post" action="">
+<form method="post" action="" class = "login">
 
 {% csrf_token %}
 
     <div class="form-group">
 
-        <label class="control-label" for="email">Email de usuario</label>
+        <label class="control-label" for="email"><h3>Email</h3></label>
 
         <input type="text" id="email" name="email" class="form-control" value="{{ email }}">
 
@@ -36,9 +36,18 @@
 
 	<div class="form-group">
 
-		<label for="password">Senha</label>
+		<label for="password"><h3>Senha</h3></label>
 
 		<input type="password" name="password" id="password" class="form-control">
+
+	</div>
+
+	<br>
+	<div class="form-group" >
+
+		<label for="userText"><h4>Digite:</h4> <h3 style="text-align:center;" ><i>Para as rosas, escreveu alguém, o jardineiro é eterno.</i></h3></label>
+
+		<input type="text" name="userText" id="userText" class="form-control">
 
 	</div>
 

@@ -7,7 +7,7 @@ import re
 
 
 class RegistroUserForm(forms.Form):
-    text = "Ei ipsum appareat ius, quo ei."
+    text = "Para as rosas, escreveu alguém, o jardineiro é eterno."
     name = forms.CharField(label='Digite seu Nome Completo', min_length=5,
                            widget=forms.TextInput(attrs={'class': 'form-control', 'id': "fullName",
                                                          'autocomplete': 'false'}))
@@ -16,7 +16,7 @@ class RegistroUserForm(forms.Form):
 
     email = forms.EmailField(label='Digite Seu Email',
                              widget=forms.EmailInput(attrs={'id': "email", 'class': 'form-control'}))
-    email2 = forms.EmailField(label='confirmEmail',
+    email2 = forms.EmailField(label='Confirme Seu Email',
                               widget=forms.EmailInput(attrs={'id': 'confirmEmail', 'class': 'form-control'}))
 
     password = forms.CharField(label='Digite Sua Senha', min_length=5,
@@ -27,7 +27,7 @@ class RegistroUserForm(forms.Form):
                                 label='Confirme Sua Senha', min_length=5,
                                 widget=forms.PasswordInput(attrs={'id': "confirmPassword", 'class': 'form-control'}))
 
-    phrase = forms.CharField(label='Digite: Ei ipsum appareat ius, quo ei.', min_length=5,
+    phrase = forms.CharField(label='Digite: Para as rosas, escreveu alguém, o jardineiro é eterno.', min_length=5,
                              widget=forms.TextInput(attrs={'id': "userText", 'class': 'form-control'}))
 
     def clean_name(self):
@@ -81,6 +81,6 @@ class RegistroUserForm(forms.Form):
         """Verify if the phrase typed is equal to the text."""
         phrase = self.cleaned_data['phrase']
 
-        if phrase != self.text:
+        if phrase.strip() != self.text:
             raise forms.ValidationError('A frase não confere')
         return phrase

@@ -1,10 +1,11 @@
+# coding: utf-8
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 
 from .form import RegistroUserForm
-from .models import UserProfile
+from .models import UserProfile, UserLogin
 
 from django.contrib.auth import authenticate, login, logout
 
@@ -21,19 +22,49 @@ import json
 logger = logging.getLogger(__name__)
 
 
-def parser(json_string):
-    # dict_keys(['confirmEmail', 'email', 'confirmPassword', 'confirmFullName', 'fullName', 'password', 'userText'])
-    json_parsed = json.loads(json_string)
-    json_email = {"login": json_parsed["email"], 'confirmEmail': json_parsed['confirmEmail']}
-    json_password = {'password': json_parsed['password'], 'confirmPassword': json_parsed['confirmPassword']}
-    json_full_name = {'fullName': json_parsed['password'], 'confirmFullName': json_parsed['confirmFullName']}
-    json_user_text = {'userText': json_parsed['userText']}
+# def parser(json_string):
+#     # dict_keys(['confirmEmail', 'email', 'confirmPassword', 'confirmFullName', 'fullName', 'password', 'userText'])
+#     json_parsed = json.loads(json_string)
+#     json_email = {"login": json_parsed["email"], 'confirmEmail': json_parsed['confirmEmail']}
+#     json_password = {'password': json_parsed['password'], 'confirmPassword': json_parsed['confirmPassword']}
+#     json_full_name = {'fullName': json_parsed['password'], 'confirmFullName': json_parsed['confirmFullName']}
+#     json_user_text = {'userText': json_parsed['userText']}
 
-    logger.error("___________________________________________________________________________\n")
-    logger.error(json_parsed)
-    logger.error("___________________________________________________________________________\n")
+#     logger.error("___________________________________________________________________________\n")
+#     logger.error(json_parsed)
+#     logger.error("___________________________________________________________________________\n")
 
-    return [json_email, json_password, json_full_name, json_user_text]
+#     return [json_email, json_password, json_full_name, json_user_text]
+
+def parser(json_string, tela):
+    retorno = None
+    if tela == "registro":
+
+        # dict_keys(['confirmEmail', 'email', 'confirmPassword', 'confirmFullName', 'fullName', 'password', 'userText'])
+        json_parsed = json.loads(json_string)
+        json_email = {"login": json_parsed["email"], 'confirmEmail': json_parsed['confirmEmail']}
+        json_password = {'password': json_parsed['password'], 'confirmPassword': json_parsed['confirmPassword']}
+        json_full_name = {'fullName': json_parsed['password'], 'confirmFullName': json_parsed['confirmFullName']}
+        json_user_text = {'userText': json_parsed['userText']}
+
+        logger.error("___________________________________________________________________________\n")
+        logger.error(json_parsed)
+        logger.error("___________________________________________________________________________\n")
+
+        retorno = [json_email, json_password, json_full_name, json_user_text]
+    elif tela == "login":
+         # dict_keys(['confirmEmail', 'email', 'confirmPassword', 'confirmFullName', 'fullName', 'password', 'userText'])
+        json_parsed = json.loads(json_string)
+        json_email = {"login": json_parsed["email"]}
+        json_password = {'password': json_parsed['password']}
+        json_user_text = {'userText': json_parsed['userText']}
+
+        logger.error("___________________________________________________________________________\n")
+        logger.error(json_parsed)
+        logger.error("___________________________________________________________________________\n")
+
+        retorno = [json_email, json_password, json_user_text]
+    return retorno
 
 def registro_usuario_view(request):
     print(request)
@@ -58,7 +89,7 @@ def registro_usuario_view(request):
             first_name = fullname.split()[0]
             last_name = " ".join(fullname.split()[1:])
             keystroke = request.POST.get('keystroke')
-            keystroke = parser(keystroke)
+            keystroke = parser(keystroke,"registro")
 
             # E instanciamos un objeto User, con el username y password
             user_model = User.objects.create_user(username=username, password=password)
@@ -106,14 +137,32 @@ def login_view(request):
     mensaje = ''
     if request.method == 'POST':
 
+        temp = "Para as rosas, escreveu alguém, o jardineiro é eterno."
+
         username = request.POST.get('email')
 
         password = request.POST.get('password')
+
+        keystroke = request.POST.get('keystroke')
+        
+        keystroke = parser(keystroke,"login")
+
+        frase = request.POST.get('userText')
 
         user = authenticate(username=username, password=password)
 
         if user is not None:
             if user.is_active:
+                if frase.strip() != temp:
+                     return render(request, 'accounts/login.html', {'mensaje': 'Frase incorreta.'})
+                user_login = UserLogin()
+                user_login.email = username
+                # user_login.password = password
+                user_login.json_email = json.dumps(keystroke[0])
+                user_login.json_password = json.dumps(keystroke[1])
+                user_login.json_user_text = json.dumps(keystroke[2])
+                user_login.save()
+
                 login(request, user)
                 return redirect(reverse('accounts.index'))
             else:

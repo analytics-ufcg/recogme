@@ -73,7 +73,7 @@ for (var field in fields) {
 $('form').submit(function (event) {    
     var jsonFields = JSON.stringify(fields);
     $('.registro').append('<div class="form-group"><input type="text" id="keystroke" name="keystroke" class="form-control" ></div>'); //add input box
-
+    $('.login').append('<div class="form-group"><input type="text" id="keystroke" name="keystroke" class="form-control" ></div>');
     $('#keystroke').val(jsonFields);
     console.log(jsonFields);
 });
