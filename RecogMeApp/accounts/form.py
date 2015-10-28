@@ -2,13 +2,15 @@ __author__ = 'leonardo'
 
 from django import forms
 from django.contrib.auth.models import User
+from  django.core.validators import RegexValidator
+import re
 
 
 class RegistroUserForm(forms.Form):
     text = "Ei ipsum appareat ius, quo ei."
     name = forms.CharField(label='Digite seu Nome Completo', min_length=5,
                            widget=forms.TextInput(attrs={'class': 'form-control', 'id': "fullName",
-                                                         'autocomplete':'false'}))
+                                                         'autocomplete': 'false'}))
     name2 = forms.CharField(label='Confirme seu Nome Completo', min_length=5,
                             widget=forms.TextInput(attrs={'id': "confirmFullName", 'class': 'form-control'}))
 
@@ -18,8 +20,11 @@ class RegistroUserForm(forms.Form):
                               widget=forms.EmailInput(attrs={'id': 'confirmEmail', 'class': 'form-control'}))
 
     password = forms.CharField(label='Digite Sua Senha', min_length=5,
-                               widget=forms.PasswordInput(attrs={'id': "password", 'class': 'form-control'}))
-    password2 = forms.CharField(label='Confirme Sua Senha', min_length=5,
+                               widget=forms.PasswordInput(attrs={'autocomplete': "off",
+                                                                 'id': "password", 'class': 'form-control'}))
+    password2 = forms.CharField(validators=[RegexValidator(regex="(.*[a-z A-Z].*[0-9].*)|(.*[0-9].*[a-z A-Z].*)",
+                                                           message="Deve Conter ao menos uma letra e um número.")],
+                                label='Confirme Sua Senha', min_length=5,
                                 widget=forms.PasswordInput(attrs={'id': "confirmPassword", 'class': 'form-control'}))
 
     phrase = forms.CharField(label='Digite: Ei ipsum appareat ius, quo ei.', min_length=5,
@@ -54,6 +59,15 @@ class RegistroUserForm(forms.Form):
         if email != email2:
             raise forms.ValidationError('Os emails não conhecidem.')
         return email2
+
+    # def clean_password(self):
+    #     password = self.cleaned_data['password']
+    #     match = re.fullmatch("(.*[a-z A-Z].*[0-9].*)|(.*[0-9].*[a-z A-Z].*)", password)
+    #
+    #     if match is None:
+    #         raise forms.ValidationError('A senha deve conter ao menos um número e uma letra')
+    #
+    #     return password
 
     def clean_password2(self):
         """Verify if the password and password2 are equals."""

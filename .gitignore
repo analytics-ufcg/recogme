@@ -27,3 +27,4 @@
 /*/data/links-simple-sorted.txt
 /target/
 *.idea
+*/__pycharm__/
