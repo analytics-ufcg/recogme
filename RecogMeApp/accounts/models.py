@@ -6,7 +6,7 @@ import time
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
     phrase = models.TextField()
-    time = models.DateField(auto_now=True)
+    time = models.DateTimeField(auto_now=True)
     json_email = models.TextField(default='default')
     json_full_name = models.TextField(default='default')
     json_password = models.TextField(default='default')
