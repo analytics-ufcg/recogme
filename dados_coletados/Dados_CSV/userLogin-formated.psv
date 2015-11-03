@@ -85,7 +85,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 1,ricooliveira@gmail.com,2015-10-28 18:44:05,userText,25809937,25810005,N,78
 1,ricooliveira@gmail.com,2015-10-28 18:44:05,userText,25810223,25810286,O,79
 1,ricooliveira@gmail.com,2015-10-28 18:44:05,userText,25810680,25810742,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 2,ricooliveira@gmail.com,2015-10-28 18:44:34,email,25818124,25818206,R,82
 2,ricooliveira@gmail.com,2015-10-28 18:44:34,email,25818282,25818353,I,73
 2,ricooliveira@gmail.com,2015-10-28 18:44:34,email,25818394,25818512,C,67
@@ -178,7 +177,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 2,ricooliveira@gmail.com,2015-10-28 18:44:34,userText,25838662,25838756,N,78
 2,ricooliveira@gmail.com,2015-10-28 18:44:34,userText,25838875,25838941,O,79
 2,ricooliveira@gmail.com,2015-10-28 18:44:34,userText,25839842,25839908,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 3,antonioricardojr@gmail.com,2015-10-28 18:44:35,email,147873621,147873716,A,65
 3,antonioricardojr@gmail.com,2015-10-28 18:44:35,email,147873725,147873812,N,78
 3,antonioricardojr@gmail.com,2015-10-28 18:44:35,email,147873844,147873908,T,84
@@ -279,7 +277,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 3,antonioricardojr@gmail.com,2015-10-28 18:44:35,userText,147897157,147897316,N,78
 3,antonioricardojr@gmail.com,2015-10-28 18:44:35,userText,147897261,147897380,O,79
 3,antonioricardojr@gmail.com,2015-10-28 18:44:35,userText,147897525,147897612,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 4,ricooliveira@gmail.com,2015-10-28 18:45:18,email,25858048,25858141,R,82
 4,ricooliveira@gmail.com,2015-10-28 18:45:18,email,25859236,25859372,C,67
 4,ricooliveira@gmail.com,2015-10-28 18:45:18,email,25859452,25859518,O,79
@@ -371,7 +368,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 4,ricooliveira@gmail.com,2015-10-28 18:45:18,userText,25882868,25882948,N,78
 4,ricooliveira@gmail.com,2015-10-28 18:45:18,userText,25883072,25883137,O,79
 4,ricooliveira@gmail.com,2015-10-28 18:45:18,userText,25883516,25883574,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 5,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:45:38,email,503660755,503660858,L,76
 5,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:45:38,email,503661043,503661131,U,85
 5,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:45:38,email,503661211,503661306,I,73
@@ -465,7 +461,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 5,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:45:38,userText,503686290,503686434,N,78
 5,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:45:38,userText,503686362,503686506,O,79
 5,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:45:38,userText,503687298,503687370,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 6,arthur.senaufcg@gmail.com,2015-10-28 18:45:40,email,511238274,511238388,A,65
 6,arthur.senaufcg@gmail.com,2015-10-28 18:45:40,email,511238466,511238590,R,82
 6,arthur.senaufcg@gmail.com,2015-10-28 18:45:40,email,511238545,511238664,T,84
@@ -567,7 +562,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 6,arthur.senaufcg@gmail.com,2015-10-28 18:45:40,userText,511256672,511256785,N,78
 6,arthur.senaufcg@gmail.com,2015-10-28 18:45:40,userText,511256801,511256908,O,79
 6,arthur.senaufcg@gmail.com,2015-10-28 18:45:40,userText,511257017,511257109,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 7,antonioricardojr@gmail.com,2015-10-28 18:45:40,email,147933754,147933850,A,65
 7,antonioricardojr@gmail.com,2015-10-28 18:45:40,email,147933834,147933930,N,78
 7,antonioricardojr@gmail.com,2015-10-28 18:45:40,email,147933970,147934066,T,84
@@ -678,7 +672,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 7,antonioricardojr@gmail.com,2015-10-28 18:45:40,userText,147960962,147961098,N,78
 7,antonioricardojr@gmail.com,2015-10-28 18:45:40,userText,147961043,147961154,O,79
 7,antonioricardojr@gmail.com,2015-10-28 18:45:40,userText,147961258,147961354,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 8,ricooliveira@gmail.com,2015-10-28 18:45:53,email,25889419,25889522,R,82
 8,ricooliveira@gmail.com,2015-10-28 18:45:53,email,25889614,25889686,I,73
 8,ricooliveira@gmail.com,2015-10-28 18:45:53,email,25889730,25889849,C,67
@@ -763,7 +756,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 8,ricooliveira@gmail.com,2015-10-28 18:45:53,userText,25911054,25911141,N,78
 8,ricooliveira@gmail.com,2015-10-28 18:45:53,userText,25911285,25911347,O,79
 8,ricooliveira@gmail.com,2015-10-28 18:45:53,userText,25911709,25911764,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 9,arthur.senaufcg@gmail.com,2015-10-28 18:46:06,email,511263874,511263989,A,65
 9,arthur.senaufcg@gmail.com,2015-10-28 18:46:06,email,511264036,511264110,R,82
 9,arthur.senaufcg@gmail.com,2015-10-28 18:46:06,email,511264064,511264190,T,84
@@ -864,7 +856,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 9,arthur.senaufcg@gmail.com,2015-10-28 18:46:06,userText,511283028,511283139,N,78
 9,arthur.senaufcg@gmail.com,2015-10-28 18:46:06,userText,511283305,511283420,O,79
 9,arthur.senaufcg@gmail.com,2015-10-28 18:46:06,userText,511283514,511283617,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 10,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:14,email,503695466,503695578,L,76
 10,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:14,email,503695722,503695818,U,85
 10,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:14,email,503695890,503695994,I,73
@@ -958,7 +949,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 10,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:14,userText,503723866,503724010,N,78
 10,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:14,userText,503723946,503724082,O,79
 10,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:14,userText,503725050,503725130,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 11,ricooliveira@gmail.com,2015-10-28 18:46:20,email,25927112,25927158,Shift,16
 11,ricooliveira@gmail.com,2015-10-28 18:46:20,email,25927579,25927697,R,82
 11,ricooliveira@gmail.com,2015-10-28 18:46:20,email,25927743,25927813,I,73
@@ -1044,7 +1034,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 11,ricooliveira@gmail.com,2015-10-28 18:46:20,userText,25943992,25944073,N,78
 11,ricooliveira@gmail.com,2015-10-28 18:46:20,userText,25944219,25944282,O,79
 11,ricooliveira@gmail.com,2015-10-28 18:46:20,userText,25945149,25945216,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 12,arthur.senaufcg@gmail.com,2015-10-28 18:46:29,email,511289343,511289465,A,65
 12,arthur.senaufcg@gmail.com,2015-10-28 18:46:29,email,511289793,511289896,R,82
 12,arthur.senaufcg@gmail.com,2015-10-28 18:46:29,email,511289856,511290008,T,84
@@ -1140,7 +1129,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 12,arthur.senaufcg@gmail.com,2015-10-28 18:46:29,userText,511306465,511306570,N,78
 12,arthur.senaufcg@gmail.com,2015-10-28 18:46:29,userText,511306617,511306720,O,79
 12,arthur.senaufcg@gmail.com,2015-10-28 18:46:29,userText,511306798,511306890,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 13,antonioricardojr@gmail.com,2015-10-28 18:46:34,email,147994248,147994375,A,65
 13,antonioricardojr@gmail.com,2015-10-28 18:46:34,email,147994328,147994423,N,78
 13,antonioricardojr@gmail.com,2015-10-28 18:46:34,email,147994791,147994910,T,84
@@ -1233,7 +1221,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 13,antonioricardojr@gmail.com,2015-10-28 18:46:34,userText,148016087,148016223,N,78
 13,antonioricardojr@gmail.com,2015-10-28 18:46:34,userText,148016175,148016287,O,79
 13,antonioricardojr@gmail.com,2015-10-28 18:46:34,userText,148016423,148016511,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 14,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:44,email,503730834,503730946,L,76
 14,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:44,email,503731066,503731162,U,85
 14,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:44,email,503731234,503731354,I,73
@@ -1323,7 +1310,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 14,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:44,userText,503753410,503753554,N,78
 14,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:44,userText,503753490,503753618,O,79
 14,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:46:44,userText,503754802,503754914,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 15,ricooliveira@gmail.com,2015-10-28 18:46:48,email,25956724,25956820,R,82
 15,ricooliveira@gmail.com,2015-10-28 18:46:48,email,25956854,25956921,I,73
 15,ricooliveira@gmail.com,2015-10-28 18:46:48,email,25956969,25957086,C,67
@@ -1408,7 +1394,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 15,ricooliveira@gmail.com,2015-10-28 18:46:48,userText,25973529,25973614,N,78
 15,ricooliveira@gmail.com,2015-10-28 18:46:48,userText,25973743,25973799,O,79
 15,ricooliveira@gmail.com,2015-10-28 18:46:48,userText,25974182,25974227,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 16,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:46:52,email,1446058118968,1446058119070,L,76
 16,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:46:52,email,1446058119071,1446058119196,E,69
 16,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:46:52,email,1446058119213,1446058119339,O,79
@@ -1519,7 +1504,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 16,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:46:52,userText,1446058148799,1446058148965,N,78
 16,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:46:52,userText,1446058148923,1446058148989,O,79
 16,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:46:52,userText,1446058149175,1446058149253,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 17,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:09,email,503760234,503760354,L,76
 17,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:09,email,503760490,503760578,U,85
 17,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:09,email,503760650,503760770,I,73
@@ -1609,7 +1593,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 17,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:09,userText,503779378,503779530,N,78
 17,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:09,userText,503779466,503779594,O,79
 17,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:09,userText,503780122,503780202,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 18,antonioricardojr@gmail.com,2015-10-28 18:47:12,email,148028471,148028567,A,65
 18,antonioricardojr@gmail.com,2015-10-28 18:47:12,email,148029239,148029311,Backspace,8
 18,antonioricardojr@gmail.com,2015-10-28 18:47:12,email,148031752,148031871,A,65
@@ -1712,7 +1695,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 18,antonioricardojr@gmail.com,2015-10-28 18:47:12,userText,148053815,148053959,N,78
 18,antonioricardojr@gmail.com,2015-10-28 18:47:12,userText,148053911,148054007,O,79
 18,antonioricardojr@gmail.com,2015-10-28 18:47:12,userText,148054119,148054207,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 19,arthur.senaufcg@gmail.com,2015-10-28 18:47:15,email,511335313,511335412,A,65
 19,arthur.senaufcg@gmail.com,2015-10-28 18:47:15,email,511335494,511335587,R,82
 19,arthur.senaufcg@gmail.com,2015-10-28 18:47:15,email,511335537,511335696,T,84
@@ -1805,7 +1787,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 19,arthur.senaufcg@gmail.com,2015-10-28 18:47:15,userText,511352030,511352123,N,78
 19,arthur.senaufcg@gmail.com,2015-10-28 18:47:15,userText,511352174,511352262,O,79
 19,arthur.senaufcg@gmail.com,2015-10-28 18:47:15,userText,511352367,511352462,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 20,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:26,email,1446058159574,1446058159670,L,76
 20,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:26,email,1446058159693,1446058159812,E,69
 20,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:26,email,1446058159836,1446058159965,O,79
@@ -1908,7 +1889,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 20,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:26,userText,1446058181852,1446058182003,N,78
 20,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:26,userText,1446058181916,1446058182027,O,79
 20,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:26,userText,1446058182422,1446058182535,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 21,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:46,email,503784578,503784690,L,76
 21,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:46,email,503784802,503784914,U,85
 21,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:46,email,503784978,503785082,I,73
@@ -2008,7 +1988,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 21,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:46,userText,503816881,503817017,N,78
 21,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:46,userText,503816961,503817097,O,79
 21,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:47:46,userText,503817705,503817793,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 22,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:58,email,1446058187933,1446058188020,L,76
 22,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:58,email,1446058188109,1446058188236,E,69
 22,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:58,email,1446058188236,1446058188364,O,79
@@ -2119,7 +2098,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 22,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:58,userText,1446058214176,1446058214276,N,78
 22,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:58,userText,1446058214245,1446058214324,O,79
 22,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:47:58,userText,1446058214541,1446058214678,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 23,arthur.senaufcg@gmail.com,2015-10-28 18:48:05,email,511385555,511385654,A,65
 23,arthur.senaufcg@gmail.com,2015-10-28 18:48:05,email,511385707,511385789,E,69
 23,arthur.senaufcg@gmail.com,2015-10-28 18:48:05,email,511385698,511385815,R,82
@@ -2218,7 +2196,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 23,arthur.senaufcg@gmail.com,2015-10-28 18:48:05,userText,511402128,511402233,N,78
 23,arthur.senaufcg@gmail.com,2015-10-28 18:48:05,userText,511402280,511402372,O,79
 23,arthur.senaufcg@gmail.com,2015-10-28 18:48:05,userText,511402469,511402557,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 24,antonioricardojr@gmail.com,2015-10-28 18:48:09,email,148088881,148088976,A,65
 24,antonioricardojr@gmail.com,2015-10-28 18:48:09,email,148088961,148089048,N,78
 24,antonioricardojr@gmail.com,2015-10-28 18:48:09,email,148089072,148089159,T,84
@@ -2311,7 +2288,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 24,antonioricardojr@gmail.com,2015-10-28 18:48:09,userText,148110264,148110424,N,78
 24,antonioricardojr@gmail.com,2015-10-28 18:48:09,userText,148110392,148110503,O,79
 24,antonioricardojr@gmail.com,2015-10-28 18:48:09,userText,148111264,148111320,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 25,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:48:14,email,503821665,503821793,L,76
 25,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:48:14,email,503821857,503821961,U,85
 25,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:48:14,email,503822041,503822145,I,73
@@ -2405,7 +2381,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 25,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:48:14,userText,503844273,503844425,N,78
 25,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:48:14,userText,503844377,503844505,O,79
 25,luiz.fonseca@ccc.ufcg.edu.br,2015-10-28 18:48:14,userText,503845025,503845121,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 26,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:48:31,email,1446058218756,1446058219219,Shift,16
 26,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:48:31,email,1446058219356,1446058219444,L,76
 26,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:48:31,email,1446058219468,1446058219612,E,69
@@ -2511,7 +2486,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 26,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:48:31,userText,1446058246137,1446058246276,N,78
 26,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:48:31,userText,1446058246205,1446058246316,O,79
 26,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:48:31,userText,1446058247214,1446058247324,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 27,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:49:49,email,1446058293008,1446058293117,L,76
 27,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:49:49,email,1446058293149,1446058293284,E,69
 27,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:49:49,email,1446058293285,1446058293400,O,79
@@ -2616,7 +2590,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 27,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:49:49,userText,1446058325728,1446058325837,N,78
 27,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:49:49,userText,1446058325782,1446058325861,O,79
 27,leonardo.santos@ccc.ufcg.edu.br,2015-10-28 18:49:49,userText,1446058326048,1446058326199,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 28,celio.barros.filho@gmail.com,2015-10-28 18:54:17,email,439016850,439016930,C,67
 28,celio.barros.filho@gmail.com,2015-10-28 18:54:17,email,439016930,439016962,L,76
 28,celio.barros.filho@gmail.com,2015-10-28 18:54:17,email,439016922,439017010,E,69
@@ -2714,7 +2687,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 28,celio.barros.filho@gmail.com,2015-10-28 18:54:17,userText,439043866,439043970,N,78
 28,celio.barros.filho@gmail.com,2015-10-28 18:54:17,userText,439043922,439044026,O,79
 28,celio.barros.filho@gmail.com,2015-10-28 18:54:17,userText,439045162,439045234,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 29,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:54:22,email,1446058346430,1446058346531,O,79
 29,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:54:22,email,1446058346595,1446058346724,R,82
 29,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:54:22,email,1446058346679,1446058346809,I,73
@@ -2807,7 +2779,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 29,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:54:22,userText,1446058371128,1446058371306,N,78
 29,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:54:22,userText,1446058371232,1446058371350,O,79
 29,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:54:22,userText,1446058372861,1446058372959,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 30,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:05,email,1446058384609,1446058384710,O,79
 30,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:05,email,1446058384830,1446058384950,R,82
 30,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:05,email,1446058384954,1446058385090,I,73
@@ -2912,7 +2883,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 30,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:05,userText,1446058412669,1446058412861,N,78
 30,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:05,userText,1446058412784,1446058412905,O,79
 30,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:05,userText,1446058414381,1446058414469,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 31,celio.barros.filho@gmail.com,2015-10-28 18:55:18,email,439081113,439081209,C,67
 31,celio.barros.filho@gmail.com,2015-10-28 18:55:18,email,439081193,439081289,E,69
 31,celio.barros.filho@gmail.com,2015-10-28 18:55:18,email,439082193,439082265,L,76
@@ -3004,7 +2974,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 31,celio.barros.filho@gmail.com,2015-10-28 18:55:18,userText,439104937,439105049,N,78
 31,celio.barros.filho@gmail.com,2015-10-28 18:55:18,userText,439105033,439105121,O,79
 31,celio.barros.filho@gmail.com,2015-10-28 18:55:18,userText,439105481,439105553,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 32,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:40,email,1446058423723,1446058423824,O,79
 32,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:40,email,1446058423934,1446058424063,R,82
 32,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:40,email,1446058424018,1446058424155,I,73
@@ -3099,7 +3068,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 32,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:40,userText,1446058451093,1446058451247,N,78
 32,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:40,userText,1446058451187,1446058451300,O,79
 32,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:55:40,userText,1446058451963,1446058452044,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 33,celio.barros.filho@gmail.com,2015-10-28 18:55:52,email,439110345,439110457,C,67
 33,celio.barros.filho@gmail.com,2015-10-28 18:55:52,email,439110425,439110537,E,69
 33,celio.barros.filho@gmail.com,2015-10-28 18:55:52,email,439111641,439111721,L,76
@@ -3211,7 +3179,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 33,celio.barros.filho@gmail.com,2015-10-28 18:55:52,userText,439139417,439139521,N,78
 33,celio.barros.filho@gmail.com,2015-10-28 18:55:52,userText,439139497,439139593,O,79
 33,celio.barros.filho@gmail.com,2015-10-28 18:55:52,userText,439139857,439139937,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 34,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:10,email,1446058458708,1446058458816,O,79
 34,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:10,email,1446058458923,1446058459051,R,82
 34,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:10,email,1446058459031,1446058459208,I,73
@@ -3300,7 +3267,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 34,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:10,userText,1446058480960,1446058481127,N,78
 34,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:10,userText,1446058481071,1446058481170,O,79
 34,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:10,userText,1446058481801,1446058481906,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 35,celio.barros.filho@gmail.com,2015-10-28 18:56:30,email,439156977,439157089,C,67
 35,celio.barros.filho@gmail.com,2015-10-28 18:56:30,email,439157049,439157161,E,69
 35,celio.barros.filho@gmail.com,2015-10-28 18:56:30,email,439157745,439157793,L,76
@@ -3402,7 +3368,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 35,celio.barros.filho@gmail.com,2015-10-28 18:56:30,userText,439176961,439177081,N,78
 35,celio.barros.filho@gmail.com,2015-10-28 18:56:30,userText,439177057,439177169,O,79
 35,celio.barros.filho@gmail.com,2015-10-28 18:56:30,userText,439177729,439177817,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 36,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:40,email,1446058487125,1446058487230,O,79
 36,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:40,email,1446058487319,1446058487451,R,82
 36,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:40,email,1446058487453,1446058487557,I,73
@@ -3499,7 +3464,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 36,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:40,userText,1446058510513,1446058510698,N,78
 36,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:40,userText,1446058510624,1446058510738,O,79
 36,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:56:40,userText,1446058511495,1446058511589,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 37,celio.barros.filho@gmail.com,2015-10-28 18:56:54,email,439183201,439183296,C,67
 37,celio.barros.filho@gmail.com,2015-10-28 18:56:54,email,439183281,439183409,E,69
 37,celio.barros.filho@gmail.com,2015-10-28 18:56:54,email,439183809,439183873,L,76
@@ -3591,7 +3555,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 37,celio.barros.filho@gmail.com,2015-10-28 18:56:54,userText,439201232,439201336,N,78
 37,celio.barros.filho@gmail.com,2015-10-28 18:56:54,userText,439201312,439201400,O,79
 37,celio.barros.filho@gmail.com,2015-10-28 18:56:54,userText,439201624,439201712,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 38,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:57:12,email,1446058517221,1446058517318,O,79
 38,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:57:12,email,1446058517404,1446058517529,R,82
 38,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:57:12,email,1446058517494,1446058517699,I,73
@@ -3682,7 +3645,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 38,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:57:12,userText,1446058542407,1446058542555,N,78
 38,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:57:12,userText,1446058542563,1446058542689,O,79
 38,orion.lima@ccc.ufcg.edu.br,2015-10-28 18:57:12,userText,1446058543364,1446058543441,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 39,celio.barros.filho@gmail.com,2015-10-28 18:58:09,email,439232240,439232344,C,67
 39,celio.barros.filho@gmail.com,2015-10-28 18:58:09,email,439232320,439232440,E,69
 39,celio.barros.filho@gmail.com,2015-10-28 18:58:09,email,439232376,439232456,L,76
@@ -3778,7 +3740,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 39,celio.barros.filho@gmail.com,2015-10-28 18:58:09,userText,439275904,439276000,N,78
 39,celio.barros.filho@gmail.com,2015-10-28 18:58:09,userText,439275984,439276072,O,79
 39,celio.barros.filho@gmail.com,2015-10-28 18:58:09,userText,439276304,439276384,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 40,laybson_flyer@hotmail.com,2015-10-28 19:02:47,email,504677996,504678148,L,76
 40,laybson_flyer@hotmail.com,2015-10-28 19:02:47,email,504678172,504678276,A,65
 40,laybson_flyer@hotmail.com,2015-10-28 19:02:47,email,504679652,504679756,Y,89
@@ -3871,7 +3832,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 40,laybson_flyer@hotmail.com,2015-10-28 19:02:47,userText,504715619,504715747,N,78
 40,laybson_flyer@hotmail.com,2015-10-28 19:02:47,userText,504715883,504715987,O,79
 40,laybson_flyer@hotmail.com,2015-10-28 19:02:47,userText,504716395,504716507,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 41,lwilker24@gmail.com,2015-10-28 19:03:12,email,512280098,512280213,L,76
 41,lwilker24@gmail.com,2015-10-28 19:03:12,email,512280949,512281094,W,87
 41,lwilker24@gmail.com,2015-10-28 19:03:12,email,512281115,512281218,I,73
@@ -3961,7 +3921,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 41,lwilker24@gmail.com,2015-10-28 19:03:12,userText,512306927,512307015,N,78
 41,lwilker24@gmail.com,2015-10-28 19:03:12,userText,512307155,512307266,O,79
 41,lwilker24@gmail.com,2015-10-28 19:03:12,userText,512307409,512307501,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 42,laybson_flyer@hotmail.com,2015-10-28 19:03:31,email,504727595,504727723,L,76
 42,laybson_flyer@hotmail.com,2015-10-28 19:03:31,email,504727731,504727851,A,65
 42,laybson_flyer@hotmail.com,2015-10-28 19:03:31,email,504727907,504728035,Y,89
@@ -4054,7 +4013,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 42,laybson_flyer@hotmail.com,2015-10-28 19:03:31,userText,504759067,504759195,N,78
 42,laybson_flyer@hotmail.com,2015-10-28 19:03:31,userText,504759315,504759427,O,79
 42,laybson_flyer@hotmail.com,2015-10-28 19:03:31,userText,504760443,504760515,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 43,laybson_flyer@hotmail.com,2015-10-28 19:04:06,email,504767835,504767971,L,76
 43,laybson_flyer@hotmail.com,2015-10-28 19:04:06,email,504767955,504768075,A,65
 43,laybson_flyer@hotmail.com,2015-10-28 19:04:06,email,504768139,504768251,Y,89
@@ -4153,7 +4111,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 43,laybson_flyer@hotmail.com,2015-10-28 19:04:06,userText,504795771,504795867,N,78
 43,laybson_flyer@hotmail.com,2015-10-28 19:04:06,userText,504795955,504796083,O,79
 43,laybson_flyer@hotmail.com,2015-10-28 19:04:06,userText,504797155,504797235,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 44,lwilker24@gmail.com,2015-10-28 19:04:14,email,512347809,512347912,L,76
 44,lwilker24@gmail.com,2015-10-28 19:04:14,email,512348129,512348248,W,87
 44,lwilker24@gmail.com,2015-10-28 19:04:14,email,512348287,512348398,I,73
@@ -4237,7 +4194,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 44,lwilker24@gmail.com,2015-10-28 19:04:14,userText,512370271,512370367,N,78
 44,lwilker24@gmail.com,2015-10-28 19:04:14,userText,512370487,512370579,O,79
 44,lwilker24@gmail.com,2015-10-28 19:04:14,userText,512370730,512370833,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 45,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:04:34,email,27005571,27005652,G,71
 45,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:04:34,email,27005644,27005795,E,69
 45,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:04:34,email,27005771,27005854,R,82
@@ -4346,7 +4302,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 45,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:04:34,userText,27039185,27039307,N,78
 45,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:04:34,userText,27039301,27039435,O,79
 45,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:04:34,userText,27040106,27040200,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 46,lwilker24@gmail.com,2015-10-28 19:04:43,email,512376325,512376424,L,76
 46,lwilker24@gmail.com,2015-10-28 19:04:43,email,512376452,512376561,W,87
 46,lwilker24@gmail.com,2015-10-28 19:04:43,email,512376549,512376639,I,73
@@ -4438,7 +4393,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 46,lwilker24@gmail.com,2015-10-28 19:04:43,userText,512399266,512399346,N,78
 46,lwilker24@gmail.com,2015-10-28 19:04:43,userText,512399497,512399589,O,79
 46,lwilker24@gmail.com,2015-10-28 19:04:43,userText,512399732,512399843,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 47,lwilker24@gmail.com,2015-10-28 19:05:10,email,512405527,512405626,L,76
 47,lwilker24@gmail.com,2015-10-28 19:05:10,email,512405981,512406096,W,87
 47,lwilker24@gmail.com,2015-10-28 19:05:10,email,512406116,512406216,I,73
@@ -4522,7 +4476,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 47,lwilker24@gmail.com,2015-10-28 19:05:10,userText,512426687,512426791,N,78
 47,lwilker24@gmail.com,2015-10-28 19:05:10,userText,512426949,512427029,O,79
 47,lwilker24@gmail.com,2015-10-28 19:05:10,userText,512427181,512427291,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 48,laybson_flyer@hotmail.com,2015-10-28 19:05:18,email,504845075,504845187,L,76
 48,laybson_flyer@hotmail.com,2015-10-28 19:05:18,email,504845915,504846059,Down,40
 48,laybson_flyer@hotmail.com,2015-10-28 19:05:18,email,504846163,504846267,Down,40
@@ -4592,7 +4545,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 48,laybson_flyer@hotmail.com,2015-10-28 19:05:18,userText,504867330,504867378,N,78
 48,laybson_flyer@hotmail.com,2015-10-28 19:05:18,userText,504869010,504869114,O,79
 48,laybson_flyer@hotmail.com,2015-10-28 19:05:18,userText,504869338,504869506,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 49,lwilker24@gmail.com,2015-10-28 19:05:41,email,512432375,512432478,L,76
 49,lwilker24@gmail.com,2015-10-28 19:05:41,email,512432814,512432925,W,87
 49,lwilker24@gmail.com,2015-10-28 19:05:41,email,512432964,512433048,I,73
@@ -4690,7 +4642,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 49,lwilker24@gmail.com,2015-10-28 19:05:41,userText,512457788,512457864,N,78
 49,lwilker24@gmail.com,2015-10-28 19:05:41,userText,512457989,512458084,O,79
 49,lwilker24@gmail.com,2015-10-28 19:05:41,userText,512458235,512458319,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 50,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:05:46,email,27086681,27086768,G,71
 50,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:05:46,email,27086773,27086939,E,69
 50,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:05:46,email,27086894,27086975,R,82
@@ -4789,7 +4740,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 50,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:05:46,userText,27110732,27110877,N,78
 50,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:05:46,userText,27110890,27111036,O,79
 50,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:05:46,userText,27111463,27111524,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 51,fabio.fernando.osilva@gmail.com,2015-10-28 19:05:56,email,149157837,149157997,F,70
 51,fabio.fernando.osilva@gmail.com,2015-10-28 19:05:56,email,149157950,149158045,A,65
 51,fabio.fernando.osilva@gmail.com,2015-10-28 19:05:56,email,149158127,149158253,B,66
@@ -4889,7 +4839,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 51,fabio.fernando.osilva@gmail.com,2015-10-28 19:05:56,userText,149177485,149177597,N,78
 51,fabio.fernando.osilva@gmail.com,2015-10-28 19:05:56,userText,149177750,149177837,O,79
 51,fabio.fernando.osilva@gmail.com,2015-10-28 19:05:56,userText,149178053,149178141,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 52,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:06:21,email,27119709,27119809,G,71
 52,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:06:21,email,27119825,27119981,E,69
 52,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:06:21,email,27119933,27120034,R,82
@@ -4997,7 +4946,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 52,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:06:21,userText,27145873,27145991,N,78
 52,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:06:21,userText,27145993,27146148,O,79
 52,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:06:21,userText,27147234,27147282,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 53,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:06:24,email,1446059278605,1446059278728,J,74
 53,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:06:24,email,1446059278729,1446059278844,O,79
 53,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:06:24,email,1446059278813,1446059278933,S,83
@@ -5102,7 +5050,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 53,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:06:24,userText,1446059318168,1446059318263,N,78
 53,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:06:24,userText,1446059318409,1446059318527,O,79
 53,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:06:24,userText,1446059319193,1446059319238,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 54,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:24,email,149187421,149187605,F,70
 54,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:24,email,149187542,149187645,A,65
 54,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:24,email,149187790,149187861,B,66
@@ -5203,7 +5150,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 54,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:24,userText,149206237,149206333,N,78
 54,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:24,userText,149206478,149206557,O,79
 54,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:24,userText,149207101,149207229,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 55,laybson_flyer@hotmail.com,2015-10-28 19:06:33,email,504911434,504911570,L,76
 55,laybson_flyer@hotmail.com,2015-10-28 19:06:33,email,504911626,504911770,A,65
 55,laybson_flyer@hotmail.com,2015-10-28 19:06:33,email,504911818,504911954,Y,89
@@ -5296,7 +5242,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 55,laybson_flyer@hotmail.com,2015-10-28 19:06:33,userText,504943314,504943426,N,78
 55,laybson_flyer@hotmail.com,2015-10-28 19:06:33,userText,504943538,504943650,O,79
 55,laybson_flyer@hotmail.com,2015-10-28 19:06:33,userText,504943954,504944066,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 56,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:54,email,149216974,149217085,F,70
 56,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:54,email,149217041,149217141,A,65
 56,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:54,email,149217214,149217333,B,66
@@ -5401,7 +5346,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 56,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:54,userText,149237085,149237213,N,78
 56,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:54,userText,149237325,149237413,O,79
 56,fabio.fernando.osilva@gmail.com,2015-10-28 19:06:54,userText,149237598,149237677,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 57,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:10,email,27153925,27154031,G,71
 57,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:10,email,27154041,27154195,E,69
 57,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:10,email,27154160,27154234,R,82
@@ -5522,7 +5466,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 57,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:10,userText,27188548,27188709,N,78
 57,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:10,userText,27188664,27188800,O,79
 57,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:10,userText,27196895,27196950,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 58,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:20,email,149244288,149244389,F,70
 58,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:20,email,149244342,149244429,A,65
 58,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:20,email,149244502,149244622,B,66
@@ -5620,7 +5563,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 58,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:20,userText,149262477,149262581,N,78
 58,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:20,userText,149262734,149262805,O,79
 58,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:20,userText,149263013,149263101,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 59,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:45,email,27201953,27202023,G,71
 59,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:45,email,27202090,27202292,E,69
 59,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:45,email,27202305,27202444,R,82
@@ -5739,7 +5681,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 59,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:45,userText,27230548,27230665,N,78
 59,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:45,userText,27230659,27230787,O,79
 59,gerson.junior@ccc.ufcg.edu.br,2015-10-28 19:07:45,userText,27231231,27231274,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 60,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:48,email,149268229,149268357,F,70
 60,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:48,email,149268310,149268389,A,65
 60,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:48,email,149268477,149268589,B,66
@@ -5849,7 +5790,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 60,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:48,userText,149289085,149289199,N,78
 60,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:48,userText,149289343,149289429,O,79
 60,fabio.fernando.osilva@gmail.com,2015-10-28 19:07:48,userText,149290687,149290781,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 61,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:08:35,email,1446059411870,1446059411989,J,74
 61,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:08:35,email,1446059412005,1446059412101,O,79
 61,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:08:35,email,1446059412053,1446059412191,S,83
@@ -5948,7 +5888,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 61,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:08:35,userText,1446059447217,1446059447286,N,78
 61,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:08:35,userText,1446059447368,1446059447415,O,79
 61,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:08:35,userText,1446059448351,1446059448381,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 62,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:09:22,email,1446059460039,1446059460182,J,74
 62,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:09:22,email,1446059460182,1446059460325,S,83
 62,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:09:22,email,1446059460183,1446059460325,O,79
@@ -6049,7 +5988,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 62,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:09:22,userText,1446059495160,1446059495239,N,78
 62,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:09:22,userText,1446059495328,1446059495391,O,79
 62,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:09:22,userText,1446059495906,1446059495942,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 63,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:04,email,1446059504304,1446059504446,J,74
 63,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:04,email,1446059504447,1446059504528,O,79
 63,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:04,email,1446059504443,1446059504575,S,83
@@ -6156,7 +6094,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 63,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:04,userText,1446059537768,1446059537839,N,78
 63,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:04,userText,1446059537976,1446059538022,O,79
 63,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:04,userText,1446059538534,1446059538573,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 64,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:41,email,1446059545673,1446059545827,J,74
 64,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:41,email,1446059545828,1446059545952,O,79
 64,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:41,email,1446059545830,1446059545973,S,83
@@ -6251,7 +6188,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 64,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:41,userText,1446059575951,1446059576030,N,78
 64,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:41,userText,1446059576145,1446059576183,O,79
 64,jose.ferreira@ccc.ufcg.edu.br,2015-10-28 19:10:41,userText,1446059576991,1446059577039,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 65,diegolimapereira@gmail.com,2015-10-28 19:16:39,email,1446059911975,1446059912056,D,68
 65,diegolimapereira@gmail.com,2015-10-28 19:16:39,email,1446059912081,1446059912162,I,73
 65,diegolimapereira@gmail.com,2015-10-28 19:16:39,email,1446059912163,1446059912225,E,69
@@ -6342,7 +6278,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 65,diegolimapereira@gmail.com,2015-10-28 19:16:39,userText,1446059934878,1446059934934,N,78
 65,diegolimapereira@gmail.com,2015-10-28 19:16:39,userText,1446059934935,1446059935053,O,79
 65,diegolimapereira@gmail.com,2015-10-28 19:16:39,userText,1446059935657,1446059935775,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 66,albertofagner.cav@gmail.com,2015-10-28 19:16:53,email,513105812,513105978,A,65
 66,albertofagner.cav@gmail.com,2015-10-28 19:16:53,email,513105959,513106071,L,76
 66,albertofagner.cav@gmail.com,2015-10-28 19:16:53,email,513106107,513106245,B,66
@@ -6436,7 +6371,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 66,albertofagner.cav@gmail.com,2015-10-28 19:16:53,userText,513131257,513131435,N,78
 66,albertofagner.cav@gmail.com,2015-10-28 19:16:53,userText,513131400,513131563,O,79
 66,albertofagner.cav@gmail.com,2015-10-28 19:16:53,userText,513132091,513132198,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 67,diegolimapereira@gmail.com,2015-10-28 19:17:07,email,1446059943992,1446059944089,D,68
 67,diegolimapereira@gmail.com,2015-10-28 19:17:07,email,1446059944113,1446059944194,I,73
 67,diegolimapereira@gmail.com,2015-10-28 19:17:07,email,1446059944194,1446059944255,E,69
@@ -6523,7 +6457,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 67,diegolimapereira@gmail.com,2015-10-28 19:17:07,userText,1446059962224,1446059962294,N,78
 67,diegolimapereira@gmail.com,2015-10-28 19:17:07,userText,1446059962295,1446059962389,O,79
 67,diegolimapereira@gmail.com,2015-10-28 19:17:07,userText,1446059963418,1446059963488,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 68,andre@gmail.com,2015-10-28 19:17:13,email,27779048,27779144,A,65
 68,andre@gmail.com,2015-10-28 19:17:13,email,27779169,27779253,N,78
 68,andre@gmail.com,2015-10-28 19:17:13,email,27779288,27779386,D,68
@@ -6608,7 +6541,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 68,andre@gmail.com,2015-10-28 19:17:13,userText,27798499,27798648,N,78
 68,andre@gmail.com,2015-10-28 19:17:13,userText,27798568,27798686,O,79
 68,andre@gmail.com,2015-10-28 19:17:13,userText,27799498,27799583,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 69,albertofagner.cav@gmail.com,2015-10-28 19:17:29,email,513141106,513141288,A,65
 69,albertofagner.cav@gmail.com,2015-10-28 19:17:29,email,513141238,513141355,L,76
 69,albertofagner.cav@gmail.com,2015-10-28 19:17:29,email,513141444,513141571,B,66
@@ -6705,7 +6637,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 69,albertofagner.cav@gmail.com,2015-10-28 19:17:29,userText,513165587,513165717,N,78
 69,albertofagner.cav@gmail.com,2015-10-28 19:17:29,userText,513165838,513165956,O,79
 69,albertofagner.cav@gmail.com,2015-10-28 19:17:29,userText,513166523,513166630,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 70,diegolimapereira@gmail.com,2015-10-28 19:17:35,email,1446059970686,1446059970791,D,68
 70,diegolimapereira@gmail.com,2015-10-28 19:17:35,email,1446059970825,1446059970896,I,73
 70,diegolimapereira@gmail.com,2015-10-28 19:17:35,email,1446059970897,1446059970969,E,69
@@ -6794,7 +6725,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 70,diegolimapereira@gmail.com,2015-10-28 19:17:35,userText,1446059990844,1446059990913,N,78
 70,diegolimapereira@gmail.com,2015-10-28 19:17:35,userText,1446059990914,1446059991016,O,79
 70,diegolimapereira@gmail.com,2015-10-28 19:17:35,userText,1446059991600,1446059991678,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 71,andre@gmail.com,2015-10-28 19:17:45,email,27812999,27813093,A,65
 71,andre@gmail.com,2015-10-28 19:17:45,email,27813123,27813218,N,78
 71,andre@gmail.com,2015-10-28 19:17:45,email,27813207,27813284,D,68
@@ -6883,7 +6813,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 71,andre@gmail.com,2015-10-28 19:17:45,userText,27830008,27830129,N,78
 71,andre@gmail.com,2015-10-28 19:17:45,userText,27830073,27830172,O,79
 71,andre@gmail.com,2015-10-28 19:17:45,userText,27831115,27831210,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 72,albertofagner.cav@gmail.com,2015-10-28 19:17:59,email,513172534,513172700,A,65
 72,albertofagner.cav@gmail.com,2015-10-28 19:17:59,email,513172654,513172759,L,76
 72,albertofagner.cav@gmail.com,2015-10-28 19:17:59,email,513172803,513172917,B,66
@@ -6976,7 +6905,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 72,albertofagner.cav@gmail.com,2015-10-28 19:17:59,userText,513195856,513196003,N,78
 72,albertofagner.cav@gmail.com,2015-10-28 19:17:59,userText,513195984,513196112,O,79
 72,albertofagner.cav@gmail.com,2015-10-28 19:17:59,userText,513196767,513196878,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 73,diegolimapereira@gmail.com,2015-10-28 19:18:03,email,1446059997758,1446059997870,D,68
 73,diegolimapereira@gmail.com,2015-10-28 19:18:03,email,1446059997894,1446059997991,I,73
 73,diegolimapereira@gmail.com,2015-10-28 19:18:03,email,1446059997990,1446059998078,E,69
@@ -7073,7 +7001,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 73,diegolimapereira@gmail.com,2015-10-28 19:18:03,userText,1446060019295,1446060019401,N,78
 73,diegolimapereira@gmail.com,2015-10-28 19:18:03,userText,1446060019400,1446060019534,O,79
 73,diegolimapereira@gmail.com,2015-10-28 19:18:03,userText,1446060019688,1446060019816,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 74,carolzinhacabral@gmail.com,2015-10-28 19:18:07,email,513200316,513200439,C,67
 74,carolzinhacabral@gmail.com,2015-10-28 19:18:07,email,513200433,513200516,A,65
 74,carolzinhacabral@gmail.com,2015-10-28 19:18:07,email,513200592,513200689,R,82
@@ -7170,7 +7097,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 74,carolzinhacabral@gmail.com,2015-10-28 19:18:07,userText,513218893,513219016,N,78
 74,carolzinhacabral@gmail.com,2015-10-28 19:18:07,userText,513218973,513219057,O,79
 74,carolzinhacabral@gmail.com,2015-10-28 19:18:07,userText,513219753,513219835,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 75,andre@gmail.com,2015-10-28 19:18:10,email,27838800,27838901,A,65
 75,andre@gmail.com,2015-10-28 19:18:10,email,27838893,27838979,N,78
 75,andre@gmail.com,2015-10-28 19:18:10,email,27838973,27839053,D,68
@@ -7256,7 +7182,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 75,andre@gmail.com,2015-10-28 19:18:10,userText,27855989,27856105,N,78
 75,andre@gmail.com,2015-10-28 19:18:10,userText,27856054,27856144,O,79
 75,andre@gmail.com,2015-10-28 19:18:10,userText,27856445,27856535,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 76,carolzinhacabral@gmail.com,2015-10-28 19:18:28,email,513226360,513226481,C,67
 76,carolzinhacabral@gmail.com,2015-10-28 19:18:28,email,513226438,513226561,A,65
 76,carolzinhacabral@gmail.com,2015-10-28 19:18:28,email,513226598,513226688,R,82
@@ -7325,7 +7250,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 76,carolzinhacabral@gmail.com,2015-10-28 19:18:28,userText,513239319,513239398,N,78
 76,carolzinhacabral@gmail.com,2015-10-28 19:18:28,userText,513239322,513239439,O,79
 76,carolzinhacabral@gmail.com,2015-10-28 19:18:28,userText,513239553,513239635,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 77,diegolimapereira@gmail.com,2015-10-28 19:18:32,email,1446060025263,1446060025366,D,68
 77,diegolimapereira@gmail.com,2015-10-28 19:18:32,email,1446060025398,1446060025478,I,73
 77,diegolimapereira@gmail.com,2015-10-28 19:18:32,email,1446060025479,1446060025542,E,69
@@ -7426,7 +7350,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 77,diegolimapereira@gmail.com,2015-10-28 19:18:32,userText,1446060048344,1446060048422,N,78
 77,diegolimapereira@gmail.com,2015-10-28 19:18:32,userText,1446060049001,1446060049055,O,79
 77,diegolimapereira@gmail.com,2015-10-28 19:18:32,userText,1446060049337,1446060049431,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 78,carolzinhacabral@gmail.com,2015-10-28 19:18:50,email,513245149,513245270,C,67
 78,carolzinhacabral@gmail.com,2015-10-28 19:18:50,email,513245227,513245349,A,65
 78,carolzinhacabral@gmail.com,2015-10-28 19:18:50,email,513245386,513245469,R,82
@@ -7519,7 +7442,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 78,carolzinhacabral@gmail.com,2015-10-28 19:18:50,userText,513262227,513262350,N,78
 78,carolzinhacabral@gmail.com,2015-10-28 19:18:50,userText,513262307,513262391,O,79
 78,carolzinhacabral@gmail.com,2015-10-28 19:18:50,userText,513262660,513262742,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 79,albertofagner.cav@gmail.com,2015-10-28 19:18:51,email,513227693,513227857,A,65
 79,albertofagner.cav@gmail.com,2015-10-28 19:18:51,email,513228436,513228547,L,76
 79,albertofagner.cav@gmail.com,2015-10-28 19:18:51,email,513228671,513228770,B,66
@@ -7614,7 +7536,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 79,albertofagner.cav@gmail.com,2015-10-28 19:18:51,userText,513248955,513249114,N,78
 79,albertofagner.cav@gmail.com,2015-10-28 19:18:51,userText,513249079,513249207,O,79
 79,albertofagner.cav@gmail.com,2015-10-28 19:18:51,userText,513249701,513249804,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 80,andre@gmail.com,2015-10-28 19:18:51,email,27864099,27864195,A,65
 80,andre@gmail.com,2015-10-28 19:18:51,email,27864201,27864281,N,78
 80,andre@gmail.com,2015-10-28 19:18:51,email,27864304,27864384,D,68
@@ -7699,7 +7620,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 80,andre@gmail.com,2015-10-28 19:18:51,userText,27880673,27880792,N,78
 80,andre@gmail.com,2015-10-28 19:18:51,userText,27880756,27880883,O,79
 80,andre@gmail.com,2015-10-28 19:18:51,userText,27881038,27881118,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 81,carolzinhacabral@gmail.com,2015-10-28 19:19:14,email,513267559,513267643,C,67
 81,carolzinhacabral@gmail.com,2015-10-28 19:19:14,email,513267637,513267723,A,65
 81,carolzinhacabral@gmail.com,2015-10-28 19:19:14,email,513268108,513268229,R,82
@@ -7796,7 +7716,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 81,carolzinhacabral@gmail.com,2015-10-28 19:19:14,userText,513286084,513286179,N,78
 81,carolzinhacabral@gmail.com,2015-10-28 19:19:14,userText,513286130,513286259,O,79
 81,carolzinhacabral@gmail.com,2015-10-28 19:19:14,userText,513286723,513286805,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 82,albertofagner.cav@gmail.com,2015-10-28 19:19:17,email,513253318,513253475,A,65
 82,albertofagner.cav@gmail.com,2015-10-28 19:19:17,email,513253953,513254045,L,76
 82,albertofagner.cav@gmail.com,2015-10-28 19:19:17,email,513254150,513254257,B,66
@@ -7891,7 +7810,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 82,albertofagner.cav@gmail.com,2015-10-28 19:19:17,userText,513274818,513274974,N,78
 82,albertofagner.cav@gmail.com,2015-10-28 19:19:17,userText,513274952,513275095,O,79
 82,albertofagner.cav@gmail.com,2015-10-28 19:19:17,userText,513275604,513275711,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 83,andre@gmail.com,2015-10-28 19:19:29,email,27904994,27905106,A,65
 83,andre@gmail.com,2015-10-28 19:19:29,email,27905128,27905207,N,78
 83,andre@gmail.com,2015-10-28 19:19:29,email,27905229,27905292,D,68
@@ -7976,7 +7894,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 83,andre@gmail.com,2015-10-28 19:19:29,userText,27920480,27920621,N,78
 83,andre@gmail.com,2015-10-28 19:19:29,userText,27920563,27920667,O,79
 83,andre@gmail.com,2015-10-28 19:19:29,userText,27920918,27920999,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 84,carolzinhacabral@gmail.com,2015-10-28 19:19:33,email,513290767,513290849,C,67
 84,carolzinhacabral@gmail.com,2015-10-28 19:19:33,email,513290806,513290929,A,65
 84,carolzinhacabral@gmail.com,2015-10-28 19:19:33,email,513290965,513291086,R,82
@@ -8065,7 +7982,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 84,carolzinhacabral@gmail.com,2015-10-28 19:19:33,userText,513305690,513305813,N,78
 84,carolzinhacabral@gmail.com,2015-10-28 19:19:33,userText,513305770,513305854,O,79
 84,carolzinhacabral@gmail.com,2015-10-28 19:19:33,userText,513305968,513306089,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 85,carolzinhacabral@gmail.com,2015-10-28 19:20:06,email,513323455,513323576,C,67
 85,carolzinhacabral@gmail.com,2015-10-28 19:20:06,email,513323532,513323655,A,65
 85,carolzinhacabral@gmail.com,2015-10-28 19:20:06,email,513323692,513323774,R,82
@@ -8160,7 +8076,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 85,carolzinhacabral@gmail.com,2015-10-28 19:20:06,userText,513338617,513338741,N,78
 85,carolzinhacabral@gmail.com,2015-10-28 19:20:06,userText,513338698,513338782,O,79
 85,carolzinhacabral@gmail.com,2015-10-28 19:20:06,userText,513338935,513339016,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 86,andre@gmail.com,2015-10-28 19:20:35,email,27979532,27979650,A,65
 86,andre@gmail.com,2015-10-28 19:20:35,email,27979668,27979766,N,78
 86,andre@gmail.com,2015-10-28 19:20:35,email,27979741,27979821,D,68
@@ -8267,7 +8182,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 86,andre@gmail.com,2015-10-28 19:20:35,userText,28000530,28000666,N,78
 86,andre@gmail.com,2015-10-28 19:20:35,userText,28000603,28000702,O,79
 86,andre@gmail.com,2015-10-28 19:20:35,userText,28001139,28001221,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 87,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:19,email,513679308,513679390,A,65
 87,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:19,email,513679347,513679431,L,76
 87,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:19,email,513679545,513679627,I,73
@@ -8367,7 +8281,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 87,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:19,userText,513709900,513709982,N,78
 87,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:19,userText,513710058,513710139,O,79
 87,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:19,userText,513710953,513711035,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 88,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:56,email,513719972,513720053,A,65
 88,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:56,email,513720056,513720134,L,76
 88,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:56,email,513720248,513720330,I,73
@@ -8459,7 +8372,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 88,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:56,userText,513746805,513746935,N,78
 88,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:56,userText,513746938,513747054,O,79
 88,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:26:56,userText,513747985,513748067,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 89,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:27:28,email,513754710,513754793,A,65
 89,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:27:28,email,513754749,513754834,L,76
 89,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:27:28,email,513754948,513755030,I,73
@@ -8553,7 +8465,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 89,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:27:28,userText,513778215,513778293,N,78
 89,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:27:28,userText,513778368,513778450,O,79
 89,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:27:28,userText,513779225,513779307,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 90,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:28:39,email,513817942,513818062,A,65
 90,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:28:39,email,513818019,513818103,L,76
 90,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:28:39,email,513818218,513818299,I,73
@@ -8645,7 +8556,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 90,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:28:39,userText,513847504,513847586,N,78
 90,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:28:39,userText,513847662,513847743,O,79
 90,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:28:39,userText,513848479,513848561,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 91,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:29:11,email,513857148,513857229,A,65
 91,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:29:11,email,513857232,513857271,L,76
 91,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:29:11,email,513857385,513857467,I,73
@@ -8741,7 +8651,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 91,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:29:11,userText,513880849,513880965,N,78
 91,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:29:11,userText,513881468,513881588,O,79
 91,aline.trovao@ccc.ufcg.edu.br,2015-10-28 19:29:11,userText,513882208,513882290,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 92,teu.araujo@gmail.com,2015-10-28 19:33:22,email,514093183,514093304,T,84
 92,teu.araujo@gmail.com,2015-10-28 19:33:22,email,514093222,514093384,E,69
 92,teu.araujo@gmail.com,2015-10-28 19:33:22,email,514094431,514094513,U,85
@@ -8852,7 +8761,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 92,teu.araujo@gmail.com,2015-10-28 19:33:22,userText,514131796,514131912,N,78
 92,teu.araujo@gmail.com,2015-10-28 19:33:22,userText,514132338,514132419,O,79
 92,teu.araujo@gmail.com,2015-10-28 19:33:22,userText,514133233,514133315,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 93,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:33:37,email,1446060930575,1446060930663,E,69
 93,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:33:37,email,1446060930703,1446060930744,M,77
 93,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:33:37,email,1446060930776,1446060930857,A,65
@@ -8956,7 +8864,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 93,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:33:37,userText,1446060952393,1446060952489,N,78
 93,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:33:37,userText,1446060952464,1446060952553,O,79
 93,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:33:37,userText,1446060952763,1446060952841,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 94,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:34:05,email,1446060960960,1446060961042,E,69
 94,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:34:05,email,1446060961075,1446060961105,M,77
 94,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:34:05,email,1446060961138,1446060961224,A,65
@@ -9056,7 +8963,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 94,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:34:05,userText,1446060980618,1446060980705,N,78
 94,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:34:05,userText,1446060980682,1446060980759,O,79
 94,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:34:05,userText,1446060980939,1446060981048,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 95,teu.araujo@gmail.com,2015-10-28 19:34:10,email,514143729,514143850,T,84
 95,teu.araujo@gmail.com,2015-10-28 19:34:10,email,514143807,514143930,E,69
 95,teu.araujo@gmail.com,2015-10-28 19:34:10,email,514143887,514143971,U,85
@@ -9165,7 +9071,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 95,teu.araujo@gmail.com,2015-10-28 19:34:10,userText,514177221,514177337,N,78
 95,teu.araujo@gmail.com,2015-10-28 19:34:10,userText,514177413,514177471,O,79
 95,teu.araujo@gmail.com,2015-10-28 19:34:10,userText,514178168,514178211,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 96,teu.araujo@gmail.com,2015-10-28 19:34:54,email,514190685,514190767,T,84
 96,teu.araujo@gmail.com,2015-10-28 19:34:54,email,514190724,514190847,E,69
 96,teu.araujo@gmail.com,2015-10-28 19:34:54,email,514191077,514191159,U,85
@@ -9259,7 +9164,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 96,teu.araujo@gmail.com,2015-10-28 19:34:54,userText,514222974,514223090,N,78
 96,teu.araujo@gmail.com,2015-10-28 19:34:54,userText,514223748,514223830,O,79
 96,teu.araujo@gmail.com,2015-10-28 19:34:54,userText,514224644,514224726,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 97,teu.araujo@gmail.com,2015-10-28 19:36:18,email,514272666,514272787,T,84
 97,teu.araujo@gmail.com,2015-10-28 19:36:18,email,514272744,514272828,E,69
 97,teu.araujo@gmail.com,2015-10-28 19:36:18,email,514273642,514273723,U,85
@@ -9360,7 +9264,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 97,teu.araujo@gmail.com,2015-10-28 19:36:18,userText,514308263,514308341,N,78
 97,teu.araujo@gmail.com,2015-10-28 19:36:18,userText,514308494,514308576,O,79
 97,teu.araujo@gmail.com,2015-10-28 19:36:18,userText,514309311,514309355,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 98,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:36:46,email,1446061120196,1446061120289,E,69
 98,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:36:46,email,1446061120290,1446061120346,M,77
 98,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:36:46,email,1446061120378,1446061120464,A,65
@@ -9458,7 +9361,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 98,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:36:46,userText,1446061142083,1446061142191,N,78
 98,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:36:46,userText,1446061142171,1446061142248,O,79
 98,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:36:46,userText,1446061142425,1446061142521,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 99,teu.araujo@gmail.com,2015-10-28 19:36:59,email,514320547,514320705,T,84
 99,teu.araujo@gmail.com,2015-10-28 19:36:59,email,514320709,514320748,U,85
 99,teu.araujo@gmail.com,2015-10-28 19:36:59,email,514320624,514320789,E,69
@@ -9568,7 +9470,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 99,teu.araujo@gmail.com,2015-10-28 19:36:59,userText,514348858,514348950,N,78
 99,teu.araujo@gmail.com,2015-10-28 19:36:59,userText,514349026,514349108,O,79
 99,teu.araujo@gmail.com,2015-10-28 19:36:59,userText,514349805,514349848,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 100,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:10,email,1446061147545,1446061147628,E,69
 100,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:10,email,1446061147629,1446061147690,M,77
 100,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:10,email,1446061147722,1446061147808,A,65
@@ -9678,7 +9579,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 100,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:10,userText,1446061165520,1446061165625,N,78
 100,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:10,userText,1446061165600,1446061165681,O,79
 100,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:10,userText,1446061165852,1446061165945,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 101,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:30,email,1446061170944,1446061171015,E,69
 101,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:30,email,1446061171023,1446061171071,M,77
 101,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:30,email,1446061171127,1446061171224,A,65
@@ -9776,7 +9676,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 101,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:30,userText,1446061187041,1446061187131,N,78
 101,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:30,userText,1446061187129,1446061187186,O,79
 101,emanoel.oliveira@ccc.ufcg.edu.br,2015-10-28 19:37:30,userText,1446061187379,1446061187465,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 102,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:39:10,email,514418803,514418923,A,65
 102,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:39:10,email,514418955,514419075,R,82
 102,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:39:10,email,514419155,514419259,T,84
@@ -9880,7 +9779,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 102,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:39:10,userText,514458043,514458139,N,78
 102,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:39:10,userText,514458275,514458395,O,79
 102,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:39:10,userText,514461443,514461531,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 103,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:00,email,514472675,514472795,A,65
 103,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:00,email,514472811,514472931,R,82
 103,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:00,email,514473011,514473115,T,84
@@ -10020,7 +9918,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 103,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:00,userText,514511211,514511299,N,78
 103,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:00,userText,514511419,514511523,O,79
 103,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:00,userText,514512243,514512347,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 104,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:36,email,514518083,514518203,A,65
 104,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:36,email,514518259,514518379,R,82
 104,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:36,email,514518435,514518539,T,84
@@ -10121,7 +10018,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 104,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:36,userText,514546114,514546202,N,78
 104,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:36,userText,514546322,514546418,O,79
 104,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:40:36,userText,514547258,514547370,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 105,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:41:16,email,514554594,514554714,A,65
 105,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:41:16,email,514554690,514554794,R,82
 105,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:41:16,email,514554874,514554938,R,82
@@ -10235,7 +10131,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 105,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:41:16,userText,514585762,514585850,N,78
 105,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:41:16,userText,514585970,514586066,O,79
 105,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:41:16,userText,514586666,514586778,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 106,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:42:32,email,514633762,514633890,A,65
 106,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:42:32,email,514633866,514633986,R,82
 106,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:42:32,email,514634066,514634162,T,84
@@ -10334,7 +10229,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 106,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:42:32,userText,514661906,514662010,N,78
 106,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:42:32,userText,514662154,514662250,O,79
 106,arthur.costa@ccc.ufcg.edu.br,2015-10-28 19:42:32,userText,514662850,514662962,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 107,tales.tsp@gmail.com,2015-10-28 19:48:25,email,514989967,514990127,T,84
 107,tales.tsp@gmail.com,2015-10-28 19:48:25,email,514990079,514990215,A,65
 107,tales.tsp@gmail.com,2015-10-28 19:48:25,email,514990191,514990319,L,76
@@ -10417,7 +10311,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 107,tales.tsp@gmail.com,2015-10-28 19:48:25,userText,515014767,515014951,N,78
 107,tales.tsp@gmail.com,2015-10-28 19:48:25,userText,515014879,515015015,O,79
 107,tales.tsp@gmail.com,2015-10-28 19:48:25,userText,515015967,515016055,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 108,tales.tsp@gmail.com,2015-10-28 19:49:44,email,515072991,515073151,T,84
 108,tales.tsp@gmail.com,2015-10-28 19:49:44,email,515073135,515073271,A,65
 108,tales.tsp@gmail.com,2015-10-28 19:49:44,email,515073263,515073415,L,76
@@ -10502,7 +10395,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 108,tales.tsp@gmail.com,2015-10-28 19:49:44,userText,515092439,515092527,Backspace,8
 108,tales.tsp@gmail.com,2015-10-28 19:49:44,userText,515092599,515092687,Backspace,8
 108,tales.tsp@gmail.com,2015-10-28 19:49:44,userText,515092831,515092903,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 109,tales.tsp@gmail.com,2015-10-28 19:50:12,email,515102111,515102279,T,84
 109,tales.tsp@gmail.com,2015-10-28 19:50:12,email,515102215,515102383,A,65
 109,tales.tsp@gmail.com,2015-10-28 19:50:12,email,515102375,515102527,L,76
@@ -10585,7 +10477,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 109,tales.tsp@gmail.com,2015-10-28 19:50:12,userText,515122150,515122350,N,78
 109,tales.tsp@gmail.com,2015-10-28 19:50:12,userText,515122302,515122423,O,79
 109,tales.tsp@gmail.com,2015-10-28 19:50:12,userText,515123046,515123110,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 110,tales.tsp@gmail.com,2015-10-28 19:50:48,email,515138798,515138926,T,84
 110,tales.tsp@gmail.com,2015-10-28 19:50:48,email,515138886,515139038,A,65
 110,tales.tsp@gmail.com,2015-10-28 19:50:48,email,515139030,515139150,L,76
@@ -10674,7 +10565,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 110,tales.tsp@gmail.com,2015-10-28 19:50:48,userText,515158446,515158630,N,78
 110,tales.tsp@gmail.com,2015-10-28 19:50:48,userText,515158542,515158694,O,79
 110,tales.tsp@gmail.com,2015-10-28 19:50:48,userText,515159142,515159230,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 111,tales.tsp@gmail.com,2015-10-28 19:51:18,email,515168126,515168262,T,84
 111,tales.tsp@gmail.com,2015-10-28 19:51:18,email,515168222,515168342,A,65
 111,tales.tsp@gmail.com,2015-10-28 19:51:18,email,515168310,515168438,L,76
@@ -10767,7 +10657,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 111,tales.tsp@gmail.com,2015-10-28 19:51:18,userText,515188526,515188694,N,78
 111,tales.tsp@gmail.com,2015-10-28 19:51:18,userText,515188630,515188758,O,79
 111,tales.tsp@gmail.com,2015-10-28 19:51:18,userText,515189302,515189374,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 112,caionobrega0@gmail.com,2015-10-28 19:51:39,email,515206895,515207016,C,67
 112,caionobrega0@gmail.com,2015-10-28 19:51:39,email,515206973,515207095,A,65
 112,caionobrega0@gmail.com,2015-10-28 19:51:39,email,515207099,515207177,I,73
@@ -10860,7 +10749,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 112,caionobrega0@gmail.com,2015-10-28 19:51:39,userText,515230886,515230968,N,78
 112,caionobrega0@gmail.com,2015-10-28 19:51:39,userText,515230925,515231047,O,79
 112,caionobrega0@gmail.com,2015-10-28 19:51:39,userText,515231706,515231827,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 113,caionobrega0@gmail.com,2015-10-28 19:52:08,email,515238201,515238324,C,67
 113,caionobrega0@gmail.com,2015-10-28 19:52:08,email,515238281,515238442,A,65
 113,caionobrega0@gmail.com,2015-10-28 19:52:08,email,515238518,515238639,I,73
@@ -10963,7 +10851,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 113,caionobrega0@gmail.com,2015-10-28 19:52:08,userText,515259855,515259976,N,78
 113,caionobrega0@gmail.com,2015-10-28 19:52:08,userText,515259933,515260017,O,79
 113,caionobrega0@gmail.com,2015-10-28 19:52:08,userText,515260170,515260252,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 114,caionobrega0@gmail.com,2015-10-28 19:52:35,email,515265421,515265542,C,67
 114,caionobrega0@gmail.com,2015-10-28 19:52:35,email,515265499,515265622,A,65
 114,caionobrega0@gmail.com,2015-10-28 19:52:35,email,515265579,515265664,I,73
@@ -11054,7 +10941,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 114,caionobrega0@gmail.com,2015-10-28 19:52:35,userText,515285769,515285846,N,78
 114,caionobrega0@gmail.com,2015-10-28 19:52:35,userText,515285849,515285926,O,79
 114,caionobrega0@gmail.com,2015-10-28 19:52:35,userText,515287868,515287964,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 115,caionobrega0@gmail.com,2015-10-28 19:53:05,email,515297993,515298114,C,67
 115,caionobrega0@gmail.com,2015-10-28 19:53:05,email,515298071,515298155,A,65
 115,caionobrega0@gmail.com,2015-10-28 19:53:05,email,515298158,515298209,I,73
@@ -11147,7 +11033,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 115,caionobrega0@gmail.com,2015-10-28 19:53:05,userText,515318204,515318285,N,78
 115,caionobrega0@gmail.com,2015-10-28 19:53:05,userText,515318288,515318365,O,79
 115,caionobrega0@gmail.com,2015-10-28 19:53:05,userText,515318518,515318562,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 116,caionobrega0@gmail.com,2015-10-28 19:53:30,email,515323187,515323310,C,67
 116,caionobrega0@gmail.com,2015-10-28 19:53:30,email,515323304,515323426,A,65
 116,caionobrega0@gmail.com,2015-10-28 19:53:30,email,515323384,515323468,I,73
@@ -11243,7 +11128,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 116,caionobrega0@gmail.com,2015-10-28 19:53:30,userText,515341981,515342058,N,78
 116,caionobrega0@gmail.com,2015-10-28 19:53:30,userText,515342061,515342138,O,79
 116,caionobrega0@gmail.com,2015-10-28 19:53:30,userText,515342408,515342528,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 117,talitabac@gmail.com,2015-10-28 20:06:11,email,516079096,516079216,T,84
 117,talitabac@gmail.com,2015-10-28 20:06:11,email,516079173,516079257,A,65
 117,talitabac@gmail.com,2015-10-28 20:06:11,email,516079219,516079299,L,76
@@ -11339,7 +11223,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 117,talitabac@gmail.com,2015-10-28 20:06:11,userText,516102610,516102693,N,78
 117,talitabac@gmail.com,2015-10-28 20:06:11,userText,516102649,516102734,O,79
 117,talitabac@gmail.com,2015-10-28 20:06:11,userText,516102964,516103046,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 118,talitabac@gmail.com,2015-10-28 20:06:37,email,516111479,516111600,T,84
 118,talitabac@gmail.com,2015-10-28 20:06:37,email,516111557,516111642,A,65
 118,talitabac@gmail.com,2015-10-28 20:06:37,email,516111603,516111651,L,76
@@ -11437,7 +11320,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 118,talitabac@gmail.com,2015-10-28 20:06:37,userText,516128981,516129104,N,78
 118,talitabac@gmail.com,2015-10-28 20:06:37,userText,516129026,516129184,O,79
 118,talitabac@gmail.com,2015-10-28 20:06:37,userText,516129298,516129380,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 119,talitabac@gmail.com,2015-10-28 20:07:01,email,516136647,516136806,T,84
 119,talitabac@gmail.com,2015-10-28 20:07:01,email,516136763,516136887,A,65
 119,talitabac@gmail.com,2015-10-28 20:07:01,email,516136809,516136893,L,76
@@ -11524,7 +11406,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 119,talitabac@gmail.com,2015-10-28 20:07:01,userText,516153024,516153108,N,78
 119,talitabac@gmail.com,2015-10-28 20:07:01,userText,516153058,516153183,O,79
 119,talitabac@gmail.com,2015-10-28 20:07:01,userText,516153298,516153380,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 120,talitabac@gmail.com,2015-10-28 20:07:51,email,516186247,516186368,T,84
 120,talitabac@gmail.com,2015-10-28 20:07:51,email,516186325,516186462,A,65
 120,talitabac@gmail.com,2015-10-28 20:07:51,email,516186371,516186468,L,76
@@ -11626,7 +11507,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 120,talitabac@gmail.com,2015-10-28 20:07:51,userText,516202388,516202507,N,78
 120,talitabac@gmail.com,2015-10-28 20:07:51,userText,516202468,516202548,O,79
 120,talitabac@gmail.com,2015-10-28 20:07:51,userText,516203440,516203522,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 121,joaotargino@gmail.com,2015-10-28 20:07:51,email,516165126,516165236,J,74
 121,joaotargino@gmail.com,2015-10-28 20:07:51,email,516165173,516165280,O,79
 121,joaotargino@gmail.com,2015-10-28 20:07:51,email,516165228,516165344,A,65
@@ -11726,7 +11606,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 121,joaotargino@gmail.com,2015-10-28 20:07:51,userText,516187006,516187139,N,78
 121,joaotargino@gmail.com,2015-10-28 20:07:51,userText,516187098,516187210,O,79
 121,joaotargino@gmail.com,2015-10-28 20:07:51,userText,516189473,516189570,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 122,talitabac@gmail.com,2015-10-28 20:08:11,email,516207640,516207724,T,84
 122,talitabac@gmail.com,2015-10-28 20:08:11,email,516207718,516207802,A,65
 122,talitabac@gmail.com,2015-10-28 20:08:11,email,516207759,516207844,L,76
@@ -11814,7 +11693,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 122,talitabac@gmail.com,2015-10-28 20:08:11,userText,516222367,516222456,N,78
 122,talitabac@gmail.com,2015-10-28 20:08:11,userText,516222406,516222493,O,79
 122,talitabac@gmail.com,2015-10-28 20:08:11,userText,516222607,516222689,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 123,joaotargino@gmail.com,2015-10-28 20:08:17,email,516196327,516196846,Shift,16
 123,joaotargino@gmail.com,2015-10-28 20:08:17,email,516196762,516196889,J,74
 123,joaotargino@gmail.com,2015-10-28 20:08:17,email,516196906,516197044,O,79
@@ -11911,7 +11789,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 123,joaotargino@gmail.com,2015-10-28 20:08:17,userText,516214237,516214378,N,78
 123,joaotargino@gmail.com,2015-10-28 20:08:17,userText,516214317,516214433,O,79
 123,joaotargino@gmail.com,2015-10-28 20:08:17,userText,516214550,516214653,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 124,joaotargino@gmail.com,2015-10-28 20:08:36,email,516218652,516218760,J,74
 124,joaotargino@gmail.com,2015-10-28 20:08:36,email,516218691,516218801,O,79
 124,joaotargino@gmail.com,2015-10-28 20:08:36,email,516218775,516218885,A,65
@@ -12000,7 +11877,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 124,joaotargino@gmail.com,2015-10-28 20:08:36,userText,516232847,516232981,N,78
 124,joaotargino@gmail.com,2015-10-28 20:08:36,userText,516232904,516233020,O,79
 124,joaotargino@gmail.com,2015-10-28 20:08:36,userText,516233129,516233232,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 125,joaotargino@gmail.com,2015-10-28 20:08:58,email,516237758,516237876,J,74
 125,joaotargino@gmail.com,2015-10-28 20:08:58,email,516237817,516237924,O,79
 125,joaotargino@gmail.com,2015-10-28 20:08:58,email,516237868,516237980,A,65
@@ -12093,7 +11969,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 125,joaotargino@gmail.com,2015-10-28 20:08:58,userText,516255086,516255231,N,78
 125,joaotargino@gmail.com,2015-10-28 20:08:58,userText,516255189,516255328,O,79
 125,joaotargino@gmail.com,2015-10-28 20:08:58,userText,516255472,516255583,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 126,joaotargino@gmail.com,2015-10-28 20:09:17,email,516259797,516259926,J,74
 126,joaotargino@gmail.com,2015-10-28 20:09:17,email,516259852,516259963,O,79
 126,joaotargino@gmail.com,2015-10-28 20:09:17,email,516259903,516260010,A,65
@@ -12184,7 +12059,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 126,joaotargino@gmail.com,2015-10-28 20:09:17,userText,516273810,516273954,N,78
 126,joaotargino@gmail.com,2015-10-28 20:09:17,userText,516273893,516274040,O,79
 126,joaotargino@gmail.com,2015-10-28 20:09:17,userText,516274199,516274325,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 127,pamelaodf@gmail.com,2015-10-28 20:10:15,email,1446063094619,1446063094737,P,80
 127,pamelaodf@gmail.com,2015-10-28 20:10:15,email,1446063094734,1446063094827,A,65
 127,pamelaodf@gmail.com,2015-10-28 20:10:15,email,1446063094900,1446063095019,M,77
@@ -12272,7 +12146,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 127,pamelaodf@gmail.com,2015-10-28 20:10:15,userText,1446063148514,1446063148603,N,78
 127,pamelaodf@gmail.com,2015-10-28 20:10:15,userText,1446063148708,1446063148795,O,79
 127,pamelaodf@gmail.com,2015-10-28 20:10:15,userText,1446063149741,1446063149819,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 128,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:21,email,508807176,508807344,I,73
 128,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:21,email,508807336,508807472,T,84
 128,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:21,email,508807608,508807760,A,65
@@ -12378,7 +12251,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 128,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:21,userText,508829528,508829736,N,78
 128,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:21,userText,508829656,508829784,O,79
 128,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:21,userText,508829920,508830072,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 129,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:50,email,508837128,508837232,I,73
 129,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:50,email,508837216,508837328,T,84
 129,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:50,email,508837440,508837536,L,76
@@ -12481,7 +12353,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 129,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:50,userText,508860584,508860776,N,78
 129,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:50,userText,508860712,508860848,O,79
 129,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:11:50,userText,508861296,508861400,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 130,pamelaodf@gmail.com,2015-10-28 20:11:53,email,1446063203533,1446063203659,P,80
 130,pamelaodf@gmail.com,2015-10-28 20:11:53,email,1446063203657,1446063203747,A,65
 130,pamelaodf@gmail.com,2015-10-28 20:11:53,email,1446063203813,1446063203917,M,77
@@ -12581,7 +12452,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 130,pamelaodf@gmail.com,2015-10-28 20:11:53,userText,1446063248893,1446063248972,Left,37
 130,pamelaodf@gmail.com,2015-10-28 20:11:53,userText,1446063249100,1446063249172,Left,37
 130,pamelaodf@gmail.com,2015-10-28 20:11:53,userText,1446063250779,1446063250907,Space,32
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 131,pamelaodf@gmail.com,2015-10-28 20:12:39,email,1446063259769,1446063259873,P,80
 131,pamelaodf@gmail.com,2015-10-28 20:12:39,email,1446063259897,1446063259985,A,65
 131,pamelaodf@gmail.com,2015-10-28 20:12:39,email,1446063260033,1446063260129,M,77
@@ -12666,7 +12536,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 131,pamelaodf@gmail.com,2015-10-28 20:12:39,userText,1446063293724,1446063293817,N,78
 131,pamelaodf@gmail.com,2015-10-28 20:12:39,userText,1446063293913,1446063294002,O,79
 131,pamelaodf@gmail.com,2015-10-28 20:12:39,userText,1446063295356,1446063295410,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 132,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:12:46,email,508895391,508895543,I,73
 132,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:12:46,email,508895511,508895623,T,84
 132,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:12:46,email,508895743,508895863,L,76
@@ -12771,7 +12640,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 132,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:12:46,userText,508916583,508916751,N,78
 132,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:12:46,userText,508916695,508916807,O,79
 132,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:12:46,userText,508917247,508917359,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 133,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:18,email,508921543,508921623,I,73
 133,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:18,email,508921639,508921791,T,84
 133,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:18,email,508922287,508922463,A,65
@@ -12912,7 +12780,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 133,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:18,userText,508948567,508948711,N,78
 133,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:18,userText,508948655,508948783,O,79
 133,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:18,userText,508949231,508949375,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 134,pamelaodf@gmail.com,2015-10-28 20:13:27,email,1446063304658,1446063304774,P,80
 134,pamelaodf@gmail.com,2015-10-28 20:13:27,email,1446063304774,1446063304835,A,65
 134,pamelaodf@gmail.com,2015-10-28 20:13:27,email,1446063304916,1446063305004,M,77
@@ -13006,7 +12873,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 134,pamelaodf@gmail.com,2015-10-28 20:13:27,userText,1446063339541,1446063339634,N,78
 134,pamelaodf@gmail.com,2015-10-28 20:13:27,userText,1446063339730,1446063339810,O,79
 134,pamelaodf@gmail.com,2015-10-28 20:13:27,userText,1446063340387,1446063340442,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 135,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:47,email,508958415,508958567,I,73
 135,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:47,email,508958527,508958655,T,84
 135,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:47,email,508958735,508958935,A,65
@@ -13106,7 +12972,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 135,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:47,userText,508977231,508977407,N,78
 135,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:47,userText,508977343,508977471,O,79
 135,italo.batista@ccc.ufcg.edu.br,2015-10-28 20:13:47,userText,508977863,508977991,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 136,pamelaodf@gmail.com,2015-10-28 20:14:00,email,1446063351699,1446063351798,P,80
 136,pamelaodf@gmail.com,2015-10-28 20:14:00,email,1446063351799,1446063351883,A,65
 136,pamelaodf@gmail.com,2015-10-28 20:14:00,email,1446063351949,1446063352044,M,77
@@ -13189,7 +13054,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 136,pamelaodf@gmail.com,2015-10-28 20:14:00,userText,1446063378636,1446063378723,N,78
 136,pamelaodf@gmail.com,2015-10-28 20:14:00,userText,1446063378836,1446063378929,O,79
 136,pamelaodf@gmail.com,2015-10-28 20:14:00,userText,1446063379732,1446063379803,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 137,talitabac@gmail.com,2015-10-28 20:15:37,email,516640217,516640345,T,84
 137,talitabac@gmail.com,2015-10-28 20:15:37,email,516640280,516640442,A,65
 137,talitabac@gmail.com,2015-10-28 20:15:37,email,516640348,516640463,L,76
@@ -13275,7 +13139,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 137,talitabac@gmail.com,2015-10-28 20:15:37,userText,516653558,516653642,,<,188
 137,talitabac@gmail.com,2015-10-28 20:15:37,userText,516654409,516654501,Backspace,8
 137,talitabac@gmail.com,2015-10-28 20:15:37,userText,516654667,516654743,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 138,tacianosilva@gmail.com,2015-10-28 20:17:45,email,516765816,516765857,T,84
 138,tacianosilva@gmail.com,2015-10-28 20:17:45,email,516765896,516766016,A,65
 138,tacianosilva@gmail.com,2015-10-28 20:17:45,email,516766130,516766251,C,67
@@ -13359,7 +13222,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 138,tacianosilva@gmail.com,2015-10-28 20:17:45,userText,516795090,516795211,N,78
 138,tacianosilva@gmail.com,2015-10-28 20:17:45,userText,516795325,516795445,O,79
 138,tacianosilva@gmail.com,2015-10-28 20:17:45,userText,516796896,516796978,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 139,tacianosilva@gmail.com,2015-10-28 20:18:26,email,516809491,516809573,T,84
 139,tacianosilva@gmail.com,2015-10-28 20:18:26,email,516809687,516809808,A,65
 139,tacianosilva@gmail.com,2015-10-28 20:18:26,email,516809922,516810055,C,67
@@ -13444,7 +13306,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 139,tacianosilva@gmail.com,2015-10-28 20:18:26,userText,516836621,516836703,N,78
 139,tacianosilva@gmail.com,2015-10-28 20:18:26,userText,516836855,516836952,O,79
 139,tacianosilva@gmail.com,2015-10-28 20:18:26,userText,516837649,516837731,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 140,tacianosilva@gmail.com,2015-10-28 20:19:04,email,516845153,516845235,T,84
 140,tacianosilva@gmail.com,2015-10-28 20:19:04,email,516845310,516845392,A,65
 140,tacianosilva@gmail.com,2015-10-28 20:19:04,email,516845739,516845821,C,67
@@ -13531,7 +13392,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 140,tacianosilva@gmail.com,2015-10-28 20:19:04,userText,516875005,516875086,N,78
 140,tacianosilva@gmail.com,2015-10-28 20:19:04,userText,516875239,516875321,O,79
 140,tacianosilva@gmail.com,2015-10-28 20:19:04,userText,516875979,516876100,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 141,tacianosilva@gmail.com,2015-10-28 20:19:41,email,516882278,516882360,T,84
 141,tacianosilva@gmail.com,2015-10-28 20:19:41,email,516882399,516882558,A,65
 141,tacianosilva@gmail.com,2015-10-28 20:19:41,email,516882672,516882792,C,67
@@ -13622,7 +13482,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 141,tacianosilva@gmail.com,2015-10-28 20:19:41,userText,516912125,516912206,N,78
 141,tacianosilva@gmail.com,2015-10-28 20:19:41,userText,516912321,516912402,O,79
 141,tacianosilva@gmail.com,2015-10-28 20:19:41,userText,516913255,516913298,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 142,tacianosilva@gmail.com,2015-10-28 20:20:15,email,516919282,516919325,T,84
 142,tacianosilva@gmail.com,2015-10-28 20:20:15,email,516919400,516919482,A,65
 142,tacianosilva@gmail.com,2015-10-28 20:20:15,email,516919985,516920105,C,67
@@ -13708,7 +13567,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 142,tacianosilva@gmail.com,2015-10-28 20:20:15,userText,516945371,516945414,N,78
 142,tacianosilva@gmail.com,2015-10-28 20:20:15,userText,516945644,516945765,O,79
 142,tacianosilva@gmail.com,2015-10-28 20:20:15,userText,516946540,516946622,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 143,balrou@gmail.com,2015-10-29 13:39:30,email,579273728,579273852,B,66
 143,balrou@gmail.com,2015-10-29 13:39:30,email,579273845,579273929,A,65
 143,balrou@gmail.com,2015-10-29 13:39:30,email,579273966,579274048,L,76
@@ -13794,7 +13652,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 143,balrou@gmail.com,2015-10-29 13:39:30,userText,579287491,579287610,N,78
 143,balrou@gmail.com,2015-10-29 13:39:30,userText,579287572,579287666,O,79
 143,balrou@gmail.com,2015-10-29 13:39:30,userText,579287859,579287940,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 144,balrou@gmail.com,2015-10-29 13:39:57,email,579299301,579299385,B,66
 144,balrou@gmail.com,2015-10-29 13:39:57,email,579299379,579299464,A,65
 144,balrou@gmail.com,2015-10-29 13:39:57,email,579299467,579299506,L,76
@@ -13882,7 +13739,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 144,balrou@gmail.com,2015-10-29 13:39:57,userText,579313216,579313294,N,78
 144,balrou@gmail.com,2015-10-29 13:39:57,userText,579313251,579313335,O,79
 144,balrou@gmail.com,2015-10-29 13:39:57,userText,579313488,579313570,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 145,balrou@gmail.com,2015-10-29 13:40:21,email,579324619,579324779,B,66
 145,balrou@gmail.com,2015-10-29 13:40:21,email,579324736,579324820,A,65
 145,balrou@gmail.com,2015-10-29 13:40:21,email,579324896,579324977,L,76
@@ -13967,7 +13823,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 145,balrou@gmail.com,2015-10-29 13:40:21,userText,579337999,579338092,N,78
 145,balrou@gmail.com,2015-10-29 13:40:21,userText,579338049,579338133,O,79
 145,balrou@gmail.com,2015-10-29 13:40:21,userText,579338286,579338330,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 146,balrou@gmail.com,2015-10-29 13:40:43,email,579346071,579346194,B,66
 146,balrou@gmail.com,2015-10-29 13:40:43,email,579346188,579346349,A,65
 146,balrou@gmail.com,2015-10-29 13:40:43,email,579346502,579346584,L,76
@@ -14053,7 +13908,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 146,balrou@gmail.com,2015-10-29 13:40:43,userText,579357919,579358003,N,78
 146,balrou@gmail.com,2015-10-29 13:40:43,userText,579357965,579358045,O,79
 146,balrou@gmail.com,2015-10-29 13:40:43,userText,579358159,579358241,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 147,balrou@gmail.com,2015-10-29 13:41:02,email,579365671,579365755,B,66
 147,balrou@gmail.com,2015-10-29 13:41:02,email,579365749,579365833,A,65
 147,balrou@gmail.com,2015-10-29 13:41:02,email,579365836,579365875,L,76
@@ -14143,7 +13997,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 147,balrou@gmail.com,2015-10-29 13:41:02,userText,579378518,579378637,N,78
 147,balrou@gmail.com,2015-10-29 13:41:02,userText,579378598,579378678,O,79
 147,balrou@gmail.com,2015-10-29 13:41:02,userText,579378831,579378913,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 148,zegildo@gmail.com,2015-10-29 13:48:49,email,579816642,579816763,Z,90
 148,zegildo@gmail.com,2015-10-29 13:48:49,email,579816800,579816920,E,69
 148,zegildo@gmail.com,2015-10-29 13:48:49,email,579817035,579817117,G,71
@@ -14239,7 +14092,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 148,zegildo@gmail.com,2015-10-29 13:48:49,userText,579844385,579844466,N,78
 148,zegildo@gmail.com,2015-10-29 13:48:49,userText,579844469,579844585,O,79
 148,zegildo@gmail.com,2015-10-29 13:48:49,userText,579845711,579845793,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 149,zegildo@gmail.com,2015-10-29 13:49:22,email,579855247,579855329,Z,90
 149,zegildo@gmail.com,2015-10-29 13:49:22,email,579855405,579855487,E,69
 149,zegildo@gmail.com,2015-10-29 13:49:22,email,579855563,579855683,G,71
@@ -14320,7 +14172,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 149,zegildo@gmail.com,2015-10-29 13:49:22,userText,579878430,579878547,N,78
 149,zegildo@gmail.com,2015-10-29 13:49:22,userText,579878504,579878627,O,79
 149,zegildo@gmail.com,2015-10-29 13:49:22,userText,579879325,579879368,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 150,zegildo@gmail.com,2015-10-29 13:49:56,email,579886604,579886686,Z,90
 150,zegildo@gmail.com,2015-10-29 13:49:56,email,579886723,579886882,E,69
 150,zegildo@gmail.com,2015-10-29 13:49:56,email,579886919,579887001,G,71
@@ -14401,7 +14252,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 150,zegildo@gmail.com,2015-10-29 13:49:56,userText,579911889,579912010,N,78
 150,zegildo@gmail.com,2015-10-29 13:49:56,userText,579911967,579912090,O,79
 150,zegildo@gmail.com,2015-10-29 13:49:56,userText,579912710,579912792,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 151,zegildo@gmail.com,2015-10-29 13:50:26,email,579919327,579919448,Z,90
 151,zegildo@gmail.com,2015-10-29 13:50:26,email,579919485,579919644,E,69
 151,zegildo@gmail.com,2015-10-29 13:50:26,email,579919681,579919763,G,71
@@ -14482,7 +14332,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 151,zegildo@gmail.com,2015-10-29 13:50:26,userText,579942787,579942942,N,78
 151,zegildo@gmail.com,2015-10-29 13:50:26,userText,579942899,579943022,O,79
 151,zegildo@gmail.com,2015-10-29 13:50:26,userText,579943681,579943763,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 152,zegildo@gmail.com,2015-10-29 13:50:50,email,579949676,579949758,Z,90
 152,zegildo@gmail.com,2015-10-29 13:50:50,email,579949833,579949954,E,69
 152,zegildo@gmail.com,2015-10-29 13:50:50,email,579950030,579950111,G,71
@@ -14561,7 +14410,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 152,zegildo@gmail.com,2015-10-29 13:50:50,userText,579966442,579966561,N,78
 152,zegildo@gmail.com,2015-10-29 13:50:50,userText,579966564,579966680,O,79
 152,zegildo@gmail.com,2015-10-29 13:50:50,userText,579967456,579967538,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 153,gustavonobrega@gmail.com,2015-10-29 13:56:56,email,580302609,580302730,G,71
 153,gustavonobrega@gmail.com,2015-10-29 13:56:56,email,580302687,580302849,U,85
 153,gustavonobrega@gmail.com,2015-10-29 13:56:56,email,580302806,580302931,T,84
@@ -14656,7 +14504,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 153,gustavonobrega@gmail.com,2015-10-29 13:56:56,userText,580328119,580328240,.>,190
 153,gustavonobrega@gmail.com,2015-10-29 13:56:56,userText,580331079,580331160,Backspace,8
 153,gustavonobrega@gmail.com,2015-10-29 13:56:56,userText,580331781,580331862,U,85
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 154,fellype.cavalcante@gmail.com,2015-10-29 13:57:57,email,1446127176819,1446127176944,F,70
 154,fellype.cavalcante@gmail.com,2015-10-29 13:57:57,email,1446127176891,1446127177008,E,69
 154,fellype.cavalcante@gmail.com,2015-10-29 13:57:57,email,1446127177048,1446127177112,L,76
@@ -14753,7 +14600,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 154,fellype.cavalcante@gmail.com,2015-10-29 13:57:57,userText,1446127200884,1446127200945,N,78
 154,fellype.cavalcante@gmail.com,2015-10-29 13:57:57,userText,1446127201064,1446127201128,O,79
 154,fellype.cavalcante@gmail.com,2015-10-29 13:57:57,userText,1446127201331,1446127201360,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 155,gustavonobrega@gmail.com,2015-10-29 13:58:08,email,580378804,580378928,G,71
 155,gustavonobrega@gmail.com,2015-10-29 13:58:08,email,580378882,580379006,U,85
 155,gustavonobrega@gmail.com,2015-10-29 13:58:08,email,580379043,580379125,T,84
@@ -14849,7 +14695,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 155,gustavonobrega@gmail.com,2015-10-29 13:58:08,userText,580404286,580404407,N,78
 155,gustavonobrega@gmail.com,2015-10-29 13:58:08,userText,580404364,580404487,O,79
 155,gustavonobrega@gmail.com,2015-10-29 13:58:08,userText,580404990,580405072,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 156,gustavonobrega@gmail.com,2015-10-29 13:58:39,email,580412581,580412705,G,71
 156,gustavonobrega@gmail.com,2015-10-29 13:58:39,email,580412659,580412824,U,85
 156,gustavonobrega@gmail.com,2015-10-29 13:58:39,email,580412818,580412904,T,84
@@ -14947,7 +14792,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 156,gustavonobrega@gmail.com,2015-10-29 13:58:39,userText,580435948,580436108,N,78
 156,gustavonobrega@gmail.com,2015-10-29 13:58:39,userText,580436026,580436149,O,79
 156,gustavonobrega@gmail.com,2015-10-29 13:58:39,userText,580436497,580436579,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 157,fellype.cavalcante@gmail.com,2015-10-29 13:58:57,email,1446127239888,1446127240040,F,70
 157,fellype.cavalcante@gmail.com,2015-10-29 13:58:57,email,1446127240001,1446127240113,E,69
 157,fellype.cavalcante@gmail.com,2015-10-29 13:58:57,email,1446127240112,1446127240161,L,76
@@ -15038,7 +14882,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 157,fellype.cavalcante@gmail.com,2015-10-29 13:58:57,userText,1446127261395,1446127261457,N,78
 157,fellype.cavalcante@gmail.com,2015-10-29 13:58:57,userText,1446127261700,1446127261762,O,79
 157,fellype.cavalcante@gmail.com,2015-10-29 13:58:57,userText,1446127262020,1446127262090,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 158,gustavonobrega@gmail.com,2015-10-29 13:59:16,email,580444330,580444492,G,71
 158,gustavonobrega@gmail.com,2015-10-29 13:59:16,email,580444408,580444572,U,85
 158,gustavonobrega@gmail.com,2015-10-29 13:59:16,email,580444566,580444653,T,84
@@ -15134,7 +14977,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 158,gustavonobrega@gmail.com,2015-10-29 13:59:16,userText,580472378,580472534,N,78
 158,gustavonobrega@gmail.com,2015-10-29 13:59:16,userText,580472452,580472575,O,79
 158,gustavonobrega@gmail.com,2015-10-29 13:59:16,userText,580472728,580472849,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 159,fellype.cavalcante@gmail.com,2015-10-29 13:59:21,email,1446127267240,1446127267384,F,70
 159,fellype.cavalcante@gmail.com,2015-10-29 13:59:21,email,1446127267329,1446127267432,E,69
 159,fellype.cavalcante@gmail.com,2015-10-29 13:59:21,email,1446127268044,1446127268106,L,76
@@ -15225,7 +15067,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 159,fellype.cavalcante@gmail.com,2015-10-29 13:59:21,userText,1446127285229,1446127285290,N,78
 159,fellype.cavalcante@gmail.com,2015-10-29 13:59:21,userText,1446127285403,1446127285465,O,79
 159,fellype.cavalcante@gmail.com,2015-10-29 13:59:21,userText,1446127285771,1446127285834,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 160,fellype.cavalcante@gmail.com,2015-10-29 13:59:47,email,1446127292280,1446127292432,F,70
 160,fellype.cavalcante@gmail.com,2015-10-29 13:59:47,email,1446127292384,1446127292505,E,69
 160,fellype.cavalcante@gmail.com,2015-10-29 13:59:47,email,1446127292504,1446127292544,L,76
@@ -15331,7 +15172,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 160,fellype.cavalcante@gmail.com,2015-10-29 13:59:47,userText,1446127311225,1446127311288,N,78
 160,fellype.cavalcante@gmail.com,2015-10-29 13:59:47,userText,1446127311433,1446127311488,O,79
 160,fellype.cavalcante@gmail.com,2015-10-29 13:59:47,userText,1446127311672,1446127311744,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 161,gustavonobrega@gmail.com,2015-10-29 13:59:50,email,580478529,580478622,G,71
 161,gustavonobrega@gmail.com,2015-10-29 13:59:50,email,580478578,580478741,U,85
 161,gustavonobrega@gmail.com,2015-10-29 13:59:50,email,580478778,580478831,T,84
@@ -15425,7 +15265,6 @@ attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 161,gustavonobrega@gmail.com,2015-10-29 13:59:50,userText,580506087,580506208,N,78
 161,gustavonobrega@gmail.com,2015-10-29 13:59:50,userText,580506126,580506288,O,79
 161,gustavonobrega@gmail.com,2015-10-29 13:59:50,userText,580506792,580506874,.>,190
-attempt_id,email,attempt_time,source,keyDown,keyUp,keyValue,keyCode
 162,fellype.cavalcante@gmail.com,2015-10-29 14:00:12,email,1446127317289,1446127317441,F,70
 162,fellype.cavalcante@gmail.com,2015-10-29 14:00:12,email,1446127317385,1446127317497,E,69
 162,fellype.cavalcante@gmail.com,2015-10-29 14:00:12,email,1446127317508,1446127317555,L,76

@@ -1,10 +1,9 @@
 import ast
 import json
+import sys
 
-def formated_string_to_tuple_dicts(string):
-	return ast.literal_eval(string)
+path = sys.argv[1]
 
-path = "/home/tales/development/recogme/dados_coletados/Dados_CSV/userLogin.psv"
 arq_user_login = open(path, "r")
 
 header_user_login = arq_user_login.readline()
@@ -12,6 +11,9 @@ header_user_login = arq_user_login.readline()
 lines_user_login = arq_user_login.readlines()
 
 formated_table = []
+
+table_header = ",".join(("attempt_id", "email", "attempt_time", "source", "keyDown", "keyUp", "keyValue", "keyCode"))
+formated_table.append(table_header)
 
 print "Processing data"
 for line in lines_user_login:
@@ -30,9 +32,6 @@ for line in lines_user_login:
 	json_user_text = line_split[5]
 	user_text_keystroke = json.loads(json_user_text)["userText"]
 
-	table_header = ",".join(("attempt_id", "email", "attempt_time", "source", "keyDown", "keyUp", "keyValue", "keyCode"))
-	formated_table.append(table_header)
-
 	for k_email in email_keystroke:
 		row = (attempt_id, email, time, "email", str(k_email["keyDown"]), str(k_email["keyUp"]), k_email["keyValue"], str(k_email["keyCode"]))
 		row = ",".join(row)
@@ -49,7 +48,7 @@ for line in lines_user_login:
 		formated_table.append(row)
 
 print "Saving table"
-arq = open("/home/tales/development/recogme/dados_coletados/Dados_CSV/userLogin-formated.psv", "w")
+arq = open(path.replace(".psv", "-formated.psv"), "w")
 for row in formated_table:
 	arq.write(row.encode("utf8") + "\n")
 
