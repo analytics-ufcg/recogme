@@ -14,7 +14,7 @@ arq.close()
 dict_keydown_line = {}
 
 for line in lines:
-	line_split = line.replace("\n", "").split(sep)
+	line_split = line.replace("\n", "").split("\t")
 	keyDown = line_split[4]
 	dict_keydown_line[keyDown] = line
 
@@ -24,10 +24,10 @@ sorted_keydown.sort()
 
 pair_data = {}
 
-last_line = lines[0].replace("\n", "").split(sep)
+last_line = lines[0].replace("\n", "").split("\t")
 
 for line in lines[1:]:
-	line_split = line.replace("\n", "").split(sep)
+	line_split = line.replace("\n", "").split("\t")
 	#print line_split
 	attempt_id = line_split[0]
 	email = line_split[1]
