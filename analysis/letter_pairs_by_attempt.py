@@ -70,7 +70,4 @@ for pair in pair_data.keys():
 			key_2nd = pair[1]
 			new_line = key_1st + sep + key_2nd + sep + line
 			arq.write(new_line)
-
-
-
-#falta continuar... pegar a estrutura {pair_data} e transformar em data.frame
+arq.close()
