@@ -55,7 +55,7 @@ for line in lines[1:]:
 
 arq = open(new_path, "w")
 
-arq.write("letra.1" + sep + "letra.2"  + sep + "occurrence\n")
+arq.write("key_1st" + sep + "key_2nd"  + sep + "occurrence\n")
 
 for i in pair_data.keys():
 	arq.write(i[0] + sep + i[1] + sep + str(pair_data[i]) + "\n")
