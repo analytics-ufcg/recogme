@@ -69,13 +69,16 @@ for (var field in fields) {
     keystrokeOnField(field, fields[field]);
 }
 
-$('#btnclick').click(function (event) {    
+$('#btnclick').click(function (event) {
+    $('#span_signing').css('display','inline');  
+
     var jsonFields = JSON.stringify(fields);
     console.log(jsonFields);
 });
 
 //Check the id for the submit button in Django project.
-$('#btnSubmit').submit(function (event) {    
+$('#btnSubmit').submit(function (event) {
+  
   var jsonFields = JSON.stringify(fields);
   //console.log(jsonFields);
 });
