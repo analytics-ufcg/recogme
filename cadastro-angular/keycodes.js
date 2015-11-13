@@ -33,6 +33,19 @@ keycodes[91] = "WINKey(Start)"
 keycodes[93] = "WINMenu"
 
 //112-123     F1 to F12
+keycodes[112] = "F1"
+keycodes[113] = "F2"
+keycodes[114] = "F3"
+keycodes[115] = "F4"
+keycodes[116] = "F5"
+keycodes[117] = "F6"
+keycodes[118] = "F7"
+keycodes[119] = "F8"
+keycodes[120] = "F9"
+keycodes[121] = "F10"
+keycodes[122] = "F11"
+keycodes[123] = "F12"
+
 
 keycodes[144] = "NumLock"
 keycodes[145] = "ScrollLock"

@@ -29,7 +29,7 @@
 	</div>
 </nav>
 
-<div class="main-content col-xs-6 col-md-offset-3" ng-controller="CadastroCtrl">
+<div class="main-content col-xs-4 col-md-offset-4" ng-controller="CadastroCtrl">
 
 	<form id="formField" name="userForm" ng-model="userForm" role="form" data-toggle="validator" ng-submit="onSubmit()" autocomplete="off"
 		  novalidate="novalidate" ng-hide="submitted">
@@ -39,33 +39,12 @@
   			name="PreventChromeAutocomplete" autocomplete="address-level4" />
 		</div>
 
+		
+			
 		<div class="form-group">
-			<label for="name" class="control-label">Nome completo</label>
-			<div>
-			<input type="text"
-				   name="fullName"
-			       class="form-control"
-			       ng-model="formModel.name"
-			       id="fullName"
-				   required="required"
-				   ng-required-err-type="emptyField"
-				   >
-			</div>
-			<label for="confirmFullName" class="control-label">Confirme seu nome</label>
-			<input type="text"
-				   name="confirmFullName"
-			       class="form-control"
-			       ng-model="formModel.confirmName"
-			       id="confirmFullName"
-				   match="formModel.name"
-				   ng-match-err-type="nameMatchErr"
-			   	   >
-		</div>
-
-		<div class="form-group">
-			<label for="email" class="control-label">Email</label>
+			<h1 for="email" class="control-label" align="center">Sign In</h1>
 			<input type="email"
-				   
+				   placeholder = "Email"
 			       class="form-control"
 			       ng-model="formModel.email"
 			       id="email"
@@ -74,27 +53,11 @@
 				   ng-email-err-type="invalidEmail"
 				   >
 		</div>
-
-		<div class="form-group">
-			<label for="confirmEmail" class="control-label">Confirme seu email</label>
-
-			<input type="email"
-		
-			       class="form-control"
-			       ng-model="formModel.confirmEmail"
-			       id="confirmEmail"
-			       ng-email-err-type="invalidEmail"
-				   ng-required-err-type="emptyField"
-				   match="formModel.email"
-				   ng-match-err-type="emailMatchErr"
-			   	   >
-		</div>
-
-
 	
 		<div class="form-group">
-			<label for="password" class="control-label">Senha</label>
+			
 			<input type="password"
+				   placeholder = "Senha"
 				   autocomplete="off"
 			       class="form-control"
 			       id="password"
@@ -104,17 +67,6 @@
 				   ng-pattern="/^[A-Za-z0-9_]{10,32}$/"
 				   ng-pattern-err-type="invalidPassword"
 				   >
-		</div>
-
-		<div class="form-group">
-			<label for="confirmPassword" class="control-label">Confirme sua senha</label>
-			<input type="password"
-			       class="form-control"
-			       ng-model="formModel.confirmPassword"
-			       id="confirmPassword"
-				   match="formModel.password"
-				   ng-match-err-type="passwordMatchErr"
-				   > 
 		</div>
 
 		<div class="form-group">
@@ -142,9 +94,8 @@
 
 		<div class="form-group">
 
-			<div id="unsuccess_msg" class="alert alert-danger text-center" ng-show="has_error" 
-				 style="display: none;">
-				<h3>Houve algum problema no seu registro, por favor tente mais tarde.</h3>
+			<div style="display: none;" class="alert alert-danger text-center" ng-show="has_error" display="none">
+				<h3>Login Inválido.</h3>
 			</div>
 
 			<button class="btn btn-primary"
@@ -152,30 +103,23 @@
 			        data-style="expand-right"
 					type="submit"
 					id="btnclick">
-				<span id="span_registering" ng-show="submitting" style="display: none;">Registrando</span>
-				<span ng-show="!submitting">Registrar</span>
+				<span ng-show="!submitting">Sign In</span>
+				<span id="span_signing" ng-show="submitting" style="display: none;">Signing In</span>
 			</button>
 		</div>
 		
 	</form>
 
-	<div id="success_msg" style="display: none;" 
-		 class="alert alert-info text-center" ng-show="submitted">
-			<h3>Registro realizado com sucesso!</h3>
-	</div>
 </div>
 
 <script type="text/javascript">
 	$('#btnclick').click(function (event) {
-    	$('#span_registering').css('display','inline');
-    	$('#success_msg').css('display','block');
-    	$('#unsuccess_msg').css('display','block');
+    	$('#span_signing').css('display','inline');
 	});
 </script>
-
 
 <script src="keycodes.js"></script>
 <script src="keystroke.js"></script>
 
-</body >
-</html >
+</body>
+</html>

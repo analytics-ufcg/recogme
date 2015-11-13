@@ -1,4 +1,4 @@
-data <- read.delim("~/development/recogme/dados_coletados/Dados_CSV/userLogin-formated.psv", quote="")
+data <- read.delim("~/development/recogme/dados_coletados/Dados_CSV/userLogin-0.1.psv", quote="")
 
 options(scipen=999)
 
@@ -41,6 +41,3 @@ attempt_id.text.speed$delta.t = NULL
 #rate view
 mean(attempt_id.text.speed$rate)
 hist(attempt_id.text.speed$rate, nclass = 30, col = "lightgreen")
-
-
-
