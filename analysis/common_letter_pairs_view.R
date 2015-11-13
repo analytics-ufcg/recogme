@@ -5,8 +5,6 @@ pairs.of.letter$hold = pairs.of.letter$keyUp - pairs.of.letter$keyDown
 occurrence = occurrence[with(occurrence, order(-occurrence)), ]
 row.names(occurrence) = NULL
 
-
-
 diversity <- function(lista){
   normalized = (lista-min(lista))/(max(lista)-min(lista))
   sd(normalized)
@@ -67,3 +65,4 @@ diversity(occurr3.type.rate$hold)
 diversity(occurr4.type.rate$hold)
 diversity(occurr5.type.rate$hold)
 diversity(occurr6.type.rate$hold)
+
