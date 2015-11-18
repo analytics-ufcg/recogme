@@ -1,0 +1,325 @@
+---
+title: "Recogme - userLogin"
+author: "Antonio Marques Jr."
+date: "4 November 2015"
+output: html_document
+---
+
+A análise a seguir diz respeito aos dados coletados durante a ação de login no sistema de cadastro.
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+library(dplyr, quietly = TRUE)
+library(ggplot2, quietly = TRUE)
+
+userLogin <- read.delim("~/Documents/recogme/recogme-R/userLogin-0.1.psv", quote="")
+
+```
+
+##Sumário
+
+```{r, echo=FALSE}
+summary(userLogin)
+```
+
+###Número de observações
+```{r, echo=FALSE}
+nrow(userLogin)
+```
+###Número de variáveis/atributos:
+```{r, echo=FALSE}
+ncol(userLogin)
+colnames(userLogin)
+```
+
+- *attempt_id* - Identificador da tentativa de uma ação de *login*.
+- *email*: Email do usuário, sendo este utilizado como *username*.
+- *source*: Variável relativa a qual campo de entrada a linha pertence (*email*, *password* ou *userText*).
+- *keyDown*: *Timestamp* (em milisegundos) relativo ao momento em que o usuário pressiona uma tecla.
+- *keyUp*: *Timestamp* (em milisegundos) relativo ao momento em que o usuário solta uma tecla.
+- *keyValue*: Caractere relacionado a tecla que foi pressionada.
+- *keyCode*: Código que representa de forma única a tecla que foi pressionada.
+
+A partir dos atributos mencionados acima, foram derivadas novas *features* que, dependendo da expressividade, podem ser utilizadas na geração do modelo de predição.
+
+##Estudo de *features* para um dado Usuário
+
+Visando iniciar a análise de forma cautelosa, foi selecionado um usuário para análise de seus *attempts*, afim de encontrar características na dinâmica de digitação e posteriormente expandir o estudo para os demais usuários do sistema.
+
+```{r, echo=FALSE}
+user_antonio <- userLogin %>% filter(email == "antonioricardojr@gmail.com")
+user_antonio <- droplevels(user_antonio)
+summary(user_antonio)
+```
+
+###Variável holdTime
+
+Relativa ao tempo em que uma tecla se encontra pressionada. Seu tempo é calculado subtraindo o *keyDown* do *keyUp*.
+
+holdTime = keyUp - keyDown
+
+```{r}
+holdTime <- function(user){
+  user$holdTime = user$keyUp - user$keyDown
+  return (user);
+}
+```
+
+```{r}
+user_antonio <- holdTime(user_antonio)
+```
+
+###Variável latencyKeyDown
+
+Relativa a latência entre as ações de *keyDown* realizadas em cada campo. Seu tempo é calculado subtraindo os *keyDowns* de uma tecla atual e sua antecessora.
+
+latencyKeyDown[i] = keyDown[i] - keyDown[i - 1], onde i representa o índice de uma tecla.
+```{r}
+#Retorna o dataset acrescido da variavel latencyKeyDown. O dataset retornado é ordenado por keyDown de forma crescente.
+latencyKeyDown <- function (user){
+  #user <- arrange(user, keyDown)
+  user$latencyKeyDown <- 0
+  for (i in 2:nrow(user)){
+    user[i,]$latencyKeyDown <- user[i,]$keyDown - user[i-1,]$keyDown
+  }
+  return (user);
+}
+
+```
+
+```{r}
+user_antonio <- latencyKeyDown(user_antonio)
+```
+
+
+```{r, echo=FALSE}
+#Retorna o dataset acrescido da variavel latencyKeyUp. O dataset retornado é ordenado por keyUp de forma crescente.
+latencyKeyUp <- function (user){
+  #user <- arrange(user, keyUp)
+  user$latencyKeyUp <- 0
+  for (i in 2:nrow(user)){
+    user[i,]$latencyKeyUp <- user[i,]$keyUp - user[i-1,]$keyUp
+  }
+  return (user);
+}
+```
+
+```{r}
+user_antonio <- latencyKeyUp(user_antonio)
+summary(user_antonio)
+```
+
+```{r}
+latencySortedByKeyDown <- function (user){
+  user <- arrange(user, keyDown)
+  user$latencySortedByKeyDown <- 0
+  
+  for (i in 2:nrow(user)){
+    user[i,]$latencySortedByKeyDown <- user[i,]$keyDown - user[i-1,]$keyUp
+  }
+  return (user);
+}
+```
+
+```{r}
+user_antonio <- latencySortedByKeyDown(user_antonio)
+
+```
+
+```{r}
+latencySortedByKeyUp <- function (user){
+  user <- arrange(user, keyUp)
+  user$latencySortedByKeyUp <- 0
+  
+  for (i in 2:nrow(user)) {
+    user[i,]$latencySortedByKeyUp <- user[i,]$keyDown - user[i-1,]$keyUp
+  }
+  return (user);
+}
+```
+
+```{r}
+user_antonio <- latencySortedByKeyUp(user_antonio)
+
+```
+
+
+
+```{r, echo=FALSE}
+#Gera as features para um dado usuário: holdTime, latencyKeyDown, latencyKeyUp, latencySorted
+generateFeatures <- function(user){
+  user <- holdTime(user)
+  user <- latencyKeyDown(user)
+  user <- latencyKeyUp(user)
+  user <- latencySortedByKeyDown(user)
+  user <- latencySortedByKeyUp(user)
+  return (user);
+}
+
+genFeaturesDataset <- function(dataset){
+  emails <- levels(dataset$email)
+  dataResp <- data.frame()
+  for (e in emails) {
+    user <- dataset %>% filter(email == e)
+    user <- generateFeatures(user)
+    dataResp <- rbind(dataResp, user)
+  }
+  return (dataResp);
+}
+
+userLogin_v1 <- genFeaturesDataset(userLogin)
+# write.table(userLogin_v1, file = "userLogin_v1.csv", append = FALSE, quote = FALSE, sep = "\t",
+#             na = "NA", dec = ".", row.names = FALSE,
+#             col.names = TRUE, 
+#             fileEncoding = "UTF-8")
+```
+
+```{r}
+summary(userLogin_v1)
+```
+
+
+###Análise do HoldTime
+
+```{r}
+ggplot(userLogin_v1, aes(x=email, y=holdTime)) + geom_point() + theme_bw()
+```
+
+
+
+
+
+```{r}
+library(Rmisc, quietly = TRUE)
+#Função que retorna os intervalos de confiança para uma dada feature do dataset.
+users_cis_by_feature <- function(dataset, feature){
+  email_users <- levels(dataset$email)
+  toPlot <- data.frame()
+  
+  for (e in email_users){
+    user <- dataset %>% filter(email == e)
+    values <- user[[feature]]
+    user_ci <- CI(values, ci=0.95)
+    toPlot <- rbind(toPlot, data.frame(user = e, 
+                                       lower = user_ci[1], 
+                                       mean = user_ci[2], 
+                                       upper = user_ci[3],
+                                       row.names = NULL))
+  }
+  
+  return (toPlot);
+}
+```
+
+#ICs - HoldTime
+```{r}
+toPlot_ht <- users_cis_by_feature(userLogin_v1, "holdTime")
+
+ggplot(toPlot_ht, aes(x = 1:31 , y=mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1) + labs(x="users", y="hold time") + theme_bw()
+
+
+```
+
+#CIS latencyKeyDown
+```{r}
+toPlot_lkd <- users_cis_by_feature(userLogin_v1, "latencyKeyDown")
+
+ggplot(toPlot_lkd, aes(x = 1:31 , y=mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1) + labs(x="users", y="latenty for keyDown") + theme_bw()
+
+
+```
+
+
+#CIS latencyKeyUp
+```{r}
+toPlot_lku <- users_cis_by_feature(userLogin_v1, "latencyKeyUp")
+
+ggplot(toPlot_lku, aes(x = 1:31 , y=mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1) + labs(x="users", y="latenty for keyUp") + theme_bw()
+
+
+```
+
+#CIS latencySorterdByKeyDown
+```{r}
+toPlot_lsbkd <- users_cis_by_feature(userLogin_v1, "latencySortedByKeyDown")
+
+ggplot(toPlot_lsbkd, aes(x = 1:31 , y=mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1) + labs(x="users", y="latenty sorted by keyDown") + theme_bw()
+
+
+```
+
+#CIS latencySorterdByKeyUp
+```{r}
+toPlot_lsbku <- users_cis_by_feature(userLogin_v1, "latencySortedByKeyUp")
+
+ggplot(toPlot_lsbku, aes(x = 1:31 , y=mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1) + labs(x="users", y="latenty sorted by keyUp") + theme_bw()
+
+
+```
+
+
+###Feature @ (Shift 2)
+
+
+```{r}
+
+occurences_at <- userLogin_v1 %>% filter(source == "email", keyCode %in% c(16, 50))
+
+shift_2_occurences <- occurences_at %>% arrange(keyCode) %>% group_by(attempt_id, email) %>% summarise(shift_ht = holdTime[[1]] ,two_ht = holdTime[[2]], latency  = latencySortedByKeyDown[[length(latencySortedByKeyDown)]],
+                                       latency_kd = latencyKeyDown[[length(latencyKeyDown)]])
+
+```
+
+###Intervalo de Confiança para o holdtime do Shift
+```{r}
+
+cis_shift_ht <- users_cis_by_feature(shift_2_occurences, "shift_ht")
+
+ggplot(cis_shift_ht, aes(x = 1:31 , y=mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1) + labs(x="users", y="HoldTime", title="ICs para o holdTime da tecla SHIFT") + theme_bw()
+
+```
+
+
+###Intervalo de Confiança para o holdtime da tecla 2 (Sendo Utilizada para escrever o '@')
+```{r}
+
+cis_two_ht <- users_cis_by_feature(shift_2_occurences, "two_ht")
+
+ggplot(cis_two_ht, aes(x = 1:31 , y=mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1) + labs(x="users", y="HoldTime", title="ICs para o holdTime da tecla 2 (para escrita do '@')") + theme_bw()
+
+```
+
+###Intervalo de Confiança para a latência entre as teclas SHIFT e 2
+```{r}
+
+cis_latency <- users_cis_by_feature(shift_2_occurences, "latency")
+
+ggplot(cis_latency, aes(x = 1:31 , y=mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1) + labs(x="users", y="latency", title="ICs para a latência entre as teclas SHIFT e 2 (escrita do @)") + theme_bw()
+
+```
+
+###Intervalo de Confiança para a latência entre keydowns das teclas SHIFT e 2
+```{r}
+
+cis_latency_kd <- users_cis_by_feature(shift_2_occurences, "latency_kd")
+
+ggplot(cis_latency_kd, aes(x = 1:31 , y=mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin=lower, ymax=upper), width=.1) + labs(x="users", y="latency", title="ICs para a latência entre keydowns das teclas SHIFT e 2 (escrita do @)") + theme_bw()
+
+```

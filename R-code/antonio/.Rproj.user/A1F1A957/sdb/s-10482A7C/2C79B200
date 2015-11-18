@@ -1,0 +1,17 @@
+{
+    "contents" : "library(caret, quietly = T)\n\nrequire(GGally, quietly = T)\n\nfeatures_login_frase <- read.delim(\"~/Documents/recogme/recogme-R/features_login_frase.psv\", header=FALSE, quote=\"\")\n\nsummary(features_login_frase)\n\n\nset.seed(825)\n\nfitControl <- trainControl(## 10-fold CV\n  method = \"repeatedcv\",\n  number = 10,\n  ## repeated ten times\n  repeats = 10)\n\nsvmFit <- train(V1 ~ ., data = features_login_frase[,1:5],\n                #method = \"svmRadial\",\n                trControl = fitControl,\n                preProc = c(\"center\", \"scale\"),\n                tuneLength = 8\n                #metric = \"ROC\"\n                )\n",
+    "created" : 1447871499320.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3144132546",
+    "id" : "2C79B200",
+    "lastKnownWriteTime" : 1447872992,
+    "path" : "~/Documents/recogme/recogme-R/recogme-svm-caret.R",
+    "project_path" : "recogme-svm-caret.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

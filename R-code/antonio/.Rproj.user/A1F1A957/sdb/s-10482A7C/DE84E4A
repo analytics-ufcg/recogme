@@ -1,0 +1,18 @@
+{
+    "contents" : "library(dplyr, quietly = TRUE)\n\nuserLogin.noBackSpace <- read.delim(\"~/Documents/recogme/recogme-R/userLogin-noBackSpace.psv\")\n\nsummary(userLogin.noBackSpace)\n\nuserPasswords <- userLogin.noBackSpace %>% filter(source == \"password\")\n\nget_latency <- function (user){\n  user <- arrange(user, keyUp)\n  user$latency <- 0\n  \n  for (i in 2:nrow(user)) {\n    user[i,]$latency <- user[i,]$keyDown - user[i-1,]$keyUp\n  }\n  return (user);\n}\n\nholdTime <- function(user){\n  user$holdTime = user$keyUp - user$keyDown\n  return (user);\n}\n\nuserPasswords <- get_latency(userPasswords)\nuserPasswords <- holdTime(userPasswords)\n\nget_top_6 <- function(data){\n  return (data[1:6,])\n}\n\nget_top_6_by_attempt <- function (data){\n  library(dplyr, quietly = TRUE)\n  detach(\"package:dplyr\", unload=TRUE)\n  library(plyr, quietly = TRUE)\n  resp <- ddply(data, \"attempt_id\", get_top_6)\n  detach(\"package:plyr\", unload=TRUE)\n  library(dplyr, quietly = TRUE)\n  return (resp)\n}\n\n\nuser_ricardo <- userPasswords %>% filter(email == \"ricooliveira@gmail.com\")  \ndetach(\"package:dplyr\", unload=TRUE)\nlibrary(plyr, quietly = TRUE)\nuser_ricardo <- ddply(user_ricardo, \"attempt_id\", get_top_6)\n\nusers_passwords_6_char <- get_top_6_by_attempt(userPasswords)\n\ndata <- user_ricardo %>% filter(attempt_id == 1)\nget_features <- function(data){\n    library(dplyr, quietly = T)\n    data_t <- data %>% select(latency, holdTime)\n    data_t <- t(data_t)\n    \n    Flatencies <- data.frame(Fpw_latency1 = data_t[1,2], Fpw_latency2 = data_t[1,3], \n                       Fpw_latency3 = data_t[1,4], Fpw_latency4 = data_t[1,5], Fpw_latency5 = data_t[1,6])\n    \n    FholdTimes <- data.frame(Fpw_holdtime1 = data_t[2,1],\n                             Fpw_holdtime2 = data_t[2,2], \n                             Fpw_holdtime3 = data_t[2,3], \n                             Fpw_holdtime4 = data_t[2,4], \n                             Fpw_holdtime5 = data_t[2,5], \n                             Fpw_holdtime6 = data_t[2,6])\n  \n    resp <- cbind(email = data$email,Flatencies, FholdTimes)\n    return (resp);\n}\n\nlibrary(plyr)\ntest_get_features <- ddply(users_passwords_6_char, \"attempt_id\",get_features) \ntest_get_features <- data.frame(unique(test_get_features))\n\nwrite.table(test_get_features, \"password-features.csv\", quote = FALSE, sep = \"\\t\", col.names = TRUE, row.names = FALSE, fileEncoding = \"UTF-8\")\n\n\n",
+    "created" : 1447877974851.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3813272556",
+    "id" : "DE84E4A",
+    "lastKnownWriteTime" : 1447783374,
+    "path" : "~/Documents/recogme/recogme-R/password-features.R",
+    "project_path" : "password-features.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
