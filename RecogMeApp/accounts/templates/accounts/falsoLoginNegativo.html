@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <div class="row text-center">
+  <!-- <div class="col-md-12 text-center signup" style="border: 2px solid green;"> -->
+      <div class="col-md-12 text-center alert alert-danger" >
+	  		<h2><strong>{{ username.capitalize }}</strong>  tente novamente !!!</h2>
+		</div>
+		<img src="/static/img/thumbs-down.png"  alt="joinha" width="304" height="236">
+      <!-- </div> -->
+   </div>
+{% endblock content %}

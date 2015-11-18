@@ -182,3 +182,10 @@ def logout_view(request):
 
 def obrigado_view(request, username):
     return render(request, 'accounts/obrigado.html', {'username': username})
+
+def falsoLoginPositivo_view(request):
+    return render(request, 'accounts/falsoLoginPositivo.html')
+
+def falsoLoginNegativo_view(request):
+    return render(request, 'accounts/falsoLoginNegativo.html')
+
