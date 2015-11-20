@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 
-{% block title %}Simulação{% endblock title %}
+{% block title %}Falso Login{% endblock title %}
 
 {% block content %}
 
@@ -10,7 +10,7 @@
 
 <div class="col-md-4 col-md-offset-4 signup">
 
-<div class="page-header"  style="text-align:center;"><h2><b>Simulação<b></h2></div>
+<div class="page-header"  style="text-align:center;"><h2><b>Falso Login<b></h2></div>
 
 {% if mensaje %}
 
@@ -25,6 +25,14 @@
 <form method="post" action="" class = "login">
 
 {% csrf_token %}
+     <!-- Aqui é o usuário e senha aleatório -->
+	 <div class="form-group">
+
+        <p><b>Tente acessar com</b> 
+      	<blockquote><h4>Usuário: "{{ randemail }}"</h4>
+      	<h4>Senha: </h4></blockquote>
+         
+    </div>
 
     <div class="form-group">
 
@@ -51,7 +59,7 @@
 
 	</div>
 
-<button id="form" type="submit" class="btn btn-primary">Login</button>
+<button id="form" type="submit" class="btn btn-primary">Tentar logar</button>
 
 </form>
 

@@ -5,19 +5,18 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 
 from .form import RegistroUserForm
-from .models import UserProfilfiltere, UserLogin
+from .models import UserProfile, UserLogin
 
 from django.contrib.auth import authenticate, login, logout
 
 from django.contrib.auth.decorators import login_required
 
 # Añadir import logout y messages
-
+from django.template import Context, Template
 from django.contrib import messages
 import logging
 import json
 
-from random import *
 # Create your views here.
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -131,10 +130,20 @@ def registro_usuario_view(request):
 def index_view(request):
     return render(request, 'accounts/index.html')
 
+# @login_required
+# def random_user():
+#     print("ENTROU AQUI !!!!!!!!!!!!!!!!!!!")
+    
+#     return randemail
+#     # return render(request, 'accounts/ataque.html', {'randemail': randemail})
 
 @login_required
 def ataque_view(request):
 
+    randuser = UserLogin.objects.order_by('?')[0]
+
+    randemail = randuser.email
+        
     mensaje = ''  
     if request.method == 'POST':
        
@@ -147,31 +156,29 @@ def ataque_view(request):
         frase = request.POST.get('userText')
 
         user = authenticate(username=username, password=password)
-
-        # all_entries = Entry.objects.all()
-        # rand =  randint(1, len(all_entries))
+        
         
         if user is not None:
             if user.is_active:
                 if frase.strip() != temp:
                      return render(request, 'accounts/ataque.html', {'mensaje': 'Frase incorreta.'})
-                user_login = UserLogin()
-                user_login.email = username
+                # user_login = UserLogin();
+                # user_login.email = username
                 # user_login.password = password
-                user_login.json_email = json.dumps(keystroke[0])
-                user_login.json_password = json.dumps(keystroke[1])
-                user_login.json_user_text = json.dumps(keystroke[2])
+                # user_login.json_email = json.dumps(keystroke[0])
+                # user_login.json_password = json.dumps(keystroke[1])
+                # user_login.json_user_text = json.dumps(keystroke[2])
                 #user_login.save()
 
                 login(request, user)
-                return redirect(reverse('accounts.index'))
+                return redirect(reverse('accounts.flpositivo'))
             else:
-                pass
+                return redirect(reverse('accounts.flnegativo'))
 
         mensaje = 'Nome de usuário ou senha não são válidos.'
         for i in request.POST.lists():
             logger.error(i)
-    return render(request, 'accounts/ataque.html', {'mensaje': mensaje})
+    return render(request, 'accounts/ataque.html', {'mensaje': mensaje,  'randemail' : randemail})
 
 
 def login_view(request):

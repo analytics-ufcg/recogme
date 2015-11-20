@@ -54,8 +54,8 @@
       {% if user.is_authenticated %}
 
           <li><a href="{% url 'accounts.index' %}">{{ user.username }}</a></li>
-
-            <li><a href="{% url 'accounts.logout' %}">Logout</a></li>
+          <li><a href="{% url 'accounts.logout' %}">Logout</a></li>
+          <li><a href="{% url 'accounts.ataque' %}">Falso Login</a></li>
 
        {% else %}
 
