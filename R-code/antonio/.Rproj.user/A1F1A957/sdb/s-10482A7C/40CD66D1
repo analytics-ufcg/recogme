@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1447872791441.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "40CD66D1",
+    "lastKnownWriteTime" : 6877952598196117861,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "93kziuguue",
+        "caption" : "features_login_frase",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=features_login_frase&cache_key=93kziuguue",
+        "displayedObservations" : 162,
+        "environment" : "",
+        "object" : "features_login_frase",
+        "totalObservations" : 162,
+        "variables" : 49
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
