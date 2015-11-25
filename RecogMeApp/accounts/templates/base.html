@@ -47,7 +47,7 @@
             <li><a href="#contact">Contact</a></li>
 
       </ul>
-
+ 
 
 <ul class="nav navbar-nav navbar-right">
 
@@ -80,6 +80,12 @@
     <div class="cover">
       <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?w=1024&amp;q=50&amp;fm=jpg&amp;s=478a9a2196033db7c0bf3c8ba3707f4d')"></div>
       <div class="container">
+
+            <div style="display: none;">
+                  <input type="text" id="PreventAutocomplete"  type="hidden"
+                    name="PreventChromeAutocomplete" autocomplete="address-level4" />
+                </div>
+                  
           {% include '_messages.html' %}
             {% block content %}{% endblock content %}
       </div>
