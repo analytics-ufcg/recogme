@@ -16,11 +16,17 @@ from django.template import Context, Template
 from django.contrib import messages
 import logging
 import json
+import csv, random
+import os
+from django.conf import settings
 
 # Create your views here.
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
+with open(settings.MEDIA_ROOT +'/data/senhas.psv', 'r') as csvfile:
+        users = csv.reader(csvfile)
+        users = [(row) for row in users]
 
 # def parser(json_string):
 #     # dict_keys(['confirmEmail', 'email', 'confirmPassword', 'confirmFullName', 'fullName', 'password', 'userText'])
@@ -137,13 +143,14 @@ def index_view(request):
 #     return randemail
 #     # return render(request, 'accounts/ataque.html', {'randemail': randemail})
 
+
 @login_required
 def ataque_view(request):
 
-    randuser = UserLogin.objects.order_by('?')[0]
+    randuser = users[random.randint(1, len(users)-1)]
+    randemail = randuser[0]
+    randsenha = randuser[1]
 
-    randemail = randuser.email
-        
     mensaje = ''  
     if request.method == 'POST':
        
@@ -178,7 +185,7 @@ def ataque_view(request):
         mensaje = 'Nome de usuário ou senha não são válidos.'
         for i in request.POST.lists():
             logger.error(i)
-    return render(request, 'accounts/ataque.html', {'mensaje': mensaje,  'randemail' : randemail})
+    return render(request, 'accounts/ataque.html', {'mensaje': mensaje,  'randemail' : randemail, 'randsenha': randsenha})
 
 
 def login_view(request):
