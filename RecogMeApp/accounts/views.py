@@ -3,44 +3,44 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
-
-from .form import RegistroUserForm
-from .models import UserProfile, UserLogin
-
 from django.contrib.auth import authenticate, login, logout
-
 from django.contrib.auth.decorators import login_required
-
-# Añadir import logout y messages
-from django.template import Context, Template
 from django.contrib import messages
-import logging
-import json
-import csv, random
-import os
 from django.conf import settings
 
-# Create your views here.
-# Get an instance of a logger
+from .form import RegistroUserForm
+from .models import UserProfile, UserLogin, FalseLogin
+
+
+
+
+# Añadir import logout y messages
+
+import logging
+import json
+import csv
+import random
+from time import ctime
+
+from .keystroke_model import SvmModel as Svm, prepare_set_test
+from .prepare_json import generate_table
+
 logger = logging.getLogger(__name__)
 
-with open(settings.MEDIA_ROOT +'/data/senhas.psv', 'r') as csvfile:
-        users = csv.reader(csvfile)
-        users = [(row) for row in users]
+randuser = []
+Svm = Svm(settings.MEDIA_ROOT + '/data/dados-train.psv',
+          settings.MEDIA_ROOT + '/data/dados-teste.psv')
+Svm.create_model()
 
-# def parser(json_string):
-#     # dict_keys(['confirmEmail', 'email', 'confirmPassword', 'confirmFullName', 'fullName', 'password', 'userText'])
-#     json_parsed = json.loads(json_string)
-#     json_email = {"login": json_parsed["email"], 'confirmEmail': json_parsed['confirmEmail']}
-#     json_password = {'password': json_parsed['password'], 'confirmPassword': json_parsed['confirmPassword']}
-#     json_full_name = {'fullName': json_parsed['password'], 'confirmFullName': json_parsed['confirmFullName']}
-#     json_user_text = {'userText': json_parsed['userText']}
+with open(settings.MEDIA_ROOT + '/data/senhas.psv', 'r') as csvfile:
+    users = csv.reader(csvfile)
+    users = [(row) for row in users]
 
-#     logger.error("___________________________________________________________________________\n")
-#     logger.error(json_parsed)
-#     logger.error("___________________________________________________________________________\n")
 
-#     return [json_email, json_password, json_full_name, json_user_text]
+def choose_randuser():
+    randuser = users[random.randint(1, len(users) - 1)]
+    return randuser
+
 
 def parser(json_string, tela):
     retorno = None
@@ -52,63 +52,48 @@ def parser(json_string, tela):
         json_password = {'password': json_parsed['password'], 'confirmPassword': json_parsed['confirmPassword']}
         json_full_name = {'fullName': json_parsed['password'], 'confirmFullName': json_parsed['confirmFullName']}
         json_user_text = {'userText': json_parsed['userText']}
-
-        logger.error("___________________________________________________________________________\n")
-        logger.error(json_parsed)
-        logger.error("___________________________________________________________________________\n")
-
         retorno = [json_email, json_password, json_full_name, json_user_text]
+
     elif tela == "login":
-         # dict_keys(['confirmEmail', 'email', 'confirmPassword', 'confirmFullName', 'fullName', 'password', 'userText'])
+        # dict_keys(['confirmEmail', 'email', 'confirmPassword', 'confirmFullName', 'fullName', 'password', 'userText'])
         json_parsed = json.loads(json_string)
         json_email = {"login": json_parsed["email"]}
         json_password = {'password': json_parsed['password']}
         json_user_text = {'userText': json_parsed['userText']}
 
-        logger.error("___________________________________________________________________________\n")
-        logger.error(json_parsed)
-        logger.error("___________________________________________________________________________\n")
-
         retorno = [json_email, json_password, json_user_text]
     return retorno
+
+
+def prepare_singnup_data(form, request):
+    cleaned_data = form.cleaned_data
+    username = cleaned_data.get('email')
+    password = cleaned_data.get('password')
+    phrase = cleaned_data.get('phrase')
+    fullname = cleaned_data.get('name')
+    first_name = fullname.split()[0]
+    last_name = " ".join(fullname.split()[1:])
+    keystroke = request.POST.get('keystroke')
+    keystroke = parser(keystroke, "registro")
+
+    return first_name, keystroke, phrase, last_name, username, password
+
 
 def registro_usuario_view(request):
     print(request)
     if request.method == 'POST':
-        # for i in request.POST.lists():
-        #     logger.error("___________________________________________________________________________\n")
-        #     logger.error(i)
-        #     logger.error("___________________________________________________________________________\n")
-
         form = RegistroUserForm(request.POST, request.FILES)
         # Comprobamos si el formulario es valido
         if form.is_valid():
-            # En caso de ser valido, obtenemos los datos del formulario.
-            # form.cleaned_data obtiene los datos limpios y los pone en un
-            # diccionario con pares clave/valor, donde clave es el nombre del campo
-            # del formulario y el valor es el valor si existe.
-            cleaned_data = form.cleaned_data
-            username = cleaned_data.get('email')
-            password = cleaned_data.get('password')
-            phrase = cleaned_data.get('phrase')
-            fullname = cleaned_data.get('name')
-            first_name = fullname.split()[0]
-            last_name = " ".join(fullname.split()[1:])
-            keystroke = request.POST.get('keystroke')
-            keystroke = parser(keystroke,"registro")
-
+            first_name, keystroke, phrase, last_name, username, password = prepare_singnup_data(form, request)
             # E instanciamos un objeto User, con el username y password
             user_model = User.objects.create_user(username=username, password=password)
-
             user_model.is_active = True
             user_model.first_name = first_name
             user_model.last_name = last_name
-            # Y guardamos el objeto, esto guardara los datos en la db.
             user_model.save()
-            # Ahora, creamos un objeto UserProfile, aunque no haya incluido
-            # una imagen, ya quedara la referencia creada en la db.
+
             user_profile = UserProfile()
-            # Al campo user le asignamos el objeto user_model
             user_profile.user = user_model
             user_profile.phrase = phrase
 
@@ -116,14 +101,11 @@ def registro_usuario_view(request):
             user_profile.json_full_name = json.dumps(keystroke[2])
             user_profile.json_password = json.dumps(keystroke[1])
             user_profile.json_user_text = json.dumps(keystroke[3])
-
-            # y le asignamos la photo (el campo, permite datos null)
-            # user_profile.photo = photo
-            # Por ultimo, guardamos tambien el objeto UserProfile
             user_profile.save()
-            # Ahora, redireccionamos a la pagina accounts/obrigado.html
-            # Pero lo hacemos con un redirect.
+
             return redirect(reverse('accounts.obrigado', kwargs={'username': first_name}))
+        else:
+            form = RegistroUserForm()
     else:
         form = RegistroUserForm()
     context = {
@@ -136,56 +118,54 @@ def registro_usuario_view(request):
 def index_view(request):
     return render(request, 'accounts/index.html')
 
-# @login_required
-# def random_user():
-#     print("ENTROU AQUI !!!!!!!!!!!!!!!!!!!")
-    
-#     return randemail
-#     # return render(request, 'accounts/ataque.html', {'randemail': randemail})
-
 
 @login_required
 def ataque_view(request):
+    mensaje = ''
+    global randuser
 
-    randuser = users[random.randint(1, len(users)-1)]
+    if request.method == 'GET':
+        randuser = choose_randuser()
+
     randemail = randuser[0]
     randsenha = randuser[1]
 
-    mensaje = ''  
     if request.method == 'POST':
-       
+
         temp = "Para as rosas, escreveu alguém, o jardineiro é eterno."
 
-        username = request.POST.get('email')
+        json_email, json_password, json_user_text, password, phrase, username = prepare_login_data(request)
 
-        password = request.POST.get('password')
-        
-        frase = request.POST.get('userText')
+        if username == randemail and password == randsenha:
+            if phrase.strip() != temp:
+                return render(request, 'accounts/ataque.html', {'mensaje': 'Frase incorreta.'})
 
-        user = authenticate(username=username, password=password)
-        
-        
-        if user is not None:
-            if user.is_active:
-                if frase.strip() != temp:
-                     return render(request, 'accounts/ataque.html', {'mensaje': 'Frase incorreta.'})
-                # user_login = UserLogin();
-                # user_login.email = username
-                # user_login.password = password
-                # user_login.json_email = json.dumps(keystroke[0])
-                # user_login.json_password = json.dumps(keystroke[1])
-                # user_login.json_user_text = json.dumps(keystroke[2])
-                #user_login.save()
+            # data = "{0}|{1}|{2}|{3}|{4}".format(str(1), username, ctime(), json_email, json_password, json_user_text)
+            data = "" + str(1) + '|' + username + '|' + ctime() + '|' + json_email + '|' + json_password + '|' + \
+                   json_user_text
 
-                login(request, user)
+            output_psv = settings.MEDIA_ROOT + '/data/output.psv'
+            test_psv = settings.MEDIA_ROOT + '/data/test.psv'
+            generate_table(data, output_psv)
+            prepare_set_test(output_psv, test_psv)
+            Svm.create_test(dataset_test=test_psv)
+            prediction = Svm.consult_prediction(email=randemail)
+
+            false_login = FalseLogin.create(invader_email=str(request.user), attempt_path=test_psv,
+                                            hacked_email=randemail, prediction_result=prediction)
+            false_login.save()
+
+            if prediction[0] == 1:
                 return redirect(reverse('accounts.flpositivo'))
             else:
                 return redirect(reverse('accounts.flnegativo'))
+        else:
+            return render(request, 'accounts/ataque.html',
+                          {'mensaje': 'Usuário e Senha não conferem com os repassados.',
 
-        mensaje = 'Nome de usuário ou senha não são válidos.'
-        for i in request.POST.lists():
-            logger.error(i)
-    return render(request, 'accounts/ataque.html', {'mensaje': mensaje,  'randemail' : randemail, 'randsenha': randsenha})
+                           'randemail': randemail, 'randsenha': randsenha})
+
+    return render(request, reverse('accounts.ataque.html'), {'mensaje': mensaje, 'randemail': randemail, 'randsenha': randsenha})
 
 
 def login_view(request):
@@ -197,28 +177,20 @@ def login_view(request):
 
         temp = "Para as rosas, escreveu alguém, o jardineiro é eterno."
 
-        username = request.POST.get('email')
-
-        password = request.POST.get('password')
-
-        keystroke = request.POST.get('keystroke')
-        
-        keystroke = parser(keystroke,"login")
-
-        frase = request.POST.get('userText')
+        json_email, json_password, json_user_text, password, phrase, username = prepare_login_data(request)
 
         user = authenticate(username=username, password=password)
 
         if user is not None:
             if user.is_active:
-                if frase.strip() != temp:
-                     return render(request, 'accounts/login.html', {'mensaje': 'Frase incorreta.'})
+                if phrase.strip() != temp:
+                    return render(request, 'accounts/login.html', {'mensaje': 'Frase incorreta.'})
                 user_login = UserLogin()
                 user_login.email = username
                 # user_login.password = password
-                user_login.json_email = json.dumps(keystroke[0])
-                user_login.json_password = json.dumps(keystroke[1])
-                user_login.json_user_text = json.dumps(keystroke[2])
+                user_login.json_email = json_email
+                user_login.json_password = json_password
+                user_login.json_user_text = json_user_text
                 user_login.save()
 
                 login(request, user)
@@ -232,6 +204,18 @@ def login_view(request):
     return render(request, 'accounts/login.html', {'mensaje': mensaje})
 
 
+def prepare_login_data(request):
+    username = request.POST.get('email')
+    password = request.POST.get('password')
+    keystroke = request.POST.get('keystroke')
+    keystroke = parser(keystroke, "login")
+    json_email = json.dumps(keystroke[0])
+    json_password = json.dumps(keystroke[1])
+    json_user_text = json.dumps(keystroke[2])
+    phrase = request.POST.get('userText')
+    return json_email, json_password, json_user_text, password, phrase, username
+
+
 def logout_view(request):
     logout(request)
     messages.success(request, 'Deslogado com Sucesso.')
@@ -241,9 +225,10 @@ def logout_view(request):
 def obrigado_view(request, username):
     return render(request, 'accounts/obrigado.html', {'username': username})
 
+
 def falsoLoginPositivo_view(request):
     return render(request, 'accounts/falsoLoginPositivo.html')
 
+
 def falsoLoginNegativo_view(request):
     return render(request, 'accounts/falsoLoginNegativo.html')
-
