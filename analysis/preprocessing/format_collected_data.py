@@ -24,10 +24,10 @@ formated_table = []
 table_header = sep.join(("attempt_id", "email", "attempt_time", "source", "keyDown", "keyUp", "keyValue", "keyCode"))
 formated_table.append(table_header)
 
-print "Processing data"
+print ("Processing data")
 for line in lines_user_login:
 	line_split = line.replace("\n","").split("|")
-
+	print(line_split)
 	attempt_id = line_split[0]
 	email = line_split[1]
 	time = line_split[2]
@@ -57,10 +57,10 @@ for line in lines_user_login:
 		formated_table.append(row)
 
 
-print "Saving table"
+print ("Saving table")
 arq = open(path.replace(".psv", "-formated.psv"), "w")
 for row in formated_table:
-	arq.write(row.encode("utf8") + "\n")
+	arq.write(row + "\n")
 arq.close()
 
-print "Done!"
+print ("Done!")

@@ -165,7 +165,7 @@ def ataque_view(request):
 
                            'randemail': randemail, 'randsenha': randsenha})
 
-    return render(request, reverse('accounts.ataque.html'), {'mensaje': mensaje, 'randemail': randemail, 'randsenha': randsenha})
+    return render(request, 'accounts/ataque.html', {'mensaje': mensaje, 'randemail': randemail, 'randsenha': randsenha})
 
 
 def login_view(request):
