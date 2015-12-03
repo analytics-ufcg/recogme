@@ -32,8 +32,9 @@ terminado==0.5
 tornado==4.3
 traitlets==4.0.0
 
-step 1) Instalar o virtualenv (ambiente virtual) com os requisitos acima
-step 2) Rodar a aplicação:
-		2.1) Entrar na pasta recogme (cd recogme)
-		2.1) iniciar o virtualenv com o seguinte comando "source Django/bin/activate". (~/recogme$ source Django/bin/activate)
-		2.2) iniciar a aplicação com o comando "python RecogMeApp/manage.py runserver" (~/recogme$ python RecogMeApp/manage.py runserver)
+step 1) Instalar Python e Django (requisitos acima)
+step 2) Criar um ambiente virtual (virtualenv). Como fazer: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+step 3) Rodar a aplicação:
+		3.1) Entrar na pasta "recogme" (cd recogme)
+		3.2) iniciar o virtualenv. Use o seguinte comando "source Django/bin/activate". (~/recogme$ source Django/bin/activate)
+		3.3) iniciar a aplicação. Use o comando "python RecogMeApp/manage.py runserver" (~/recogme$ python RecogMeApp/manage.py runserver)
