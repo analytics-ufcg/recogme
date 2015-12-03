@@ -10,25 +10,30 @@ class RegistroUserForm(forms.Form):
     text = "Para as rosas, escreveu alguém, o jardineiro é eterno."
     name = forms.CharField(label='Digite seu Nome Completo', min_length=5,
                            widget=forms.TextInput(attrs={'class': 'form-control', 'id': "fullName",
-                                                         'autocomplete': 'false'}))
+                                                         'autocomplete': "off"}))
     name2 = forms.CharField(label='Confirme seu Nome Completo', min_length=5,
-                            widget=forms.TextInput(attrs={'id': "confirmFullName", 'class': 'form-control'}))
+                            widget=forms.TextInput(attrs={'id': "confirmFullName", 'class': 'form-control',
+                                                          'autocomplete': "off"}))
 
     email = forms.EmailField(label='Digite Seu Email',
-                             widget=forms.EmailInput(attrs={'id': "email", 'class': 'form-control'}))
+                             widget=forms.EmailInput(attrs={'id': "email", 'class': 'form-control',
+                                                            'autocomplete': "off"}))
     email2 = forms.EmailField(label='Confirme Seu Email',
-                              widget=forms.EmailInput(attrs={'id': 'confirmEmail', 'class': 'form-control'}))
+                              widget=forms.EmailInput(attrs={'id': 'confirmEmail', 'class': 'form-control',
+                                                             'autocomplete': "off"}))
 
-    password = forms.CharField(label='Digite Sua Senha', min_length=5,
-                               widget=forms.PasswordInput(attrs={'autocomplete': "off",
-                                                                 'id': "password", 'class': 'form-control'}))
+    password = forms.CharField(label='Digite Sua Senha', min_length=6,
+                               widget=forms.PasswordInput(attrs={'id': "password", 'class': 'form-control',
+                                                                 'autocomplete': "off"}))
     password2 = forms.CharField(validators=[RegexValidator(regex="(.*[a-z A-Z].*[0-9].*)|(.*[0-9].*[a-z A-Z].*)",
                                                            message="Deve Conter ao menos uma letra e um número.")],
-                                label='Confirme Sua Senha', min_length=5,
-                                widget=forms.PasswordInput(attrs={'id': "confirmPassword", 'class': 'form-control'}))
+                                label='Confirme Sua Senha', min_length=6,
+                                widget=forms.PasswordInput(attrs={'id': "confirmPassword", 'class': 'form-control',
+                                                                  'autocomplete': "off"}))
 
     phrase = forms.CharField(label='Digite: Para as rosas, escreveu alguém, o jardineiro é eterno.', min_length=5,
-                             widget=forms.TextInput(attrs={'id': "userText", 'class': 'form-control'}))
+                             widget=forms.TextInput(attrs={'id': "userText", 'class': 'form-control',
+                                                           'autocomplete': "off"}))
 
     def clean_name(self):
         """Verify if the username is already registered"""

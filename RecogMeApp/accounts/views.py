@@ -1,4 +1,5 @@
 # coding: utf-8
+# from django
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
@@ -8,33 +9,29 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.conf import settings
 
-from .form import RegistroUserForm
-from .models import UserProfile, UserLogin, FalseLogin
-
-
-
-
-# Añadir import logout y messages
-
-import logging
+# from Python base
 import json
 import csv
 import random
 from time import ctime
 
+# from APP
+from .form import RegistroUserForm
+from .models import UserProfile, UserLogin, FalseLogin
 from .keystroke_model import SvmModel as Svm, prepare_set_test
 from .prepare_json import generate_table
 
-logger = logging.getLogger(__name__)
+# globals
+RANDOM_USER = []
+ACCEPTANCE_RATE = 0.8
 
-randuser = []
-Svm = Svm(settings.MEDIA_ROOT + '/data/dados-train.psv',
+SVM = Svm(settings.MEDIA_ROOT + '/data/dados-train.psv',
           settings.MEDIA_ROOT + '/data/dados-teste.psv')
-Svm.create_model()
+SVM.create_model()
 
 with open(settings.MEDIA_ROOT + '/data/senhas.psv', 'r') as csvfile:
     users = csv.reader(csvfile)
-    users = [(row) for row in users]
+    users = [row for row in users]
 
 
 def choose_randuser():
@@ -79,14 +76,23 @@ def prepare_singnup_data(form, request):
     return first_name, keystroke, phrase, last_name, username, password
 
 
+def prepare_login_data(request):
+    username = request.POST.get('email')
+    password = request.POST.get('password')
+    keystroke = request.POST.get('keystroke')
+    keystroke = parser(keystroke, "login")
+    json_email = json.dumps(keystroke[0])
+    json_password = json.dumps(keystroke[1])
+    json_user_text = json.dumps(keystroke[2])
+    phrase = request.POST.get('userText')
+    return json_email, json_password, json_user_text, password, phrase, username
+
+
 def registro_usuario_view(request):
-    print(request)
     if request.method == 'POST':
         form = RegistroUserForm(request.POST, request.FILES)
-        # Comprobamos si el formulario es valido
         if form.is_valid():
             first_name, keystroke, phrase, last_name, username, password = prepare_singnup_data(form, request)
-            # E instanciamos un objeto User, con el username y password
             user_model = User.objects.create_user(username=username, password=password)
             user_model.is_active = True
             user_model.first_name = first_name
@@ -121,14 +127,13 @@ def index_view(request):
 
 @login_required
 def ataque_view(request):
-    mensaje = ''
-    global randuser
+    global RANDOM_USER
 
     if request.method == 'GET':
-        randuser = choose_randuser()
+        RANDOM_USER = choose_randuser()
 
-    randemail = randuser[0]
-    randsenha = randuser[1]
+    randemail = RANDOM_USER[0]
+    randsenha = RANDOM_USER[1]
 
     if request.method == 'POST':
 
@@ -148,14 +153,14 @@ def ataque_view(request):
             test_psv = settings.MEDIA_ROOT + '/data/test.psv'
             generate_table(data, output_psv)
             prepare_set_test(output_psv, test_psv)
-            Svm.create_test(dataset_test=test_psv)
-            prediction = Svm.consult_prediction(email=randemail)
+            SVM.create_test(dataset_test=test_psv)
+            prediction = SVM.consult_prediction(email=randemail)
 
             false_login = FalseLogin.create(invader_email=str(request.user), attempt_path=test_psv,
                                             hacked_email=randemail, prediction_result=prediction)
             false_login.save()
 
-            if prediction[0] == 1:
+            if prediction[0] >= ACCEPTANCE_RATE:
                 return redirect(reverse('accounts.flpositivo'))
             else:
                 return redirect(reverse('accounts.flnegativo'))
@@ -165,14 +170,14 @@ def ataque_view(request):
 
                            'randemail': randemail, 'randsenha': randsenha})
 
-    return render(request, 'accounts/ataque.html', {'mensaje': mensaje, 'randemail': randemail, 'randsenha': randsenha})
+    return render(request, 'accounts/ataque.html', {'mensaje': "", 'randemail': randemail, 'randsenha': randsenha})
 
 
 def login_view(request):
     if request.user.is_authenticated():
         return redirect(reverse('accounts.ataque'))
 
-    mensaje = ''
+    message = ''
     if request.method == 'POST':
 
         temp = "Para as rosas, escreveu alguém, o jardineiro é eterno."
@@ -198,22 +203,9 @@ def login_view(request):
             else:
                 pass
 
-        mensaje = 'Nome de usuário ou senha não são válidos.'
-        for i in request.POST.lists():
-            logger.error(i)
-    return render(request, 'accounts/login.html', {'mensaje': mensaje})
+        message = 'Nome de usuário ou senha não são válidos.'
 
-
-def prepare_login_data(request):
-    username = request.POST.get('email')
-    password = request.POST.get('password')
-    keystroke = request.POST.get('keystroke')
-    keystroke = parser(keystroke, "login")
-    json_email = json.dumps(keystroke[0])
-    json_password = json.dumps(keystroke[1])
-    json_user_text = json.dumps(keystroke[2])
-    phrase = request.POST.get('userText')
-    return json_email, json_password, json_user_text, password, phrase, username
+    return render(request, 'accounts/login.html', {'mensaje': message})
 
 
 def logout_view(request):
@@ -222,13 +214,16 @@ def logout_view(request):
     return redirect(reverse('accounts.login'))
 
 
+@login_required
 def obrigado_view(request, username):
     return render(request, 'accounts/obrigado.html', {'username': username})
 
 
+@login_required
 def falsoLoginPositivo_view(request):
     return render(request, 'accounts/falsoLoginPositivo.html')
 
 
+@login_required
 def falsoLoginNegativo_view(request):
     return render(request, 'accounts/falsoLoginNegativo.html')

@@ -28,3 +28,5 @@
 /target/
 *.idea
 */__pycharm__/
+*/data/output*
+*/data/test*
