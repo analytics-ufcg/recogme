@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.db import models
 from django.conf import settings
 
@@ -25,6 +24,17 @@ class UserLogin(models.Model):
     json_password = models.TextField(default='default')
     json_user_text = models.TextField(default='default')
 
+    @classmethod
+    def create(cls, **kwargs):
+        """
+        Keywords Arguments
+        email -- email of the user
+        json_email -- json with the keystroke of the field email
+        json_password -- json with the keystroke of the field password
+        json_user_text -- json with the keystroke of the field user_text
+        """
+        return cls(**kwargs)
+
     def __str__(self):
         return self.email
 
@@ -36,12 +46,18 @@ class FalseLogin(models.Model):
     prediction_result = models.TextField(default='default')
 
     @classmethod
-    def create(cls, invader_email, attempt_path, hacked_email, prediction_result):
+    def create(cls, attempt_path, **kwargs):
+        """
+        Keywords Arguments
+        invader_email -- the email of invader who's trying hack
+        attempt_path  -- the path of the file with the attempent information
+        hacked_email  -- the email who's being  hacked
+        prediction_result -- the result of the prediction
+        """
         with open(attempt_path) as f:
             attempt = f.read()
 
-        return cls(invader_email=invader_email, attempt=attempt, hacked_email=hacked_email,
-                   prediction_result=prediction_result)
+        return cls(attempt=attempt, **kwargs)
 
     def __str__(self):
         return self.hacked_email

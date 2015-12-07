@@ -190,12 +190,8 @@ def login_view(request):
             if user.is_active:
                 if phrase.strip() != temp:
                     return render(request, 'accounts/login.html', {'mensaje': 'Frase incorreta.'})
-                user_login = UserLogin()
-                user_login.email = username
-                # user_login.password = password
-                user_login.json_email = json_email
-                user_login.json_password = json_password
-                user_login.json_user_text = json_user_text
+                user_login = UserLogin.create(email=username, json_email=json_email, json_password=json_password,
+                                              json_user_text=json_user_text)
                 user_login.save()
 
                 login(request, user)
