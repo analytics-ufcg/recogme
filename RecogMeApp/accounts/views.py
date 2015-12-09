@@ -62,15 +62,29 @@ def parser(json_string, tela):
     return retorno
 
 
-def prepare_singnup_data(form, request):
-    cleaned_data = form.cleaned_data
-    username = cleaned_data.get('email')
-    password = cleaned_data.get('password')
-    phrase = cleaned_data.get('phrase')
-    fullname = cleaned_data.get('name')
+def prepare_singnup_data(request):
+    # cleaned_data = form.cleaned_data
+    # cleaned_data =  request.POST
+    username = request.POST.get('email')
+    password = request.POST.get('password')
+    phrase = request.POST.get('userText')
+    fullname = request.POST.get('fullName')
+
+    print("#####################")
+    print(username)
+    print(password)
+    print(fullname)
+    print(phrase)
+    print("#####################")
+
+    print(request.POST)
+
     first_name = fullname.split()[0]
     last_name = " ".join(fullname.split()[1:])
     keystroke = request.POST.get('keystroke')
+    print("#####################")
+    print(keystroke)
+    print("#####################")
     keystroke = parser(keystroke, "registro")
 
     return first_name, keystroke, phrase, last_name, username, password
@@ -89,33 +103,37 @@ def prepare_login_data(request):
 
 
 def registro_usuario_view(request):
+
     if request.method == 'POST':
-        form = RegistroUserForm(request.POST, request.FILES)
-        if form.is_valid():
-            first_name, keystroke, phrase, last_name, username, password = prepare_singnup_data(form, request)
-            user_model = User.objects.create_user(username=username, password=password)
-            user_model.is_active = True
-            user_model.first_name = first_name
-            user_model.last_name = last_name
-            user_model.save()
 
-            user_profile = UserProfile()
-            user_profile.user = user_model
-            user_profile.phrase = phrase
+        # form = RegistroUserForm(request.POST, request.FILES)
+        # if form.is_valid():
+       
+        first_name, keystroke, phrase, last_name, username, password = prepare_singnup_data(request)
+        user_model = User.objects.create_user(username=username, password=password)
+        user_model.is_active = True
+        user_model.first_name = first_name
+        user_model.last_name = last_name
+        user_model.save()
 
-            user_profile.json_email = json.dumps(keystroke[0])
-            user_profile.json_full_name = json.dumps(keystroke[2])
-            user_profile.json_password = json.dumps(keystroke[1])
-            user_profile.json_user_text = json.dumps(keystroke[3])
-            user_profile.save()
+        user_profile = UserProfile()
+        user_profile.user = user_model
+        user_profile.phrase = phrase
 
-            return redirect(reverse('accounts.obrigado', kwargs={'username': first_name}))
-        else:
-            form = RegistroUserForm()
+        user_profile.json_email = json.dumps(keystroke[0])
+        user_profile.json_full_name = json.dumps(keystroke[2])
+        user_profile.json_password = json.dumps(keystroke[1])
+        user_profile.json_user_text = json.dumps(keystroke[3])
+        user_profile.save()
+
+        return redirect(reverse('accounts.obrigado', kwargs={'username': first_name}))
+        # else:
+        #     form = RegistroUserForm()
     else:
-        form = RegistroUserForm()
+        # form = RegistroUserForm()
+        pass
     context = {
-        'form': form
+        # 'form': form
     }
     return render(request, 'accounts/registro.html', context)
 
@@ -142,8 +160,8 @@ def ataque_view(request):
         json_email, json_password, json_user_text, password, phrase, username = prepare_login_data(request)
 
         if username == randemail and password == randsenha:
-            if phrase.strip() != temp:
-                return render(request, 'accounts/ataque.html', {'mensaje': 'Frase incorreta.'})
+            # if phrase.strip() != temp:
+            #     return render(request, 'accounts/ataque.html', {'mensaje': 'Frase incorreta.'})
 
             # data = "{0}|{1}|{2}|{3}|{4}".format(str(1), username, ctime(), json_email, json_password, json_user_text)
             data = "" + str(1) + '|' + username + '|' + ctime() + '|' + json_email + '|' + json_password + '|' + \
@@ -174,11 +192,17 @@ def ataque_view(request):
 
 
 def login_view(request):
+
+
     if request.user.is_authenticated():
         return redirect(reverse('accounts.ataque'))
 
     message = ''
     if request.method == 'POST':
+
+        print("###################################")
+        print("ENTROU NO LOGIN")
+        print("###################################")
 
         temp = "Para as rosas, escreveu alguém, o jardineiro é eterno."
 
@@ -187,9 +211,10 @@ def login_view(request):
         user = authenticate(username=username, password=password)
 
         if user is not None:
+            
             if user.is_active:
-                if phrase.strip() != temp:
-                    return render(request, 'accounts/login.html', {'mensaje': 'Frase incorreta.'})
+                # if phrase.strip() != temp:
+                #     return render(request, 'accounts/login.html', {'mensaje': 'Frase incorreta.'})
                 user_login = UserLogin()
                 user_login.email = username
                 # user_login.password = password
@@ -202,7 +227,11 @@ def login_view(request):
                 return redirect(reverse('accounts.ataque'))
             else:
                 pass
-
+        print("###################################")
+        print(user == None)
+        print(username)
+        print(password)
+        print("###################################")
         message = 'Nome de usuário ou senha não são válidos.'
 
     return render(request, 'accounts/login.html', {'mensaje': message})

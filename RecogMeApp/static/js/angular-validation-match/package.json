@@ -1,0 +1,73 @@
+{
+  "name": "angular-validation-match",
+  "version": "1.5.2",
+  "homepage": "https://github.com/TheSharpieOne/angular-validation-match",
+  "description": "Checks if one input matches another",
+  "main": "./index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TheSharpieOne/angular-validation-match"
+  },
+  "keywords": [
+    "Angular",
+    "input",
+    "form",
+    "confirmation",
+    "match",
+    "validation"
+  ],
+  "author": "",
+  "maintainers": [
+    {
+      "name": "sharpie",
+      "email": "dumbdrum@gmail.com"
+    }
+  ],
+  "license": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "devDependencies": {
+    "chai": "1.10.0",
+    "gulp": "^3.8.8",
+    "gulp-bump": "~0.1.0",
+    "gulp-karma": "0.0.4",
+    "gulp-ng-annotate": "^0.3.3",
+    "gulp-sequence": "^0.3.1",
+    "gulp-uglifyjs": "^0.4.3",
+    "gulp-wrap": "^0.3.0",
+    "karma": "^0.12.21",
+    "karma-chai-sinon": "^0.1.4",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-mocha": "~0.1",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma-script-launcher": "~0.1.0",
+    "sinon": "^1.12.1",
+    "sinon-chai": "^2.6.0"
+  },
+  "gitHead": "77d208f26ec8f9ef5643dacaab80d048af397eb9",
+  "bugs": {
+    "url": "https://github.com/TheSharpieOne/angular-validation-match/issues"
+  },
+  "_id": "angular-validation-match@1.5.2",
+  "_shasum": "5bfe70f6194bb020164301f44fab081bf80e685c",
+  "_from": "angular-validation-match@*",
+  "_npmVersion": "2.7.4",
+  "_nodeVersion": "0.12.2",
+  "_npmUser": {
+    "name": "sharpie",
+    "email": "dumbdrum@gmail.com"
+  },
+  "dist": {
+    "shasum": "5bfe70f6194bb020164301f44fab081bf80e685c",
+    "tarball": "http://registry.npmjs.org/angular-validation-match/-/angular-validation-match-1.5.2.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/angular-validation-match/-/angular-validation-match-1.5.2.tgz"
+}

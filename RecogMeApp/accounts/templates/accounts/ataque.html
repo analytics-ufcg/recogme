@@ -6,9 +6,9 @@
 
 {% block content %}
 
-<div class="row">
+<div class="row" ng-app="cadastro">
 
-<div class="col-md-4 col-md-offset-4 signup">
+<div class="col-md-4 col-md-offset-4 signup" ng-controller="CadastroCtrl">
 
 <div class="page-header"  style="text-align:center;"><h2><b>Falso Login<b></h2></div>
 
@@ -22,47 +22,98 @@
 
 {% endif %}
 
-<form method="post" action="" class = "login">
 
-{% csrf_token %}
 
-     <!-- Aqui é o usuário e senha aleatório -->
-	 <div class="form-group">
 
-        <p><b>Tente acessar com</b> 
-      	<blockquote><h4>Usuário: "{{ randemail }}"</h4>
-      	<h4>Senha: "{{ randsenha }}"</h4></blockquote>
+<form class="login" id="formField" name="userForm" ng-model="userForm" role="form" data-toggle="validator" action="" autocomplete="off"
+                  novalidate="novalidate" ng-hide="submitted" method="POST">
+                 {% csrf_token %}
+
+                  <div class="form-group">
+
+				        <p><b>Tente acessar com</b> 
+				      	<blockquote><h4>Usuário: "{{ randemail }}"</h4>
+				      	<h4>Senha: "{{ randsenha }}"</h4></blockquote>
          
-    </div>
+    			</div>
 
-    <div class="form-group">
 
-        <label class="control-label" for="email"><h3>Email</h3></label>
+                 <div style="display: none;">
+                        <input type="text" id="PreventAutocomplete"  type="hidden"
+                        name="PreventChromeAutocomplete" autocomplete="address-level4" />
+                </div>
+ 
+               
+                       
+                <div class="form-group">
+                        <input type="email"
+                                   placeholder = "Email"
+                               class="form-control"
+                               ng-model="formModel.email"
+                               id="email"
+                               name = "email"
+                                   required="required"
+                                   ng-required-err-type="emptyField"
+                                   ng-email-err-type="invalidEmail"
+                                   >
+                </div>
+       
+                <div class="form-group">
+                       
+                        <input type="password"
+                                   placeholder = "Senha"
+                                   autocomplete="off"
+                               class="form-control"
+                               id="password"
+                               name="password"
+                               ng-model="formModel.password"
+                               required="required"
+                               ng-required-err-type="emptyField"
+                                   >
+                </div>
+ 
+                <div class="form-group">
+                <div class="form-group">
+                       <!--  <label for="textField">Frase: </label>
+                        <p id="textField" ng-model="textField">Imagine uma nova história para sua vida e acredite nela.</p> -->
+                         <label for="textField">Type:  </label>
+                    <p id="textField" ng-model="textField">Para as rosas, escreveu alguém, o jardineiro é eterno.</p>
 
-        <input type="text" id="email" name="email" class="form-control" value="{{ email }}" autocomplete="off">
-
-    </div>
-
-	<div class="form-group">
-
-		<label for="password"><h3>Senha</h3></label>
-
-		<input type="password" name="password" id="password" class="form-control" autocomplete="off">
-
-	</div>
-
-	<br>
-	<div class="form-group" >
-
-		<label for="userText"><h4>Digite:</h4> <h3 style="text-align:center;" ><i>Para as rosas, escreveu alguém, o jardineiro é eterno.</i></h3></label>
-
-		<input type="text" name="userText" id="userText" class="form-control" autocomplete="off">
-
-	</div>
-
-<button id="form" type="submit" class="btn btn-primary">Tentar logar</button>
-
-</form>
+ 
+                </div>
+                        <div class="form-group">
+ 
+	                                <textarea type="text"
+                                          id="userText"
+                                          class="form-control"
+                                                  ng-model="formModel.userText"
+                                                  name="keystroke"
+                                                  required="required"
+                                                  ng-required-err-type="emptyField"
+                                                  match="textField"
+                                                  ng-match-err-type="textMatchErr"
+                                                  rows="5"></textarea>
+                        </div>
+ 
+                </div>
+ 
+                <div class="form-group">
+ 
+                        <div style="display: none;" class="alert alert-danger text-center" ng-show="has_error" display="none">
+                                <h3>Login Inválido.</h3>
+                        </div>
+ 
+                        <button class="btn btn-primary"
+                                ladda="submitting"
+                                data-style="expand-right"
+                                        type="submit"
+                                        id="form">
+                                <span ng-show="!submitting">Fake Sign in</span>
+                                <span id="span_signing" ng-show="submitting" style="display: none;">Signing In</span>
+                        </button>
+                </div>
+               
+        </form>
 
 </div>
 
@@ -70,5 +121,7 @@
 
 <script src="{% static 'js/keycodes.js' %}"></script>
 <script src="{% static 'js/keystroke.js' %}"></script>
+
+<script src="{% static 'js/cadastro.js' %}"></script>
 
 {% endblock content %}

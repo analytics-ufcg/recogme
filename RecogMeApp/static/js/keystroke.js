@@ -31,6 +31,7 @@ function onKeyUp(field, timestamps, k) {
 
                      k = keyValueCheck(k); //check if the keyValue is empty.
                     timestamps.push(k);
+                    console.log(timestamps);
 
                 }
             }
@@ -48,10 +49,10 @@ function keyValueCheck (k) {
 //defines an object for the fields in the form. Return the IDs for the form fields.
 var fieldNames = function () {
     var formFields = $("input").not("#PreventAutocomplete"); // get the input fields.
-    //var userText = $("textArea")[0].id; //get the id for the text Area
+    var userText = $("textArea")[0].id; //get the id for the text Area
     var fieldIDs = {};
 
-    //fieldIDs[userText] = []; // add the userText id.
+    fieldIDs[userText] = []; // add the userText id.
 
     for (var i = 0; i < formFields.length; i++) {
 

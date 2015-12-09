@@ -27,6 +27,8 @@ app.controller('CadastroCtrl', function ($scope, $http) {
 
 	$scope.textField = $('#textField').text();
 
+	console.log("sdfasdfasdfsadfsda");
+
 	$scope.onSubmit = function () {
 		$scope.submitting = true;
 		console.log("Hey i'm submitted!");
