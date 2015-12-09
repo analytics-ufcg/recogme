@@ -62,29 +62,15 @@ def parser(json_string, tela):
     return retorno
 
 
-def prepare_singnup_data(request):
-    # cleaned_data = form.cleaned_data
-    # cleaned_data =  request.POST
-    username = request.POST.get('email')
-    password = request.POST.get('password')
-    phrase = request.POST.get('userText')
-    fullname = request.POST.get('fullName')
-
-    print("#####################")
-    print(username)
-    print(password)
-    print(fullname)
-    print(phrase)
-    print("#####################")
-
-    print(request.POST)
-
+def prepare_singnup_data(form, request):
+    cleaned_data = form.cleaned_data
+    username = cleaned_data.get('email')
+    password = cleaned_data.get('password')
+    phrase = cleaned_data.get('phrase')
+    fullname = cleaned_data.get('name')
     first_name = fullname.split()[0]
     last_name = " ".join(fullname.split()[1:])
     keystroke = request.POST.get('keystroke')
-    print("#####################")
-    print(keystroke)
-    print("#####################")
     keystroke = parser(keystroke, "registro")
 
     return first_name, keystroke, phrase, last_name, username, password
@@ -192,17 +178,11 @@ def ataque_view(request):
 
 
 def login_view(request):
-
-
     if request.user.is_authenticated():
         return redirect(reverse('accounts.ataque'))
 
     message = ''
     if request.method == 'POST':
-
-        print("###################################")
-        print("ENTROU NO LOGIN")
-        print("###################################")
 
         temp = "Para as rosas, escreveu alguém, o jardineiro é eterno."
 
@@ -211,27 +191,18 @@ def login_view(request):
         user = authenticate(username=username, password=password)
 
         if user is not None:
-            
             if user.is_active:
                 # if phrase.strip() != temp:
                 #     return render(request, 'accounts/login.html', {'mensaje': 'Frase incorreta.'})
-                user_login = UserLogin()
-                user_login.email = username
-                # user_login.password = password
-                user_login.json_email = json_email
-                user_login.json_password = json_password
-                user_login.json_user_text = json_user_text
+                user_login = UserLogin.create(email=username, json_email=json_email, json_password=json_password,
+                                              json_user_text=json_user_text)
                 user_login.save()
 
                 login(request, user)
                 return redirect(reverse('accounts.ataque'))
             else:
                 pass
-        print("###################################")
-        print(user == None)
-        print(username)
-        print(password)
-        print("###################################")
+
         message = 'Nome de usuário ou senha não são válidos.'
 
     return render(request, 'accounts/login.html', {'mensaje': message})
