@@ -6,188 +6,221 @@
 
 {% block content %}
 
-<div class="row" ng-app="cadastro">
+    <div class="row" ng-app="cadastro">
 
-<div class="col-md-4 col-md-offset-4 signup" ng-controller="CadastroCtrl">
+        <div class="col-md-4 col-md-offset-4 signup" ng-controller="CadastroCtrl">
 
-<div class="page-header"  style="text-align:center;"><h2><b>Falso Login<b></h2></div>
+            <div class="page-header" style="text-align:center;"><h2><b>Falso Login<b></h2></div>
+            <div style="text-align: center"><h3>Do you think you can login as another user? So try it!</h3></div>
 
-{% if mensaje %}
+            {% if mensaje %}
 
-<div class="alert alert-danger">
+                <div class="alert alert-danger">
 
-{{ mensaje }}
+                    {{ mensaje }}
 
-</div>
-
-{% endif %}
-
-
-
-
-<form class="login" id="formField" name="userForm" ng-model="userForm" role="form" data-toggle="validator" action="" autocomplete="off"
-                  novalidate="novalidate" ng-hide="submitted" method="POST">
-                 {% csrf_token %}
-
-                
-
-                  <div class="form-group">
-
-				        <p><b>Tente acessar com</b> <br>
-				        	 <select name="myselect"  id="id_myselect" class = "form-control">
-						        {% for name in all_users %}
-						        	<option value="{{ name.0 }}">{{ name.0 }}</option>
-						        {% endfor %}
-    						</select>
-
-    						<div id = "myDiv"></div>
-				      	<blockquote><h4 id="fakeUser" >Usuário: "{{ randemail }}"</h4>
-
-				      	<input name="email_mirror" value="" id="inputTemp" style="display: none;"/>
-				      	<!-- <input type="password" name="password_mirror" value="" id="passwordTemp" style="display: inline;"/> -->
-				      	<input type="password" class="form-control" name="cfmPassword" id="cfmPassword"  style="display: none;"/>
-
-				      	<h4 id="fakePassword">Senha: "{{ randsenha }}"</h4></blockquote>
-         
-    			</div>
-
-
-                 <div style="display: none;">
-                        <input type="text" id="PreventAutocomplete"  type="hidden"
-                        name="PreventChromeAutocomplete" autocomplete="address-level4" />
                 </div>
- 
-               
-                       
+
+            {% endif %}
+
+
+            <form class="login" id="formField" name="userForm" ng-model="userForm" role="form" data-toggle="validator"
+                  action="" autocomplete="off"
+                  novalidate="novalidate" ng-hide="submitted" method="POST">
+                {% csrf_token %}
+
+                <div class="row">
+                    <div class="col-md-6">
+                        {#                       <h3><b>Tente acessar com</b></h3> <br>#}
+                    </div>
+                    <div class="col-md-12">
+                        <select name="myselect" id="id_myselect" class="form-control">
+                            {% for name in all_users %}
+                                <option value="{{ name.0 }}">{{ name.0 }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
                 <div class="form-group">
-                        <input type="email"
-                                   placeholder = "Email"
-                               class="form-control"
-                               ng-model="formModel.email"
-                               id="email"
-                               name = "email"
+
+                    {#				        <p><b>Tente acessar com</b> <br>#}
+                    {#				        	 <select name="myselect"  id="id_myselect" class = "form-control">#}
+                    {#						        {% for name in all_users %}#}
+                    {#						        	<option value="{{ name.0 }}">{{ name.0 }}</option>#}
+                    {#						        {% endfor %}#}
+                    {#    						</select>#}
+
+                    <div id="myDiv"></div>
+                    {#				      	<blockquote><h4 id="fakeUser" >Usuário: "{{ randemail }}"</h4>#}
+
+                        <!-- <input type="password" name="password_mirror" value="" id="passwordTemp" style="display: inline;"/> -->
+
+
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email"
+                                   placeholder="Email"
+                                   class="form-control"
+                                   ng-model="formModel.email"
+                                   id="email"
+                                   name="email"
                                    required="required"
                                    ng-required-err-type="emptyField"
                                    ng-email-err-type="invalidEmail"
                                    ng-required-err-type=""
-                                   >
+                                    >
+                            <input name="email_mirror" value="" id="inputTemp" style="display: none;"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 id="fakeUser">"{{ randemail }}"</h4>
+                    </div>
                 </div>
-       
-                <div class="form-group">
-                       
-                        <input type="password"
-                                   placeholder = "Senha"
-                                   autocomplete="off"
-                               class="form-control"
-                               id="password"
-                               name="password"
-                               ng-model="formModel.password"
-                               required="required"
-                               ng-required-err-type="emptyField"
-                                   >
-                </div>
- 
-                <div class="form-group">
-                <div class="form-group">
-                       <!--  <label for="textField">Frase: </label>
-                        <p id="textField" ng-model="textField">Imagine uma nova história para sua vida e acredite nela.</p> -->
-                         <label for="textField">Type:  </label>
-                    <p id="textField" ng-model="textField">Para as rosas, escreveu alguém, o jardineiro é eterno.</p>
 
- 
-                </div>
+            <div class="row">
+                    <div class="col-md-6">
                         <div class="form-group">
- 
-	                                <textarea type="text"
-                                          id="userText"
-                                          class="form-control"
-                                                  ng-model="formModel.userText"
-                                                  name="keystroke"
-                                                  required="required"
-                                                  ng-required-err-type="emptyField"
-                                                  match="textField"
-                                                  ng-match-err-type="textMatchErr"
-                                                  rows="5"></textarea>
-                        </div>
- 
+
+                    <input type="password"
+                           placeholder="Senha"
+                           autocomplete="off"
+                           class="form-control"
+                           id="password"
+                           name="password"
+                           ng-model="formModel.password"
+                           required="required"
+                           ng-required-err-type="emptyField"
+                            >
+                            <input type="password" class="form-control" name="cfmPassword" id="cfmPassword"
+                               style="display: none;"/>
                 </div>
- 
+
+                    </div>
+                    <div class="col-md-6">
+                          <h4 id="fakePassword">{{ randsenha }}</h4>
+
+                    </div>
+                </div>
+
+
+                <div style="display: none;">
+                    <input type="text" id="PreventAutocomplete" type="hidden"
+                           name="PreventChromeAutocomplete" autocomplete="address-level4"/>
+                </div>
+
+
+
+
                 <div class="form-group">
- 
-                        <div style="display: none;" class="alert alert-danger text-center" ng-show="has_error" display="none">
-                                <h3>Login Inválido.</h3>
-                        </div>
- 
-                        <button class="btn btn-primary btn-lg"
-                                ladda="submitting"
-                                data-style="expand-right"
-                                        type="submit"
-                                        id="form" ng-disabled="userForm.$invalid">
-                                <span ng-show="!submitting" >Fake Sign in</span>
-                                <span id="span_signing" ng-show="submitting" style="display: none;">Signing In</span>
-                        </button>
+                    <div class="form-group">
+                        <!--  <label for="textField">Frase: </label>
+                         <p id="textField" ng-model="textField">Imagine uma nova história para sua vida e acredite nela.</p> -->
+                        <label for="textField">Type: </label>
+
+                        <p id="textField" ng-model="textField">Para as rosas, escreveu alguém, o jardineiro é
+                            eterno.</p>
+
+
+                    </div>
+                    <div class="form-group">
+
+	                                <textarea type="text"
+                                              id="userText"
+                                              class="form-control"
+                                              ng-model="formModel.userText"
+                                              name="keystroke"
+                                              required="required"
+                                              ng-required-err-type="emptyField"
+                                              match="textField"
+                                              ng-match-err-type="textMatchErr"
+                                              rows="5"></textarea>
+                    </div>
+
                 </div>
-               
-        </form>
 
-</div>
+                <div class="form-group">
 
-</div>
+                    <div style="display: none;" class="alert alert-danger text-center" ng-show="has_error"
+                         display="none">
+                        <h3>Login Inválido.</h3>
+                    </div>
 
-<script src="{% static 'js/keycodes.js' %}"></script>
-<script src="{% static 'js/keystroke.js' %}"></script>
+                    <button class="btn btn-primary btn-lg"
+                            ladda="submitting"
+                            data-style="expand-right"
+                            type="submit"
+                            id="form" ng-disabled="userForm.$invalid">
+                        <span ng-show="!submitting">Fake Sign in</span>
+                        <span id="span_signing" ng-show="submitting" style="display: none;">Signing In</span>
+                    </button>
+                </div>
 
-<script src="{% static 'js/cadastro.js' %}"></script>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/keycodes.js' %}"></script>
+    <script src="{% static 'js/keystroke.js' %}"></script>
+
+    <script src="{% static 'js/cadastro.js' %}"></script>
 
 
-<script type="text/javascript">
-	$( "select" )
-		  .change(function () {
-		    var str = "";
-		    $( "select option:selected" ).each(function() {
-		     	  str += $( this ).text();
-		     	 // console.log($( this ).text());
-		    });
-		     $( "#fakeUser" ).text( str );
-		     $( "#inputTemp" ).val( str );
+    <script type="text/javascript">
+        $("select")
+                .change(function () {
+                    var str = "";
+                    $("select option:selected").each(function () {
+                        str += $(this).text();
+                        // console.log($( this ).text());
+                    });
+                    $("#fakeUser").text(str);
+                    $("#inputTemp").val(str);
 
-		     console.log($( "#fakeUser" ).text())
-			 console.log($("#email").val())
-		     console.log($( "#fakeUser" ).text() === $("#email").val())
+                    console.log($("#fakeUser").text())
+                    console.log($("#email").val())
+                    console.log($("#fakeUser").text() === $("#email").val())
 
 
 
-		    {% for name in all_users %}
-				if ("{{name.0}}" === str){
-					// console.log("{{name.1}}");
-					$( "#fakePassword" ).text( "{{name.1}}" );
-					$( "#cfmPassword" ).val( "{{name.1}}" );
-				}
-			{% endfor %}
-		   
-		  }).change();
+                    {% for name in all_users %}
+                        if ("{{name.0}}" === str) {
+                            // console.log("{{name.1}}");
+                            $("#fakePassword").text("{{name.1}}");
+                            $("#cfmPassword").val("{{name.1}}");
+                        }
+                    {% endfor %}
 
-	
-		   $( "#formField" ).validate({
-				  rules: {
-				    email: {
-				      equalTo: "#inputTemp"
-				    },
-				   password: { 
-                    	equalTo: "#cfmPassword",
-              		}
-				  },
-				  messages:{
-				  	email: {
-				  		equalTo: "Emails don't match. Please, type exactly how you see them."
-				  	}
-				  	// ,
-				  	// password: {
-				  	// 	equalTo: "Passwords don't match. Please, type exactly how you see them."
-				  	// }
-				  }
-				});	
+                }).change();
 
-</script>
+
+        $("#formField").validate({
+            rules: {
+                email: {
+                    equalTo: "#inputTemp"
+                },
+                password: {
+                    equalTo: "#cfmPassword",
+                }
+            },
+            messages: {
+                email: {
+                    equalTo: "Emails don't match. Please, type exactly how you see them."
+                }
+                // ,
+                // password: {
+                // 	equalTo: "Passwords don't match. Please, type exactly how you see them."
+                // }
+            }
+        });
+
+    </script>
 
 {% endblock content %}
