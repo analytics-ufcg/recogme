@@ -29,11 +29,25 @@
                   novalidate="novalidate" ng-hide="submitted" method="POST">
                  {% csrf_token %}
 
+                
+
                   <div class="form-group">
 
-				        <p><b>Tente acessar com</b> 
-				      	<blockquote><h4>Usuário: "{{ randemail }}"</h4>
-				      	<h4>Senha: "{{ randsenha }}"</h4></blockquote>
+				        <p><b>Tente acessar com</b> <br>
+				        	 <select name="myselect"  id="id_myselect" class = "form-control">
+						        {% for name in all_users %}
+						        	<option value="{{ name.0 }}">{{ name.0 }}</option>
+						        {% endfor %}
+    						</select>
+
+    						<div id = "myDiv"></div>
+				      	<blockquote><h4 id="fakeUser" >Usuário: "{{ randemail }}"</h4>
+
+				      	<input name="email_mirror" value="" id="inputTemp" style="display: none;"/>
+				      	<!-- <input type="password" name="password_mirror" value="" id="passwordTemp" style="display: inline;"/> -->
+				      	<input type="password" class="form-control" name="cfmPassword" id="cfmPassword"  style="display: none;"/>
+
+				      	<h4 id="fakePassword">Senha: "{{ randsenha }}"</h4></blockquote>
          
     			</div>
 
@@ -55,6 +69,7 @@
                                    required="required"
                                    ng-required-err-type="emptyField"
                                    ng-email-err-type="invalidEmail"
+                                   ng-required-err-type=""
                                    >
                 </div>
        
@@ -103,12 +118,12 @@
                                 <h3>Login Inválido.</h3>
                         </div>
  
-                        <button class="btn btn-primary"
+                        <button class="btn btn-primary btn-lg"
                                 ladda="submitting"
                                 data-style="expand-right"
                                         type="submit"
-                                        id="form">
-                                <span ng-show="!submitting">Fake Sign in</span>
+                                        id="form" ng-disabled="userForm.$invalid">
+                                <span ng-show="!submitting" >Fake Sign in</span>
                                 <span id="span_signing" ng-show="submitting" style="display: none;">Signing In</span>
                         </button>
                 </div>
@@ -123,5 +138,56 @@
 <script src="{% static 'js/keystroke.js' %}"></script>
 
 <script src="{% static 'js/cadastro.js' %}"></script>
+
+
+<script type="text/javascript">
+	$( "select" )
+		  .change(function () {
+		    var str = "";
+		    $( "select option:selected" ).each(function() {
+		     	  str += $( this ).text();
+		     	 // console.log($( this ).text());
+		    });
+		     $( "#fakeUser" ).text( str );
+		     $( "#inputTemp" ).val( str );
+
+		     console.log($( "#fakeUser" ).text())
+			 console.log($("#email").val())
+		     console.log($( "#fakeUser" ).text() === $("#email").val())
+
+
+
+		    {% for name in all_users %}
+				if ("{{name.0}}" === str){
+					// console.log("{{name.1}}");
+					$( "#fakePassword" ).text( "{{name.1}}" );
+					$( "#cfmPassword" ).val( "{{name.1}}" );
+				}
+			{% endfor %}
+		   
+		  }).change();
+
+	
+		   $( "#formField" ).validate({
+				  rules: {
+				    email: {
+				      equalTo: "#inputTemp"
+				    },
+				   password: { 
+                    	equalTo: "#cfmPassword",
+              		}
+				  },
+				  messages:{
+				  	email: {
+				  		equalTo: "Emails don't match. Please, type exactly how you see them."
+				  	}
+				  	// ,
+				  	// password: {
+				  	// 	equalTo: "Passwords don't match. Please, type exactly how you see them."
+				  	// }
+				  }
+				});	
+
+</script>
 
 {% endblock content %}

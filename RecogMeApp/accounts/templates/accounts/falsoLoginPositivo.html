@@ -1,12 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   <div class="row text-center">
+   <div style="display:none;" class="row text-center similarity">
   <!-- <div class="col-md-12 text-center signup"> -->
 	      <div class="col-md-12 text-center alert alert-success" >
-		  		<h2> Parabéns, você conseguiu logar <strong>{{ username.capitalize }}</strong></h2>
+		  		<h2> Similaridade Alta <strong>{{ username.capitalize }}</strong></h2>
 			</div>
-		<img src="/static/img/thumbs-up.png"  alt="joinha" width="304" height="236">
+		<!-- <img src="/static/img/thumbs-up.png"  alt="joinha" width="304" height="236"> -->
 	</div>
+
+	<div  style="display:none;" class="c100 p50 big center green similarity">
+	  <span>50%</span>
+	  <div class="slice">
+	    <div class="bar"></div>
+	    <div class="fill"></div>
+	  </div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+        		 $(".similarity").fadeIn("slow");
+		});
+	</script>
    <!-- </div> -->
-{% endblock content %} 
+{% endblock content %}

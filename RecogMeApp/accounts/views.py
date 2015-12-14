@@ -62,12 +62,14 @@ def parser(json_string, tela):
     return retorno
 
 
-def prepare_singnup_data(form, request):
-    cleaned_data = form.cleaned_data
-    username = cleaned_data.get('email')
-    password = cleaned_data.get('password')
-    phrase = cleaned_data.get('phrase')
-    fullname = cleaned_data.get('name')
+def prepare_singnup_data(request):
+    # cleaned_data = form.cleaned_data
+    username = request.POST.get('email')
+    password = request.POST.get('password')
+    phrase = request.POST.get('userText')
+
+    fullname = request.POST.get('fullName')
+
     first_name = fullname.split()[0]
     last_name = " ".join(fullname.split()[1:])
     keystroke = request.POST.get('keystroke')
@@ -134,10 +136,11 @@ def ataque_view(request):
     global RANDOM_USER
 
     if request.method == 'GET':
-        RANDOM_USER = choose_randuser()
+         RANDOM_USER = choose_randuser()
 
     randemail = RANDOM_USER[0]
     randsenha = RANDOM_USER[1]
+    all_users = users
 
     if request.method == 'POST':
 
@@ -145,36 +148,43 @@ def ataque_view(request):
 
         json_email, json_password, json_user_text, password, phrase, username = prepare_login_data(request)
 
-        if username == randemail and password == randsenha:
+        randemail = username
+        randsenha = password
+
+        print("###########")
+        print(randemail)
+        print(randsenha)
+        print("###########")
+        # if username == randemail and password == randsenha:
             # if phrase.strip() != temp:
             #     return render(request, 'accounts/ataque.html', {'mensaje': 'Frase incorreta.'})
 
             # data = "{0}|{1}|{2}|{3}|{4}".format(str(1), username, ctime(), json_email, json_password, json_user_text)
-            data = "" + str(1) + '|' + username + '|' + ctime() + '|' + json_email + '|' + json_password + '|' + \
-                   json_user_text
+        data = "" + str(1) + '|' + username + '|' + ctime() + '|' + json_email + '|' + json_password + '|' + \
+               json_user_text
 
-            output_psv = settings.MEDIA_ROOT + '/data/output.psv'
-            test_psv = settings.MEDIA_ROOT + '/data/test.psv'
-            generate_table(data, output_psv)
-            prepare_set_test(output_psv, test_psv)
-            SVM.create_test(dataset_test=test_psv)
-            prediction = SVM.consult_prediction(email=randemail)
+        output_psv = settings.MEDIA_ROOT + '/data/output.psv'
+        test_psv = settings.MEDIA_ROOT + '/data/test.psv'
+        generate_table(data, output_psv)
+        prepare_set_test(output_psv, test_psv)
+        SVM.create_test(dataset_test=test_psv)
+        prediction = SVM.consult_prediction(email=randemail)
 
-            false_login = FalseLogin.create(invader_email=str(request.user), attempt_path=test_psv,
-                                            hacked_email=randemail, prediction_result=prediction)
-            false_login.save()
+        false_login = FalseLogin.create(invader_email=str(request.user), attempt_path=test_psv,
+                                        hacked_email=randemail, prediction_result=prediction)
+        false_login.save()
 
-            if prediction[0] >= ACCEPTANCE_RATE:
-                return redirect(reverse('accounts.flpositivo'))
-            else:
-                return redirect(reverse('accounts.flnegativo'))
+        if prediction[0] >= ACCEPTANCE_RATE:
+            return redirect(reverse('accounts.flpositivo'))
         else:
-            return render(request, 'accounts/ataque.html',
-                          {'mensaje': 'Usuário e Senha não conferem com os repassados.',
+            return redirect(reverse('accounts.flnegativo'))
+        # else:
+        #     return render(request, 'accounts/ataque.html',
+        #                   {'mensaje': 'Usuário e Senha não conferem com os repassados.',
 
-                           'randemail': randemail, 'randsenha': randsenha})
+        #                    'randemail': randemail, 'randsenha': randsenha , 'all_users' : all_users} )
 
-    return render(request, 'accounts/ataque.html', {'mensaje': "", 'randemail': randemail, 'randsenha': randsenha})
+    return render(request, 'accounts/ataque.html', {'mensaje': "", 'randemail': randemail, 'randsenha': randsenha, 'all_users' : all_users})
 
 
 def login_view(request):

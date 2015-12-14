@@ -4,10 +4,10 @@
 
 
 {% block content %}
-<div class="row" ng-app="cadastro" style="border:2px solid #b3b3b3;  border-radius:25px;">
+<div class="row" ng-app="cadastro" style="">
   <div class="col-md-12 text-center signup"  >
     <div class="page-header" >
-        <h2>Sign Up</h2>
+        <h1>Sign Up</h1>
     </div>
     <style type="text/css">
      /* .help-block{
@@ -30,6 +30,7 @@
 
             <form class= "registro" id="formField" name="userForm" role="form" action="" data-toggle="validator" autocomplete="off"
                   novalidate="novalidate" method="POST">
+
                   {% csrf_token %}
                  <div style="display: none;">
                     <input type="text" id="PreventAutocomplete"  type="hidden"
@@ -38,7 +39,7 @@
 
                 <div class="form-group input-group">
                     <!-- <label for="name" class="control-label">Enter name</label> -->
-                        <span class="input-group-addon" ><i class="fa fa-circle-o-notch fa-1x" ></i></span>
+                    <span class="input-group-addon" ><i class="fa fa-circle-o-notch fa-1x" ></i></span>
                                         
 
                     <input type="text"
@@ -172,11 +173,11 @@
                         <h3>Houve algum problema no seu registro, por favor tente mais tarde.</h3>
                     </div>
 
-                    <button class="btn btn-primary"
+                    <button class="btn btn-primary btn-lg"
                             ladda="submitting"
                             data-style="expand-right"
                             type="submit"
-                            id="form">
+                            id="form"  ng-disabled="userForm.$invalid">
                         <span id="span_registering" ng-show="submitting" style="display: none;">Registrando</span>
                         <span ng-show="!submitting">Registrar</span>
                     </button>

@@ -1,12 +1,45 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   <div class="row text-center">
+   <div style="display:none;"  class="row text-center similarity">
   <!-- <div class="col-md-12 text-center signup" style="border: 2px solid green;"> -->
-      <div class="col-md-12 text-center alert alert-danger" >
-	  		<h2><strong>{{ username.capitalize }}</strong>  tente novamente !!!</h2>
+      <div class="col-md-8 text-center alert alert-danger" style="margin-left:10vw;" >
+	  		<h2><strong>{{ username.capitalize }}</strong>  Similaridade Baixa </h2>
 		</div>
-		<img src="/static/img/thumbs-down.png"  alt="joinha" width="304" height="236">
-      <!-- </div> -->
-   </div>
+		<!-- <img src="/static/img/thumbs-down.png"  alt="joinha" width="304" height="236"> -->
+	</div>
+
+	<div  style="display:none;" class="c100 p50 big center green similarity">
+	  <span>50%</span>
+	  <div class="slice" >
+	    <div class="bar"></div>
+	    <div class="fill"></div>
+	  </div>
+	</div>
+
+	<br>
+	<div class="row text-center">
+		<a href="{% url 'accounts.ataque' %}"> <button class="btn btn-primary btn-lg">  Voltar</button> </a>
+	</div>
+	<br>
+
+
+	 <style type="text/css">
+	 	/*.circle-text{
+	 		border: 2px solid red;
+	 		
+	 	}
+*/
+	 	/*canvas{
+	 		position: relative;
+	 		margin-top: -2vw;
+	 	}*/
+
+	 </style>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+        		 $(".similarity").fadeIn("slow");
+		});
+	</script>
 {% endblock content %}
