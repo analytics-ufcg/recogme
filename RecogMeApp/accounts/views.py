@@ -9,6 +9,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.conf import settings
 
+# from django.db.models import FalseLogin
+
 # from Python base
 import json
 import csv
@@ -33,6 +35,8 @@ with open(settings.MEDIA_ROOT + '/data/senhas.psv', 'r') as csvfile:
     users = csv.reader(csvfile)
     users = [row for row in users]
 
+
+# Utilities
 
 def choose_randuser():
     randuser = users[random.randint(1, len(users) - 1)]
@@ -90,6 +94,7 @@ def prepare_login_data(request):
     return json_email, json_password, json_user_text, password, phrase, username
 
 
+# Views
 def registro_usuario_view(request):
     if request.method == 'POST':
 
@@ -127,6 +132,10 @@ def registro_usuario_view(request):
 
 @login_required
 def index_view(request):
+    query1 = FalseLogin.objects.filter(invader_email="a@mail").count()
+    query = FalseLogin.objects.filter(invader_email="a@mail").filter(prediction_result__gt=.8).count()
+    query2 = FalseLogin.objects.filter(invader_email="a@mail").filter(prediction_result__lt=.8).count()
+    print(query1,query, query2)
     return render(request, 'accounts/index.html')
 
 
@@ -170,13 +179,13 @@ def ataque_view(request):
         prediction = SVM.consult_prediction(email=randemail)
 
         false_login = FalseLogin.create(invader_email=str(request.user), attempt_path=test_psv,
-                                        hacked_email=randemail, prediction_result=prediction)
+                                        hacked_email=randemail, prediction_result=prediction[0])
         false_login.save()
 
         if prediction[0] >= ACCEPTANCE_RATE:
-            return render(request, 'accounts/falsoLoginPositivo.html', {'prediction':int(prediction[0]*100)})
+            return render(request, 'accounts/falsoLoginPositivo.html', {'prediction': int(prediction[0] * 100)})
         else:
-            return render(request, 'accounts/falsoLoginNegativo.html', {'prediction': int(prediction[0]*100)})
+            return render(request, 'accounts/falsoLoginNegativo.html', {'prediction': int(prediction[0] * 100)})
             # else:
             #     return render(request, 'accounts/ataque.html',
             #                   {'mensaje': 'Usuário e Senha não conferem com os repassados.',
