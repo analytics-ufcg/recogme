@@ -9,15 +9,15 @@ var app = angular.module('cadastro', [
 app.run(function (defaultErrorMessageResolver) {
 		defaultErrorMessageResolver.getErrorMessages().then(function (errorMessages) {
 				
-			errorMessages['invalidField'] = 'Campo inválido.';
-			errorMessages['emptyField'] = 'Preencha o campo acima.';
-			errorMessages['invalidEmail'] = 'Email inválido.';
-			errorMessages['emailMatchErr'] = 'Email não confere.';
-			errorMessages['nameMatchErr'] = 'Nome não confere.';
-			errorMessages['invalidPassword'] = 'Senha inválida. A senha deve conter no mínimo 10 digitos e ser formada por letras e/ou números.';
-			errorMessages['passwordMatchErr'] = 'Senha nao confere.'
-			errorMessages['textMatchErr'] = 'Texto nao confere.'
-			errorMessages['loginMatchErr'] = 'Login não confere.';
+			errorMessages['invalidField'] = 'Invalid Field.';
+			errorMessages['emptyField'] = 'Fill the field below.';
+			errorMessages['invalidEmail'] = 'Invalid Email';
+			errorMessages['emailMatchErr'] = "Emails Don't Match";
+			errorMessages['nameMatchErr'] = "Names Don't Match";
+			errorMessages['invalidPassword'] = 'Invalid Password. Password must have at least 10 digits and contain letters and numbers';
+			errorMessages['passwordMatchErr'] = "Passwords Don't Match.'
+			errorMessages['textMatchErr'] = "Text Don't Match";
+			errorMessages['loginMatchErr'] = "User Login Don't Match";
 
 		});
 	}

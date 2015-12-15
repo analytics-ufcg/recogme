@@ -5,7 +5,30 @@
 {% block title %}Falso Login{% endblock title %}
 
 {% block content %}
+    <div class="row center" style="text-align:center;">
+        <div class="col-xs-12">
+            <h3>Your Results</h3>
+        </div>
+        <div class="col-md-6">
+            <div  class="c100 p{{ positive_percentage }} small center green similarity">
+                <span>{{ positive_attempts }}</span>
+                <div class="slice" >
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-md-6">
+            <div  class="c100 p{{ false_percentage }} small center pink similarity">
+                <span>{{ false_attempts }}</span>
+                <div class="slice" >
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row center" ng-app="cadastro" style="text-align:left;">
 
         <div class="col-md-4 col-md-offset-4 signup" ng-controller="CadastroCtrl" style="margin:5%; width: 90% ;">
@@ -41,26 +64,7 @@
                         </select>
                     </div>
                 </div>
-
-                <div class="form-group">
-
-                    {#				        <p><b>Tente acessar com</b> <br>#}
-                    {#				        	 <select name="myselect"  id="id_myselect" class = "form-control">#}
-                    {#						        {% for name in all_users %}#}
-                    {#						        	<option value="{{ name.0 }}">{{ name.0 }}</option>#}
-                    {#						        {% endfor %}#}
-                    {#    						</select>#}
-
-                    <div id="myDiv"></div>
-                    {#				      	<blockquote><h4 id="fakeUser" >Usuário: "{{ randemail }}"</h4>#}
-
-                        <!-- <input type="password" name="password_mirror" value="" id="passwordTemp" style="display: inline;"/> -->
-
-
-
-                </div>
-
-
+                <br>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -83,27 +87,27 @@
                     </div>
                 </div>
 
-            <div class="row">
+                <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
 
-                    <input type="password"
-                           placeholder="Senha"
-                           autocomplete="off"
-                           class="form-control"
-                           id="password"
-                           name="password"
-                           ng-model="formModel.password"
-                           required="required"
-                           ng-required-err-type="emptyField"
-                            >
+                            <input type="password"
+                                   placeholder="Senha"
+                                   autocomplete="off"
+                                   class="form-control"
+                                   id="password"
+                                   name="password"
+                                   ng-model="formModel.password"
+                                   required="required"
+                                   ng-required-err-type="emptyField"
+                                    >
                             <input type="password" class="form-control" name="cfmPassword" id="cfmPassword"
-                               style="display: none;"/>
-                </div>
+                                   style="display: none;"/>
+                        </div>
 
                     </div>
                     <div class="col-md-6">
-                          <h4 id="fakePassword">{{ randsenha }}</h4>
+                        <h4 id="fakePassword">{{ randsenha }}</h4>
 
                     </div>
                 </div>

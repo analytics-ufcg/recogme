@@ -132,10 +132,6 @@ def registro_usuario_view(request):
 
 @login_required
 def index_view(request):
-    query1 = FalseLogin.objects.filter(invader_email="a@mail").count()
-    query = FalseLogin.objects.filter(invader_email="a@mail").filter(prediction_result__gt=.8).count()
-    query2 = FalseLogin.objects.filter(invader_email="a@mail").filter(prediction_result__lt=.8).count()
-    print(query1,query, query2)
     return render(request, 'accounts/index.html')
 
 
@@ -150,22 +146,17 @@ def ataque_view(request):
     randsenha = RANDOM_USER[1]
     all_users = users
 
+    positive_attempts = FalseLogin.objects.filter(invader_email=str(request.user)).filter(prediction_result__gt=.8).count()
+    false_attempts = FalseLogin.objects.filter(invader_email=str(request.user)).filter(prediction_result__lt=.8).count()
+
     if request.method == 'POST':
 
-        temp = "Para as rosas, escreveu alguém, o jardineiro é eterno."
+        # temp = "Para as rosas, escreveu alguém, o jardineiro é eterno."
 
         json_email, json_password, json_user_text, password, phrase, username = prepare_login_data(request)
 
         randemail = username
-        randsenha = password
-
-        print("###########")
-        print(randemail)
-        print(randsenha)
-        print("###########")
-        # if username == randemail and password == randsenha:
-        # if phrase.strip() != temp:
-        #     return render(request, 'accounts/ataque.html', {'mensaje': 'Frase incorreta.'})
+        # randsenha = password
 
         # data = "{0}|{1}|{2}|{3}|{4}".format(str(1), username, ctime(), json_email, json_password, json_user_text)
         data = "" + str(1) + '|' + username + '|' + ctime() + '|' + json_email + '|' + json_password + '|' + \
@@ -186,14 +177,12 @@ def ataque_view(request):
             return render(request, 'accounts/falsoLoginPositivo.html', {'prediction': int(prediction[0] * 100)})
         else:
             return render(request, 'accounts/falsoLoginNegativo.html', {'prediction': int(prediction[0] * 100)})
-            # else:
-            #     return render(request, 'accounts/ataque.html',
-            #                   {'mensaje': 'Usuário e Senha não conferem com os repassados.',
-
-            #                    'randemail': randemail, 'randsenha': randsenha , 'all_users' : all_users} )
 
     return render(request, 'accounts/ataque.html',
-                  {'mensaje': "", 'randemail': randemail, 'randsenha': randsenha, 'all_users': all_users})
+                  {'mensaje': "", 'randemail': randemail, 'randsenha': randsenha, 'all_users': all_users,
+                   "user": str(request.user), "positive_attempts": positive_attempts, "false_attempts": false_attempts,
+                   "positive_percentage": int((positive_attempts / (positive_attempts + false_attempts))*100),
+                   "false_percentage": int((false_attempts / (positive_attempts + false_attempts))*100)})
 
 
 def login_view(request):
