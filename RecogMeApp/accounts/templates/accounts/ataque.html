@@ -6,11 +6,11 @@
 
 {% block content %}
 
-    <div class="row" ng-app="cadastro">
+    <div class="row center" ng-app="cadastro" style="text-align:left;">
 
-        <div class="col-md-4 col-md-offset-4 signup" ng-controller="CadastroCtrl">
+        <div class="col-md-4 col-md-offset-4 signup" ng-controller="CadastroCtrl" style="margin:5%; width: 90% ;">
 
-            <div class="page-header" style="text-align:center;"><h2><b>Falso Login<b></h2></div>
+            <div class="page-header" style="text-align:center;"><h2><b>Recogme<b></h2></div>
             <div style="text-align: center"><h3>Do you think you can login as another user? So try it!</h3></div>
 
             {% if mensaje %}
@@ -24,7 +24,7 @@
             {% endif %}
 
 
-            <form class="login" id="formField" name="userForm" ng-model="userForm" role="form" data-toggle="validator"
+            <form style=" width: 100%" width="100%;" class="login" id="formField" name="userForm" ng-model="userForm" role="form" data-toggle="validator"
                   action="" autocomplete="off"
                   novalidate="novalidate" ng-hide="submitted" method="POST">
                 {% csrf_token %}
@@ -123,8 +123,7 @@
                          <p id="textField" ng-model="textField">Imagine uma nova história para sua vida e acredite nela.</p> -->
                         <label for="textField">Type: </label>
 
-                        <p id="textField" ng-model="textField">Para as rosas, escreveu alguém, o jardineiro é
-                            eterno.</p>
+                        <p id="textField" ng-model="textField">Para as rosas, escreveu alguém, o jardineiro é eterno.</p>
 
 
                     </div>
@@ -212,7 +211,7 @@
             },
             messages: {
                 email: {
-                    equalTo: "Emails don't match. Please, type exactly how you see them."
+                    equalTo: "Emails don't match. Please, type exactly how you see it."
                 }
                 // ,
                 // password: {
