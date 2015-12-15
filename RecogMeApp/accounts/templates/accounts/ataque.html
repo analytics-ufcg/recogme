@@ -10,24 +10,23 @@
             <h3>Your Results</h3>
         </div>
         <div class="col-md-6">
-            <div  class="c100 p{{ positive_percentage }} small center green similarity">
-                <span>{{ positive_attempts }}</span>
-                <div class="slice" >
-                    <div class="bar"></div>
-                    <div class="fill"></div>
-                </div>
+
+            <div class="third circle" >
+                <strong style=" position:absolute; margin-left: -13%;
+                margin-top: 8%; font-size: 130%;"></strong>
+                <input style="display: none" id="tempInput" value={{ positive_percentage }}>
             </div>
+
         </div>
 
-        <div class="col-md-6">
-            <div  class="c100 p{{ false_percentage }} small center pink similarity">
-                <span>{{ false_attempts }}</span>
-                <div class="slice" >
-                    <div class="bar"></div>
-                    <div class="fill"></div>
-                </div>
-            </div>
+
+        <div id = "negativeCircle"class="third circle" >
+            <strong style=" position:absolute; margin-left:-3.5%;margin-top:2%;font-size: 130%;"></strong>
+            <input style="display: none" id="tempInput2" value={{ false_percentage }}>
         </div>
+
+
+
     </div>
     <div class="row center" ng-app="cadastro" style="text-align:left;">
 
@@ -123,13 +122,8 @@
 
                 <div class="form-group">
                     <div class="form-group">
-                        <!--  <label for="textField">Frase: </label>
-                         <p id="textField" ng-model="textField">Imagine uma nova história para sua vida e acredite nela.</p> -->
                         <label for="textField">Type: </label>
-
                         <p id="textField" ng-model="textField">Para as rosas, escreveu alguém, o jardineiro é eterno.</p>
-
-
                     </div>
                     <div class="form-group">
 
@@ -217,13 +211,24 @@
                 email: {
                     equalTo: "Emails don't match. Please, type exactly how you see it."
                 }
-                // ,
-                // password: {
-                // 	equalTo: "Passwords don't match. Please, type exactly how you see them."
-                // }
             }
         });
 
     </script>
+    <script>
+        $('.third.circle').circleProgress({
+            value: parseFloat($("#tempInput").val()) ,
+            fill: { gradient: [['#00ff99', .5], ['#00ff99',.5]], gradientAngle: Math.PI / 4 }
+        }).on('circle-animation-progress', function(event, progress, stepValue) {
+            $(this).find('strong').text(String(stepValue.toFixed(2)).substr(1));
+        });
 
+        $('#negativeCircle').circleProgress({
+            value: parseFloat($("#tempInput2    ").val()) ,
+            fill: { gradient: [['#ff471a', .5], ['#ff471a',.5]], gradientAngle: Math.PI / 4 }
+        }).on('circle-animation-progress', function(event, progress, stepValue) {
+            $(this).find('strong').text(String(stepValue.toFixed(2)).substr(1));
+        });
+
+    </script>
 {% endblock content %}

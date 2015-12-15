@@ -181,8 +181,8 @@ def ataque_view(request):
     return render(request, 'accounts/ataque.html',
                   {'mensaje': "", 'randemail': randemail, 'randsenha': randsenha, 'all_users': all_users,
                    "user": str(request.user), "positive_attempts": positive_attempts, "false_attempts": false_attempts,
-                   "positive_percentage": int((positive_attempts / (positive_attempts + false_attempts))*100),
-                   "false_percentage": int((false_attempts / (positive_attempts + false_attempts))*100)})
+                   "positive_percentage": str((positive_attempts / (positive_attempts + false_attempts))),
+                   "false_percentage": str((false_attempts / (positive_attempts + false_attempts)))})
 
 
 def login_view(request):

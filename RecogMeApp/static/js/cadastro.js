@@ -15,7 +15,7 @@ app.run(function (defaultErrorMessageResolver) {
 			errorMessages['emailMatchErr'] = "Emails Don't Match";
 			errorMessages['nameMatchErr'] = "Names Don't Match";
 			errorMessages['invalidPassword'] = 'Invalid Password. Password must have at least 10 digits and contain letters and numbers';
-			errorMessages['passwordMatchErr'] = "Passwords Don't Match.'
+			errorMessages['passwordMatchErr'] = "Passwords Don't Match.";
 			errorMessages['textMatchErr'] = "Text Don't Match";
 			errorMessages['loginMatchErr'] = "User Login Don't Match";
 
