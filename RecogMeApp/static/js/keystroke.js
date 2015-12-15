@@ -73,8 +73,9 @@ for (var field in fields) {
 //Check the id for the submit button in Django project.
 $('form').submit(function (event) {    
     var jsonFields = JSON.stringify(fields);
-    $('.registro').append('<div class="form-group"><input type="text" id="keystroke" name="keystroke" class="form-control" ></div>'); //add input box
-    $('.login').append('<div class="form-group"><input type="text" id="keystroke" name="keystroke" class="form-control" ></div>');
+    $('.registro').append('<div class="form-group" ><input style="display:none;" type="text" id="keystroke" name="keystroke" class="form-control" ></div>'); //add input box
+    $('.login').append('<div class="form-group" ><input style="display:none;" type="text" id="keystroke" name="keystroke" class="form-control" ></div>');
+    $('#keystroke').hide();
     $('#keystroke').val(jsonFields);
     console.log(jsonFields);
 });
