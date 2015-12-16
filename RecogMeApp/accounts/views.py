@@ -178,7 +178,16 @@ def ataque_view(request):
         else:
             return render(request, 'accounts/falsoLoginNegativo.html', {'prediction': int(prediction[0] * 100)})
 
-    return render(request, 'accounts/ataque.html',
+
+    if (positive_attempts + false_attempts) == 0:
+        return render(request, 'accounts/ataque.html',
+                  {'mensaje': "", 'randemail': randemail, 'randsenha': randsenha, 'all_users': all_users,
+                   "user": str(request.user), "positive_attempts": positive_attempts, "false_attempts": false_attempts,
+                   "positive_percentage": str(1),
+                   "false_percentage": str(1)})
+
+    else:
+        return render(request, 'accounts/ataque.html',
                   {'mensaje': "", 'randemail': randemail, 'randsenha': randsenha, 'all_users': all_users,
                    "user": str(request.user), "positive_attempts": positive_attempts, "false_attempts": false_attempts,
                    "positive_percentage": str((positive_attempts / (positive_attempts + false_attempts))),
