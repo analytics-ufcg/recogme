@@ -34,14 +34,14 @@ Para rodar a aplicação em outro servidor são necessários os seguintes requis
 step 1) Instalar Python 3.4
 
 step 2) Criar um ambiente virtual (virtualenv). Usar a sequencia de comandos a seguir:
-pyvenv <nome_da_pasta> 
+ <br />pyvenv \<nome_da_pasta\>
 
 step 3) Ativar ambiente virtual
-source <nome_da_pasta>/bin/activate
+ <br />source \<nome_da_pasta\>/bin/activate
 
 step 4) Instalar dependências
-após entrar na raiz do projeto:
-pip install -r pip-packages
+ <br />após entrar na raiz do projeto:
+ <br />pip install -r pip-packages
 
 step 5) Iniciar a aplicação. 
-python RecogMeApp/manage.py runserver (~/recogme$ python RecogMeApp/manage.py runserver)
+ <br />python RecogMeApp/manage.py runserver (~/recogme$ python RecogMeApp/manage.py runserver)
